@@ -109,9 +109,14 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="logo" href="index.html">
-                <img src="img/logo.svg" alt="Wasabi Wallet">
-            </a>
+            <div>
+                <a class="logo" href="index.html">
+                    <img src="img/logo.svg" alt="Wasabi Wallet">
+                </a>
+                <div class="language-select-holder">
+                    <select id="language-selector"></select>
+                </div>
+            </div>
             <input type="checkbox" id="navswitch">
             <label for="navswitch" class="navbar-toggler">
                 <span class="navbar-toggler-icon"></span>
@@ -119,25 +124,25 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">The Wallet</a>
+                        <a class="nav-link" href="index.html" data-lang="nav_1">The Wallet</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contribution.html">Contribution</a>
+                        <a class="nav-link" href="contribution.html" data-lang="nav_2">Contribution</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://docs.wasabiwallet.io/" target="_blank">Docs</a>
+                        <a class="nav-link" href="https://docs.wasabiwallet.io/" target="_blank" data-lang="nav_3">Docs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://blog.wasabiwallet.io" target="_blank">Blog</a>
+                        <a class="nav-link" href="https://blog.wasabiwallet.io" target="_blank" data-lang="nav_4">Blog</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="faq.html">Help</a>
+                        <a class="nav-link" href="faq.html" data-lang="nav_5">Help</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About us</a>
+                        <a class="nav-link" href="about.html" data-lang="nav_6">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="index.html#download">Download</a>
+                        <a class="btn btn-primary" href="index.html#download" data-lang="download">Download</a>
                     </li>
                 </ul>
             </div>
@@ -226,10 +231,10 @@
 
                         <div class="card">
                             <input type="checkbox" id="faq1">
-                            <label for="faq1">
+                            <label for="faq1" data-lang="faq_title_1">
                                 WHAT IS A “COINJOIN”?
                             </label>
-                            <div class="card-content">
+                            <div class="card-content" data-lang="faq_content_1">
                                 <p>A coinjoin is a collaborative transaction between multiple peers.</p>
 
                                 <p>Usually, but not necessarily, it consists of some standard output denominations that participants should break their coins in to. This makes it difficult for outside parties to trace where a particular coin was sent to (as opposed to regular bitcoin transactions, where there is usually one sender and one receiver).</p>
@@ -394,8 +399,8 @@
                 <div class="row mb-5">
                     <div class="col-xl-10 offset-xl-1">
                         <div class="text-center">
-                            <h2 class="title mt-5">Reclaim your <span class="green-text d-block">privacy now</span></h2>
-                            <h3>Get started in 3 simple steps</h3>
+                            <h2 class="title mt-5" data-lang="bottom_cta_title">Reclaim your <span class="green-text d-block">privacy now</span></h2>
+                            <h3 data-lang="bottom_cta_subtitle">Get started in 3 simple steps</h3>
                         </div>
                         <div class="row text-center p-100">
                             <div class="col-md-4 my-4">
@@ -403,29 +408,29 @@
                                     <img src="img/downloadww.svg">
                                 </div>
                                 <p class="mt-4 mb-0 text-center text-md-left">
-                                    <strong>1. Download Wasabi Wallet</strong>
+                                    <strong data-lang="bottom_cta_step1">1. Download Wasabi Wallet</strong>
                                 </p>
                             </div>
                             <div class="col-md-4 my-4">
                                 <div class="icon-big mx-auto">
                                     <img src="img/createnewwallet.svg">
                                 </div>
-                                <p class="mt-4 mb-0 text-md-left">
-                                    <strong>2. Create a new wallet</strong>
+                                <p class="mt-4 mb-0 text-center text-md-left">
+                                    <strong data-lang="bottom_cta_step2">2. Create a new wallet</strong>
                                 </p>
                             </div>
                             <div class="col-md-4 my-4">
                                 <div class="icon-big mx-auto">
                                     <img src="img/coinjoin.svg">
                                 </div>
-                                <p class="mt-4 mb-0 text-md-left">
-                                    <strong>3. Let auto-coinjoin do its magic</strong>
+                                <p class="mt-4 mb-0 text-center text-md-left">
+                                    <strong data-lang="bottom_cta_step3">3. Let auto-coinjoin do its magic</strong>
                                 </p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col text-center">
-                                <a href="index.html#download" class="btn btn-primary btn-download">Download NOW</a>
+                                <a href="index.html#download" class="btn btn-primary btn-download" data-lang="download_now">Download NOW</a>
                             </div>
                         </div>
                     </div>
@@ -511,12 +516,14 @@
                 </div>
                 <div class="col-md-4 py-2 text-md-end">
                     <a href="/swagger" class="d-inline-block me-3">API</a>
-                    <a href="https://github.com/zkSNACKs/zIPs/raw/master/WasabiPressKit.zip" target="_blank" class="d-inline-block me-3">Press Kit</a>
-                    <a href="https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi/Legal/Assets/LegalDocumentsWw2.txt" target="_blank" class="d-inline-block">Privacy policy</a>
+                    <a href="https://github.com/zkSNACKs/zIPs/raw/master/WasabiPressKit.zip" target="_blank" class="d-inline-block me-3" data-lang="press_kit">Press Kit</a>
+                    <a href="https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi/Legal/Assets/LegalDocumentsWw2.txt" target="_blank" class="d-inline-block" data-lang="privacy_policy">Privacy policy</a>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

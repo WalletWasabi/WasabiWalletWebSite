@@ -959,6 +959,30 @@ hr {
 .card label {
     width: calc(100% - 30px);
 }
+#language-selector {
+    appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+  /* other styles for aesthetics */
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+#language-selector:focus {
+    outline: none;
+}
+.language-select-holder {
+    display: inline-flex;
+    align-items: center;
+}
+.language-select-holder:before {
+    content: "/";
+    margin: 0 10px;
+    display: inline-block;
+    opacity: 0.2;
+}
 @media (min-width: 576px) {
     body {
         --breakpoint: 540px;

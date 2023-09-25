@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.ico">
-    <title>Wasabi Wallet - 404 Page not found</title>
+    <title data-lang="404_title">Wasabi Wallet - 404 Page not found</title>
 
 </head>
 
@@ -44,16 +44,18 @@
                         <img src="img/logo.svg" alt="Wasabi Wallet">
                     </a>
                 </div>
-                <h1><span class="green-text">Page not found</span></h1>
-                <p>
+                <h1><span class="green-text" data-lang="404_title">Page not found</span></h1>
+                <p data-lang="404_text">
                     We couldn't find the page you were looking for.<br>Maybe it's hiding with Satoshi Nakamoto.
                 </p>
             </div>
-            <a href="index.html" class="btn btn-primary btn-download d-block d-md-inline">
+            <a href="index.html" class="btn btn-primary btn-download d-block d-md-inline" data-lang="back_to_home">
                 Go back to homepage <img src="img/download-arrow.svg">
             </a>
         </div>
     </section>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

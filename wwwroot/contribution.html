@@ -33,9 +33,14 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="logo" href="index.html">
-                <img src="img/logo.svg" alt="Wasabi Wallet">
-            </a>
+            <div>
+                <a class="logo" href="index.html">
+                    <img src="img/logo.svg" alt="Wasabi Wallet">
+                </a>
+                <div class="language-select-holder">
+                    <select id="language-selector"></select>
+                </div>
+            </div>
             <input type="checkbox" id="navswitch">
             <label for="navswitch" class="navbar-toggler">
                 <span class="navbar-toggler-icon"></span>
@@ -43,25 +48,25 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">The Wallet</a>
+                        <a class="nav-link" href="index.html" data-lang="nav_1">The Wallet</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="contribution.html">Contribution</a>
+                        <a class="nav-link" href="contribution.html" data-lang="nav_2">Contribution</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://docs.wasabiwallet.io/" target="_blank">Docs</a>
+                        <a class="nav-link" href="https://docs.wasabiwallet.io/" target="_blank" data-lang="nav_3">Docs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://blog.wasabiwallet.io" target="_blank">Blog</a>
+                        <a class="nav-link" href="https://blog.wasabiwallet.io" target="_blank" data-lang="nav_4">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.html">Help</a>
+                        <a class="nav-link" href="faq.html" data-lang="nav_5">Help</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About us</a>
+                        <a class="nav-link" href="about.html" data-lang="nav_6">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="index.html#download">Download</a>
+                        <a class="btn btn-primary" href="index.html#download" data-lang="download">Download</a>
                     </li>
                 </ul>
             </div>
@@ -328,12 +333,14 @@
                 </div>
                 <div class="col-md-4 py-2 text-md-end">
                     <a href="/swagger" class="d-inline-block me-3">API</a>
-                    <a href="https://github.com/zkSNACKs/zIPs/raw/master/WasabiPressKit.zip" target="_blank" class="d-inline-block me-3">Press Kit</a>
-                    <a href="https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi/Legal/Assets/LegalDocumentsWw2.txt" target="_blank" class="d-inline-block">Privacy policy</a>
+                    <a href="https://github.com/zkSNACKs/zIPs/raw/master/WasabiPressKit.zip" target="_blank" class="d-inline-block me-3" data-lang="press_kit">Press Kit</a>
+                    <a href="https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi/Legal/Assets/LegalDocumentsWw2.txt" target="_blank" class="d-inline-block" data-lang="privacy_policy">Privacy policy</a>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

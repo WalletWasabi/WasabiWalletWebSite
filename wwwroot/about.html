@@ -33,9 +33,14 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="logo" href="index.html">
-                <img src="img/logo.svg" alt="Wasabi Wallet">
-            </a>
+            <div>
+                <a class="logo" href="index.html">
+                    <img src="img/logo.svg" alt="Wasabi Wallet">
+                </a>
+                <div class="language-select-holder">
+                    <select id="language-selector"></select>
+                </div>
+            </div>
             <input type="checkbox" id="navswitch">
             <label for="navswitch" class="navbar-toggler">
                 <span class="navbar-toggler-icon"></span>
@@ -43,25 +48,25 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">The Wallet</a>
+                        <a class="nav-link" href="index.html" data-lang="nav_1">The Wallet</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contribution.html">Contribution</a>
+                        <a class="nav-link" href="contribution.html" data-lang="nav_2">Contribution</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://docs.wasabiwallet.io/" target="_blank">Docs</a>
+                        <a class="nav-link" href="https://docs.wasabiwallet.io/" target="_blank" data-lang="nav_3">Docs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://blog.wasabiwallet.io" target="_blank">Blog</a>
+                        <a class="nav-link" href="https://blog.wasabiwallet.io" target="_blank" data-lang="nav_4">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.html">Help</a>
+                        <a class="nav-link" href="faq.html" data-lang="nav_5">Help</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="about.html">About us</a>
+                        <a class="nav-link" href="about.html" data-lang="nav_6">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="index.html#download">Download</a>
+                        <a class="btn btn-primary" href="index.html#download" data-lang="download">Download</a>
                     </li>
                 </ul>
             </div>
@@ -70,7 +75,7 @@
 
     <div class="fixed-img">
         <img src="img/05_wallet.png" alt="Wasabi Wallet - About">
-        <div class="floating-title">
+        <div class="floating-title" data-lang="about_title">
             Better money
             <br>Better world
         </div>
@@ -81,16 +86,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <h1 class="title-lined left">Motivation</h1>
-                        <p>
-                            We believe that the most urgent problem for mankind is fixing the money, that Bitcoin is the best option for doing this and that privacy is its biggest problem.
-                        </p>
-                        <p>
-                            Wasabi Wallet was created to help Bitcoin maintain its cypherpunk roots on its path to a global reserve currency and to mitigate the inherent privacy issues of its public ledger. This is why Wasabi Wallet is an open-source, non-custodial, privacy-focused Bitcoin wallet for desktop that implements trustless coinjoin magic.
-                        </p>
-                        <p>
-                            After years of doing privacy research and development, we’ve concluded that having good tools is not enough - They need to be easy to use, otherwise they will only be utilized by the minority, making users stand out from the crowd. To increase the adoption of these tools, Wasabi is designed to be user friendly and to provide privacy automatically by default.
-                        </p>
+                        <h1 class="title-lined left" data-lang="about_subtitle1">Motivation</h1>
+                        <div data-lang="about_subitem1">
+                            <p>
+                                We believe that the most urgent problem for mankind is fixing the money, that Bitcoin is the best option for doing this and that privacy is its biggest problem.
+                            </p>
+                            <p>
+                                Wasabi Wallet was created to help Bitcoin maintain its cypherpunk roots on its path to a global reserve currency and to mitigate the inherent privacy issues of its public ledger. This is why Wasabi Wallet is an open-source, non-custodial, privacy-focused Bitcoin wallet for desktop that implements trustless coinjoin magic.
+                            </p>
+                            <p>
+                                After years of doing privacy research and development, we’ve concluded that having good tools is not enough - They need to be easy to use, otherwise they will only be utilized by the minority, making users stand out from the crowd. To increase the adoption of these tools, Wasabi is designed to be user friendly and to provide privacy automatically by default.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -99,17 +106,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="title text-center">The history of Wasabi Wallet</h2>
+                        <h2 class="title text-center" data-lang="history_title">The history of Wasabi Wallet</h2>
                         <ul class="timeline">
-                            <li>
+                            <li data-lang="history1">
                                 <div class="timeline-title">2015 - YEARS OF RESEARCH</div>
                                 <p>Ádám Ficsór, aka nopara73, and Lucas Ontivero conducted extensive research on Joinmarket, Zerolink, Tor and Bitcoin Programming in their quest to create a privacy-oriented bitcoin wallet of their own.</p>
                             </li>
-                            <li>
+                            <li data-lang="history2">
                                 <div class="timeline-title">2017 - Hidden Wallet</div>
                                 <p>Ádám was experimenting with the concept of a chaumian coinjoin implementation in Hidden Wallet. It already had a rudimentary Tor and block filter integration. The UI was simple, yet comprehensive, exposing a lot of coordination details to the user.</p>
                             </li>
-                            <li>
+                            <li data-lang="history3">
                                 <div class="timeline-title">2018 - zkSNACKs Ltd. IS FORMED</div>
                                 <p>Ádám collaborated with Gergely Hajdú and Bálint Harmat to create zkSNACKs, a for-profit organization that sponsors the development of Wasabi Wallet, previously called Hidden Wallet.</p>
 
@@ -117,55 +124,55 @@
 
                                 <p>ZK also stands for zero-knowledge: Wasabi Wallet does not and cannot store any personally identifiable information.</p>
                             </li>
-                            <li>
+                            <li data-lang="history4">
                                 <div class="timeline-title">2018 - BUILDING ON BITCOIN CONFERENCE</div>
                                 <p>Lisbon, Portugal</p>
 
                                 <p>Nopara73 made a presentation titled “Anonymous Bitcoin” and announced that Wasabi Wallet, a solution for using bitcoin in a fully anonymous way, would be launched on the 10 year anniversary of the Satoshi Whitepaper.</p>
                             </li>
-                            <li>
+                            <li data-lang="history5">
                                 <div class="timeline-title">2018 - <img src="img/wasabi-wallet-logo.svg" class="timeline-small-img" alt="Wasabi Wallet"> WASABI WALLET IS RELEASED</div>
                                 <p>Wasabi v1.0: Stable Release was launched on the 31st of October, 2018. The software was described as an “open-source, non-custodial, privacy-focused Bitcoin wallet for desktop that implements trustless coinjoin.</p>
                             </li>
-                            <li>
+                            <li data-lang="history6">
                                 <div class="timeline-title">2019 - MIT BITCOIN EXPO</div>
                                 <p>David Molnár, CTO and Developer, introduces Wasabi Wallet in a presentation titled “Wasabi Wallet: Unfairly Private” where he highlighted Wasabi Wallet’s innovative coinjoin feature.</p>
                             </li>
-                            <li>
+                            <li data-lang="history7">
                                 <div class="timeline-title">
                                     2019 - RECOGNITION FROM <a href="https://bitcoin.org" target="_blank">BITCOIN.ORG</a>
                                 </div>
                                 <p>Wasabi Wallet is listed on <a href="https://bitcoin.org" target="_blank">https://bitcoin.org</a> as a wallet available for Linux, Apple and Windows desktop operating systems.</p>
                             </li>
-                            <li>
+                            <li data-lang="history8">
                                 <div class="timeline-title">2019 - 10 BTC BOUNTY</div>
                                 <p>Wasabi awarded a 10 BTC bounty for the coinjoin privacy implementation by building a more end-user accessible solution and larger adoption. The bounty was distributed by Bitcoin core developers Gregory Maxwell, Pieter Wuille and bitcointalk.org owner, Theymos.</p>
                             </li>
-                            <li>
+                            <li data-lang="history9">
                                 <div class="timeline-title">2020 - HRF DONATION</div>
                                 <p>1 BTC IS DONATED to the HRF's Bitcoin Development Fund to protect Bitcoin users' right to privacy.</p>
                             </li>
-                            <li>
+                            <li data-lang="history10">
                                 <div class="timeline-title">2020 - <img src="img/logo_small.svg" class="timeline-small-img" alt="Wasabi Wallet"> WASABI WALLET 2.0 ANNOUNCED</div>
                                 <p>On November 5th, 2020, nopara73 announced that the construction of Wasabi Wallet 2.0, a "next-generation Bitcoin privacy Wallet," has begun.</p>
                             </li>
-                            <li>
+                            <li data-lang="history11">
                                 <div class="timeline-title">2021 - JOIN THE WASABIKAS PODCAST</div>
                                 <p>Longstanding Wasabi Contributor and Bitcoin maximalist, Max Hillebrand, launched “Join the Wasabikas”. A podcast exploring bitcoin privacy with many famous guests from the Bitcoin ecosystem.</p>
                             </li>
-                            <li>
+                            <li data-lang="history12">
                                 <div class="timeline-title">2021 - BITCOIN KNOTS DONATION</div>
                                 <p>Wasabi Wallet and Bull Bitcoin donate 0.86 BTC towards the development of Bitcoin Knots.</p>
                             </li>
-                            <li>
+                            <li data-lang="history13">
                                 <div class="timeline-title">2021 - 1.11 BTC GRANT</div>
                                 <p>Wasabi Wallet Launches the 1.11 BTC Lightning Network Privacy Research Grant in cooperation with MAGIC Grants.</p>
                             </li>
-                            <li>
+                            <li data-lang="history14">
                                 <div class="timeline-title">2022 - <img src="img/logo_small.svg" class="timeline-small-img" alt="Wasabi Wallet"> NEW LOGO</div>
                                 <p>The Wasabi Wallet Logo was transformed from the original green and orange shield to a sleek, modern design.</p>
                             </li>
-                            <li>
+                            <li data-lang="history15">
                                 <div class="timeline-title">2022 - <img src="img/logo_small.svg" class="timeline-small-img" alt="Wasabi Wallet"> WASABI WALLET 2.0</div>
                                 <p>After two years of development, 2.0 is launched on June 15th initiating a new era for Bitcoin privacy.</p>
                             </li>
@@ -179,8 +186,8 @@
                 <div class="row mb-5">
                     <div class="col-xl-10 offset-xl-1">
                         <div class="text-center">
-                            <h2 class="title mt-5">Reclaim your <span class="green-text d-block">privacy now</span></h2>
-                            <h3>Get started in 3 simple steps</h3>
+                            <h2 class="title mt-5" data-lang="bottom_cta_title">Reclaim your <span class="green-text d-block">privacy now</span></h2>
+                            <h3 data-lang="bottom_cta_subtitle">Get started in 3 simple steps</h3>
                         </div>
                         <div class="row text-center p-100">
                             <div class="col-md-4 my-4">
@@ -188,7 +195,7 @@
                                     <img src="img/downloadww.svg">
                                 </div>
                                 <p class="mt-4 mb-0 text-center text-md-left">
-                                    <strong>1. Download Wasabi Wallet</strong>
+                                    <strong data-lang="bottom_cta_step1">1. Download Wasabi Wallet</strong>
                                 </p>
                             </div>
                             <div class="col-md-4 my-4">
@@ -196,7 +203,7 @@
                                     <img src="img/createnewwallet.svg">
                                 </div>
                                 <p class="mt-4 mb-0 text-center text-md-left">
-                                    <strong>2. Create a new wallet</strong>
+                                    <strong data-lang="bottom_cta_step2">2. Create a new wallet</strong>
                                 </p>
                             </div>
                             <div class="col-md-4 my-4">
@@ -204,13 +211,13 @@
                                     <img src="img/coinjoin.svg">
                                 </div>
                                 <p class="mt-4 mb-0 text-center text-md-left">
-                                    <strong>3. Let auto-coinjoin do its magic</strong>
+                                    <strong data-lang="bottom_cta_step3">3. Let auto-coinjoin do its magic</strong>
                                 </p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col text-center">
-                                <a href="index.html#download" class="btn btn-primary btn-download">Download NOW</a>
+                                <a href="index.html#download" class="btn btn-primary btn-download" data-lang="download_now">Download NOW</a>
                             </div>
                         </div>
                     </div>
@@ -296,12 +303,14 @@
                 </div>
                 <div class="col-md-4 py-2 text-md-end">
                     <a href="/swagger" class="d-inline-block me-3">API</a>
-                    <a href="https://github.com/zkSNACKs/zIPs/raw/master/WasabiPressKit.zip" target="_blank" class="d-inline-block me-3">Press Kit</a>
-                    <a href="https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi/Legal/Assets/LegalDocumentsWw2.txt" target="_blank" class="d-inline-block">Privacy policy</a>
+                    <a href="https://github.com/zkSNACKs/zIPs/raw/master/WasabiPressKit.zip" target="_blank" class="d-inline-block me-3" data-lang="press_kit">Press Kit</a>
+                    <a href="https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi/Legal/Assets/LegalDocumentsWw2.txt" target="_blank" class="d-inline-block" data-lang="privacy_policy">Privacy policy</a>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
