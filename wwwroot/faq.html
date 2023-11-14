@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.ico">
-    <title>Wasabi Wallet - Bitcoin privacy wallet with built-in coinjoin</title>
+    <title data-lang="site_title">Wasabi Wallet - Bitcoin privacy wallet with built-in coinjoin</title>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -114,7 +114,12 @@
                     <img src="img/logo.svg" alt="Wasabi Wallet">
                 </a>
                 <div class="language-select-holder">
-                    <select id="language-selector"></select>
+                    <select id="language-selector" name="lang-select" onchange="location = this.value;">
+                        <option value="https://wasabiwallet.io/">EN</option>
+                        <option value="https://wasabiwallet.io/de">DE</option>
+                        <option value="https://wasabiwallet.io/es">ES</option>
+                        <option value="https://wasabiwallet.io/fr">FR</option>
+                    </select>
                 </div>
             </div>
             <input type="checkbox" id="navswitch">

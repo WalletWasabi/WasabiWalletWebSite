@@ -47,7 +47,12 @@
                     <img src="img/logo.svg" alt="Wasabi Wallet">
                 </a>
                 <div class="language-select-holder">
-                    <select id="language-selector"></select>
+                    <select id="language-selector" name="lang-select" onchange="location = this.value;">
+                        <option value="https://wasabiwallet.io/">EN</option>
+                        <option value="https://wasabiwallet.io/de">DE</option>
+                        <option value="https://wasabiwallet.io/es">ES</option>
+                        <option value="https://wasabiwallet.io/fr">FR</option>
+                    </select>
                 </div>
             </div>
             <input type="checkbox" id="navswitch">
