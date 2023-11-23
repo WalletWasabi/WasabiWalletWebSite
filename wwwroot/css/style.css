@@ -362,6 +362,18 @@ footer .white-text {
 .feature-box .title {
     font-size: 20px;
 }
+.feature-box.green {
+    background: var(--green);
+}
+.feature-box.green a {
+    color: #fff;
+}
+.floating-content {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+}
 .scale-svg {
     width: 100%;
     max-width: 150px;
@@ -491,6 +503,10 @@ footer .white-text {
     background-color: var(--light-blue);
     border-color: var(--light-blue);
     color: #000;
+}
+.btn-link {
+    color: var(--green);
+    text-decoration: none;
 }
 .navbar {
     background: rgba(0, 0, 0, 0.3);
@@ -959,6 +975,21 @@ hr {
 .card label {
     width: calc(100% - 30px);
 }
+.integration-img {
+    width: 100%;
+    max-width: 400px;
+}
+.logo-size {
+    width: 50%;
+    height: 100px;
+    object-fit: contain;
+}
+.icon-size {
+    width: 50%;
+    height: 100px;
+    object-fit: contain;
+    object-position: left;
+}
 @media (min-width: 576px) {
     body {
         --breakpoint: 540px;
@@ -982,6 +1013,11 @@ hr {
 @media (min-width: 1400px) {
     body {
         --breakpoint: 1320px;
+    }
+}
+@media (max-width: 1400px) {
+    .navbar-expand-lg .navbar-nav .nav-item {
+        font-size: 13px;
     }
 }
 @media only screen and (max-width: 1199px) {
