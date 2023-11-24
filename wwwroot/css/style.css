@@ -370,9 +370,9 @@ footer .white-text {
 }
 .floating-content {
     position: absolute;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
-}
+    width: calc(100% - 40px);
 }
 .scale-svg {
     width: 100%;
@@ -980,8 +980,8 @@ hr {
     max-width: 400px;
 }
 .logo-size {
-    width: 50%;
-    height: 100px;
+    width: 40%;
+    height: 50px;
     object-fit: contain;
 }
 .icon-size {
@@ -1180,8 +1180,7 @@ hr {
     .timeline li:before {
         font-size: 50px;
     }
-    .timeline li:nth-child(even):before,
-    .timeline li:nth-child(odd):before {
+    .timeline li:nth-child(even):before, .timeline li:nth-child(odd):before {
         right: calc(15% - 4px);
     }
     .timeline-title {
@@ -1207,7 +1206,8 @@ hr {
     }
 }
 /* Firefox fixes */
-@supports (-moz-appearance:none) {
+
+@supports (-moz-appearance: none) {
     .navbar {
         background: rgba(0, 0, 0, 0.5);
     }
