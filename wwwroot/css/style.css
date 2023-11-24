@@ -1190,6 +1190,12 @@ hr {
     .timeline-small-img {
         height: 14px;
     }
+    .floating-content {
+        position: static;
+        top: 0;
+        transform: none;
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 400px) {} @media only screen and (max-width: 320px) {
     .home-text-area h1 {
