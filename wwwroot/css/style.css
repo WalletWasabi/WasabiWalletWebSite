@@ -990,6 +990,18 @@ hr {
     object-fit: contain;
     object-position: left;
 }
+.green-bg {
+    background: var(--green);
+}
+.green-bg .title-lined:after {
+    background: #fff;
+}
+.big-text {
+    font-size: 24px;
+}
+.overflow {
+    overflow: visible;
+}
 @media (min-width: 576px) {
     body {
         --breakpoint: 540px;
@@ -1116,7 +1128,7 @@ hr {
         padding: 40px 0;
     }
     .p-200 {
-        padding: 40px 0;
+        padding: 40px 30px;
     }
     .modal-window {
         width: 90vw;
