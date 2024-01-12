@@ -453,11 +453,14 @@ footer .white-text {
 }
 .home-text-area {
     width: 100%;
-    max-width: 600px;
+    max-width: 560px;
     margin-bottom: 40px;
 }
 .home-text-area h1 {
     font-size: 60px;
+}
+.home-text-area h1 span {
+    font-size: 47px;
 }
 .home-text-area p {
     font-size: 24px;
@@ -1144,6 +1147,9 @@ hr {
     .home-text-area h1 {
         font-size: 34px;
     }
+    .home-text-area h1 span {
+        font-size: 34px;
+    }
     .download-btn-area {
         transform: translateY(-50%);
         max-width: 100%;
@@ -1211,6 +1217,9 @@ hr {
 }
 @media only screen and (max-width: 400px) {} @media only screen and (max-width: 320px) {
     .home-text-area h1 {
+        font-size: 24px;
+    }
+    .home-text-area h1 span {
         font-size: 24px;
     }
     .home-text-area, .download-btn-area {
