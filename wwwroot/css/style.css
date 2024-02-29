@@ -362,6 +362,18 @@ footer .white-text {
 .feature-box .title {
     font-size: 20px;
 }
+.feature-box.green {
+    background: var(--green);
+}
+.feature-box.green a {
+    color: #fff;
+}
+.floating-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% - 40px);
+}
 .scale-svg {
     width: 100%;
     max-width: 150px;
@@ -441,11 +453,14 @@ footer .white-text {
 }
 .home-text-area {
     width: 100%;
-    max-width: 600px;
+    max-width: 560px;
     margin-bottom: 40px;
 }
 .home-text-area h1 {
     font-size: 60px;
+}
+.home-text-area h1 span {
+    font-size: 47px;
 }
 .home-text-area p {
     font-size: 24px;
@@ -491,6 +506,10 @@ footer .white-text {
     background-color: var(--light-blue);
     border-color: var(--light-blue);
     color: #000;
+}
+.btn-link {
+    color: var(--green);
+    text-decoration: none;
 }
 .navbar {
     background: rgba(0, 0, 0, 0.3);
@@ -959,6 +978,33 @@ hr {
 .card label {
     width: calc(100% - 30px);
 }
+.integration-img {
+    width: 100%;
+    max-width: 400px;
+}
+.logo-size {
+    width: 40%;
+    height: 50px;
+    object-fit: contain;
+}
+.icon-size {
+    width: 50%;
+    height: 100px;
+    object-fit: contain;
+    object-position: left;
+}
+.green-bg {
+    background: var(--green);
+}
+.green-bg .title-lined:after {
+    background: #fff;
+}
+.big-text {
+    font-size: 24px;
+}
+.overflow {
+    overflow: visible;
+}
 @media (min-width: 576px) {
     body {
         --breakpoint: 540px;
@@ -982,6 +1028,11 @@ hr {
 @media (min-width: 1400px) {
     body {
         --breakpoint: 1320px;
+    }
+}
+@media (max-width: 1400px) {
+    .navbar-expand-lg .navbar-nav .nav-item {
+        font-size: 13px;
     }
 }
 @media only screen and (max-width: 1199px) {
@@ -1080,7 +1131,7 @@ hr {
         padding: 40px 0;
     }
     .p-200 {
-        padding: 40px 0;
+        padding: 40px 30px;
     }
     .modal-window {
         width: 90vw;
@@ -1094,6 +1145,9 @@ hr {
 }
 @media only screen and (max-width: 600px) {
     .home-text-area h1 {
+        font-size: 34px;
+    }
+    .home-text-area h1 span {
         font-size: 34px;
     }
     .download-btn-area {
@@ -1144,8 +1198,7 @@ hr {
     .timeline li:before {
         font-size: 50px;
     }
-    .timeline li:nth-child(even):before,
-    .timeline li:nth-child(odd):before {
+    .timeline li:nth-child(even):before, .timeline li:nth-child(odd):before {
         right: calc(15% - 4px);
     }
     .timeline-title {
@@ -1155,9 +1208,18 @@ hr {
     .timeline-small-img {
         height: 14px;
     }
+    .floating-content {
+        position: static;
+        top: 0;
+        transform: none;
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 400px) {} @media only screen and (max-width: 320px) {
     .home-text-area h1 {
+        font-size: 24px;
+    }
+    .home-text-area h1 span {
         font-size: 24px;
     }
     .home-text-area, .download-btn-area {
@@ -1171,7 +1233,8 @@ hr {
     }
 }
 /* Firefox fixes */
-@supports (-moz-appearance:none) {
+
+@supports (-moz-appearance: none) {
     .navbar {
         background: rgba(0, 0, 0, 0.5);
     }
