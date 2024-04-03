@@ -562,6 +562,8 @@ footer .white-text {
     width: 50%;
     height: 100px;
     object-fit: contain;
+}
+.icon-size.left {
     object-position: left;
 }
 .integration-img {
