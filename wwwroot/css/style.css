@@ -266,7 +266,7 @@ video::-webkit-media-controls {
 }
 section {
     background-color: var(--black);
-    padding: clamp(40px,10vh,200px) 0;
+    padding: clamp(40px, 10vh, 200px) 0;
     width: 100%;
 }
 .video-section {
@@ -317,7 +317,7 @@ footer .white-text {
     top: 0;
     height: 100%;
     width: 80px;
-    background: linear-gradient(90deg, rgba(11,11,11,0) 0%, rgba(11,11,11,1) 100%);
+    background: linear-gradient(90deg, rgba(11, 11, 11, 0) 0%, rgba(11, 11, 11, 1) 100%);
 }
 .no-break::-webkit-scrollbar {
     display: none;
@@ -362,6 +362,19 @@ footer .white-text {
     border: 1px solid var(--gray);
     border-radius: 20px;
     padding: 20px;
+    position: relative;
+}
+.box.green {
+    background-color: var(--green);
+}
+.equal .box {
+    height: 100% !important;
+}
+.floating-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% - 40px);
 }
 .icon-pull-left {
     position: absolute;
@@ -627,11 +640,59 @@ ol li::marker {
     .btn-giga svg {
         height: 20px;
     }
-    .video-section,
-    .video-homepage {
+    .video-section, .video-homepage {
         height: 50vh;
     }
     .section-transparent {
         background-color: var(--black);
+    }
+}
+@media only screen and (max-width: 600px) {
+    .timeline li {
+        width: 90%;
+        padding: 60px 0
+    }
+    .timeline:before, .timeline:after {
+        margin-left: calc(90% - 11px)
+    }
+    .timeline li:nth-child(odd) {
+        padding-right: 20%
+    }
+    .timeline li:nth-child(even) {
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 20%
+    }
+    .timeline li:nth-child(even) {
+        border-left: 0;
+        border-right: 1px solid var(--green)
+    }
+    .timeline li:nth-child(even) .timeline-title:after {
+        left: auto;
+        right: 0
+    }
+    .timeline li:nth-child(even):before {
+        left: inherit;
+        right: calc(15% - 8px)
+    }
+    .timeline li:before {
+        font-size: 50px;
+        top: 53px;
+    }
+    .timeline li:nth-child(even):before, .timeline li:nth-child(odd):before {
+        right: calc(15% - 4px)
+    }
+    .timeline-title {
+        font-size: 16px;
+        margin-top: 10px
+    }
+    .timeline-small-img {
+        height: 14px
+    }
+    .floating-content {
+        position: static;
+        top: 0;
+        transform: none;
+        width: 100%
     }
 }
