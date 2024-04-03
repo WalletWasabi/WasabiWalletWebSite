@@ -89,6 +89,8 @@ header {
     background: url('../img/icon_menu.svg') no-repeat center center;
     background-size: contain;
     margin-right: 10px;
+    width: 1em;
+    height: 1em;
 }
 .navbarToggler {
     cursor: pointer;
