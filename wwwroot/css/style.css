@@ -98,6 +98,7 @@ header {
     color: #fff;
     padding-left: 20px !important;
     text-transform: uppercase;
+    border: none;
 }
 .navbarToggler:hover {
     color: var(--green);
@@ -140,6 +141,7 @@ header {
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
     color: #fff;
+    border: none;
 }
 .btn-blur:hover {
     color: var(--green);
@@ -264,7 +266,7 @@ video::-webkit-media-controls {
 }
 section {
     background-color: var(--black);
-    padding: 140px 0;
+    padding: clamp(40px,10vh,200px) 0;
     width: 100%;
 }
 .video-section {
@@ -288,7 +290,7 @@ footer {
     background: var(--black);
 }
 footer, footer a {
-    color: var(--gray);
+    color: #fff;
     font-size: 14px;
 }
 footer .white-text {
@@ -488,7 +490,7 @@ footer .white-text {
     color: var(--green);
     position: absolute;
     font-size: 70px;
-    top: 72px;
+    top: 44px;
 }
 .timeline li:nth-child(even):before {
     left: calc(15% - 8px);
@@ -561,8 +563,12 @@ ol {
 }
 ol li {
     margin: 15px 0;
+    line-height: 1.7em;
 }
 ol li::marker {
+    color: var(--green);
+}
+.green-text {
     color: var(--green);
 }
 @media (min-width: 576px) {
@@ -616,8 +622,16 @@ ol li::marker {
     }
     .btn-giga {
         padding: 0 30px;
+        font-size: 36px;
     }
     .btn-giga svg {
         height: 20px;
+    }
+    .video-section,
+    .video-homepage {
+        height: 50vh;
+    }
+    .section-transparent {
+        background-color: var(--black);
     }
 }
