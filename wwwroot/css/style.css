@@ -62,7 +62,7 @@ header {
 }
 .menu-row {
     display: flex;
-    column-gap: 30px;
+    column-gap: 20px;
     align-items: center;
     position: relative;
 }
@@ -104,6 +104,7 @@ header {
 }
 .navbarToggler:hover {
     color: var(--green);
+    background: rgba(0, 0, 0, 0.3);
 }
 #navswitch {
     display: none;
@@ -147,6 +148,7 @@ header {
 }
 .btn-blur:hover {
     color: var(--green);
+    background: rgba(0, 0, 0, 0.3);
 }
 .btn-giga {
     border-radius: 60px;
@@ -414,7 +416,7 @@ footer .white-text {
     line-height: 1.2em;
 }
 .card label:after {
-    content: '▼';
+    content: '↓';
     color: var(--green);
     position: absolute;
     right: 0;
@@ -422,7 +424,7 @@ footer .white-text {
     top: calc(50% - 7px);
 }
 .card input:checked + label:after {
-    content: '▲';
+    content: '↑';
     top: 20px;
 }
 .card-content {
