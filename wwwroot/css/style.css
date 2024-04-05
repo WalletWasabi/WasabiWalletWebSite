@@ -21,7 +21,7 @@
 :root {
     --black: #0b0b0b;
     --green: #77C600;
-    --gray: #222;
+    --gray: #3b3b3b;
     --blue: #002647;
     --light-blue: #00BBC4;
     --border-radius: 15px;
@@ -154,7 +154,7 @@ header {
     border-radius: 60px;
     border: 1px solid #fff;
     padding: 0 60px;
-    font-size: 80px;
+    font-size: smaller;
     vertical-align: top;
 }
 .btn-giga:hover {
@@ -237,6 +237,13 @@ video::-webkit-media-controls {
     display: none;
     -webkit-appearance: none;
 }
+.floating-home {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    width: calc(100% - 30px);
+    left: 15px;
+}
 .social-media {
     margin: 0;
     padding: 0;
@@ -264,6 +271,9 @@ video::-webkit-media-controls {
 .social-media li svg {
     fill: #fff;
 }
+.social-media li:hover {
+    background: rgba(55, 55, 55, 0.3);
+}
 .content {
     width: 100%;
     overflow-x: hidden;
@@ -276,6 +286,7 @@ section {
 .video-section {
     background-color: transparent;
     height: 100vh;
+    padding: 0;
 }
 .coinjoin-section {
     background-image: url('../img/coinjoin_bg.svg');
@@ -641,13 +652,9 @@ ol li::marker {
     }
     .btn-giga {
         padding: 0 30px;
-        font-size: 36px;
     }
     .btn-giga svg {
         height: 20px;
-    }
-    .video-section, .video-homepage {
-        height: 50vh;
     }
     .section-transparent {
         background-color: var(--black);
