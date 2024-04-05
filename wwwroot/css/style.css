@@ -151,10 +151,13 @@ header {
     background: rgba(0, 0, 0, 0.3);
 }
 .btn-giga {
+    background: rgba(55, 55, 55, 0.3);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
     border-radius: 60px;
     border: 1px solid #fff;
     padding: 0 60px;
-    font-size: smaller;
+    font-size: 0.75em;
     vertical-align: top;
 }
 .btn-giga:hover {
@@ -296,6 +299,7 @@ section {
 }
 .section-transparent {
     background-color: transparent;
+    padding: 200px 0;
 }
 footer {
     padding: 20px 0;
@@ -381,6 +385,14 @@ footer .white-text {
 }
 .box.green {
     background-color: var(--green);
+}
+.box-blur {
+    background: rgba(55, 55, 55, 0.3);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
 }
 .equal .box {
     height: 100% !important;
@@ -627,7 +639,7 @@ ol li::marker {
     }
 }
 @media only screen and (max-width: 991px) {
-    section {
+    section, .section-transparent {
         min-height: auto;
         padding: 40px 0;
     }
