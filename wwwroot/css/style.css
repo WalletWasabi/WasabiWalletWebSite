@@ -20,7 +20,7 @@
 }
 :root {
     --black: #0b0b0b;
-    --green: #77C600;
+    --green: #77c400;
     --gray: #3b3b3b;
     --blue: #002647;
     --light-blue: #00BBC4;
@@ -114,6 +114,7 @@ header {
 }
 .btn {
     border-radius: 60px;
+    border:none;
     padding: 12px 30px 9px;
     line-height: 1;
     font-size: 14px;
@@ -283,7 +284,7 @@ video::-webkit-media-controls {
 }
 section {
     background-color: var(--black);
-    padding: clamp(40px, 10vh, 200px) 0;
+    padding: clamp(40px, 15vh, 200px) 0;
     width: 100%;
 }
 .video-section {
@@ -325,6 +326,9 @@ footer .white-text {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+.no-break::-webkit-scrollbar {
+    display: none;
+}
 .no-break-holder {
     position: relative;
 }
@@ -337,9 +341,6 @@ footer .white-text {
     height: 100%;
     width: 80px;
     background: linear-gradient(90deg, rgba(11, 11, 11, 0) 0%, rgba(11, 11, 11, 1) 100%);
-}
-.no-break::-webkit-scrollbar {
-    display: none;
 }
 .title-small {
     font-size: 20px;
