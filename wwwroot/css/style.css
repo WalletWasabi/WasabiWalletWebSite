@@ -85,11 +85,11 @@ header {
     font-size: 20px;
     line-height: 2em;
 }
-.menu li a[target="_blank"] {
+header a[target="_blank"] {
     position: relative;
     padding-right: 30px;
 }
-.menu li a[target="_blank"]:after {
+header a[target="_blank"]:after {
     content: '';
     background-image: url('../img/icon_arrow_right.svg');
     background-repeat: no-repeat;
