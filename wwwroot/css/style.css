@@ -659,6 +659,19 @@ ol li::marker {
     }
 }
 @media only screen and (max-width: 991px) {
+    header {
+        background: rgba(0, 0, 0, 0.3);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+        padding: 8px 0 8px 12px;
+        border-radius: 60px;
+        margin: 15px 15px;
+        position: fixed;
+        width: calc(100% - 30px);
+    }
+    .content {
+        padding-top: 80px;
+    }
     section, .section-transparent {
         min-height: auto;
         padding: 40px 0;
@@ -681,6 +694,22 @@ ol li::marker {
         background: rgba(0, 0, 0, 0.3);
         -webkit-backdrop-filter: saturate(180%) blur(20px);
         backdrop-filter: saturate(180%) blur(20px);
+    }
+    .menu li:last-child a {
+        border-radius: 60px;
+        padding: 12px 30px 9px;
+        line-height: 1;
+        font-size: 14px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--green);
+        border-color: var(--green);
+        color: var(--black);
+        font-weight: bold;
+        text-transform: uppercase;
     }
     .btn-giga {
         padding: 0 30px;
