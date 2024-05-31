@@ -452,7 +452,7 @@ footer .white-text {
     display: block;
 }
 .card label {
-    padding: 20px 20px 16px 20px;
+    padding: 20px 36px 16px 20px;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
@@ -768,5 +768,8 @@ ol li::marker {
         top: 0;
         transform: none;
         width: 100%
+    }
+    .menu {
+        padding: 20px;
     }
 }
