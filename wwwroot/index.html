@@ -1,564 +1,1374 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="title" content="Wasabi Wallet: Bitcoin privacy wallet with coinjoin">
-    <meta name="description" content="Wasabi is an open-source, non-custodial, privacy-focused Bitcoin wallet for desktop, that implements trustless coinjoin over the Tor anonymity network.">
-    <meta name="keywords" content="wasabi wallet,wasabiwallet,wasabi bitcoin wallet,wassabi wallet,bitcoin wasabi wallet,wasabiwallet,download wasabi wallet,wasabi btc,wasabi wallet,wallet wasabi,wasabi wallet fees,what is wasabi wallet,coinjoin, coin join">
-    <meta http-equiv="onion-location" content="http://wasabiukrxmkdgve5kynjztuovbg43uxcbcxn6y2okcrsg7gb6jdmbad.onion">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wasabiwallet.io">
-    <meta property="og:title" content="Wasabi Wallet - Bitcoin privacy wallet with coinjoin">
-    <meta property="og:description" content="Wasabi is an open-source, non-custodial, privacy-focused Bitcoin wallet for desktop, it implements trustless coinjoin over the Tor anonymity network.">
-    <meta property="og:image" content="https://wasabiwallet.io/img/wasabi-social.jpg">
-    <meta property="og:site_name" content="Wasabi Wallet - Bitcoin privacy wallet with coinjoin">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://wasabiwallet.io">
-    <meta property="twitter:title" content="Wasabi Wallet - Bitcoin privacy wallet with coinjoin">
-    <meta property="twitter:description" content="Wasabi is an open-source, non-custodial, privacy-focused Bitcoin wallet for desktop, it implements trustless coinjoin over the Tor anonymity network.">
-    <meta property="twitter:image" content="https://wasabiwallet.io/img/wasabi-social.jpg">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/favicon.ico">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="title"
+      content="Wasabi Wallet: Bitcoin privacy wallet with coinjoin"
+    />
+    <meta
+      name="description"
+      content="Wasabi is an open-source, non-custodial, privacy-focused Bitcoin wallet for desktop, that implements trustless coinjoin over the Tor anonymity network."
+    />
+    <meta
+      name="keywords"
+      content="wasabi wallet,wasabiwallet,wasabi bitcoin wallet,wassabi wallet,bitcoin wasabi wallet,wasabiwallet,download wasabi wallet,wasabi btc,wasabi wallet,wallet wasabi,wasabi wallet fees,what is wasabi wallet,coinjoin, coin join"
+    />
+    <meta
+      http-equiv="onion-location"
+      content="http://wasabiukrxmkdgve5kynjztuovbg43uxcbcxn6y2okcrsg7gb6jdmbad.onion"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wasabiwallet.io" />
+    <meta
+      property="og:title"
+      content="Wasabi Wallet - Bitcoin privacy wallet with coinjoin"
+    />
+    <meta
+      property="og:description"
+      content="Wasabi is an open-source, non-custodial, privacy-focused Bitcoin wallet for desktop, it implements trustless coinjoin over the Tor anonymity network."
+    />
+    <meta
+      property="og:image"
+      content="https://wasabiwallet.io/img/wasabi-social.jpg"
+    />
+    <meta
+      property="og:site_name"
+      content="Wasabi Wallet - Bitcoin privacy wallet with coinjoin"
+    />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://wasabiwallet.io" />
+    <meta
+      property="twitter:title"
+      content="Wasabi Wallet - Bitcoin privacy wallet with coinjoin"
+    />
+    <meta
+      property="twitter:description"
+      content="Wasabi is an open-source, non-custodial, privacy-focused Bitcoin wallet for desktop, it implements trustless coinjoin over the Tor anonymity network."
+    />
+    <meta
+      property="twitter:image"
+      content="https://wasabiwallet.io/img/wasabi-social.jpg"
+    />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
     <title>Wasabi Wallet - Bitcoin privacy wallet with coinjoin</title>
-    <script type="application/ld+json">{ "@context": "https://schema.org", "@type": "Organization", "url": "https://wasabiwallet.io", "logo": "https://wasabiwallet.io/img/wasabi_logo.png" }</script>
-</head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "url": "https://wasabiwallet.io",
+        "logo": "https://wasabiwallet.io/img/wasabi_logo.png"
+      }
+    </script>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-1">
-                    <a href="index.html"><img src="img/logo_small.svg" class="logo">
-                    </a>
-                </div>
-                <div class="col text-end text-lg-start">
-                    <div class="menu-row">
-                        <input type="checkbox" id="navswitch">
-                        <label for="navswitch" class="btn navbarToggler"><span class="navbar-toggler-icon"></span> Menu</label>
-                        <ul class="menu">
-                            <li><a href="index.html">Home</a>
-                            </li>
-                            <li><a href="buy-anything.html">Buy Anything</a>
-                            </li>
-                            <li><a href="contribution.html">Contribution</a>
-                            </li>
-                            <li><a href="about.html">About Us</a>
-                            </li>
-                            <li><a href="faq.html">Help</a>
-                            </li>
-                            <li><a href="https://docs.wasabiwallet.io/" target="_blank">Docs</a>
-                            </li>
-                            <li><a href="https://blog.wasabiwallet.io" target="_blank">Blog</a>
-                            </li>
-                            <li><a href="https://wasabiwallet.io/swagger/index.html" target="_blank">API</a>
-                            </li>
-                            <li><a href="https://github.com/WalletWasabi/WalletWasabi/blob/master/WalletWasabi/Legal/Assets/LegalDocumentsWw2.txt" target="_blank">Privacy policy</a>
-                            </li>
-                            <li><a href="index.html#download">Download</a>
-                            </li>
-                        </ul>
-                        <a href="index.html#download" class="btn btn-primary prefix-arrowdown d-none d-lg-block">Download</a>
-                    </div>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                    <div class="menu-row"><a href="faq.html">Help</a><a href="https://docs.wasabiwallet.io/" target="_blank">Docs</a> 
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-1">
+            <a href="index.html"
+              ><img src="img/logo_small.svg" class="logo" />
+            </a>
+          </div>
+          <div class="col text-end text-lg-start">
+            <div class="menu-row">
+              <input type="checkbox" id="navswitch" />
+              <label for="navswitch" class="btn navbarToggler"
+                ><span class="navbar-toggler-icon"></span> Menu</label
+              >
+              <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buy-anything.html">Buy Anything</a></li>
+                <li><a href="contribution.html">Contribution</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="faq.html">Help</a></li>
+                <li>
+                  <a href="https://docs.wasabiwallet.io/" target="_blank"
+                    >Docs</a
+                  >
+                </li>
+                <li>
+                  <a href="https://blog.wasabiwallet.io" target="_blank"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://wasabiwallet.io/swagger/index.html"
+                    target="_blank"
+                    >API</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/WalletWasabi/WalletWasabi/blob/master/WalletWasabi/Legal/Assets/LegalDocumentsWw2.txt"
+                    target="_blank"
+                    >Privacy policy</a
+                  >
+                </li>
+                <li><a href="index.html#download">Download</a></li>
+              </ul>
+              <a
+                href="index.html#download"
+                class="btn btn-primary prefix-arrowdown d-none d-lg-block"
+                >Download</a
+              >
             </div>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <div class="menu-row">
+              <a href="faq.html">Help</a
+              ><a href="https://docs.wasabiwallet.io/" target="_blank">Docs</a>
+            </div>
+          </div>
         </div>
+      </div>
     </header>
     <div class="content">
-        <ul class="social-media d-none d-lg-flex">
-            <li>
-                <a href="https://github.com/WalletWasabi" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20.505" height="20" viewBox="0 0 20.505 20">
-                        <path id="Path_9" data-name="Path 9" d="M627.359,98.8c.052-.375.1-.75.156-1.124a9.778,9.778,0,0,1,1.636-4.021,10.2,10.2,0,0,1,9.487-4.4,9.919,9.919,0,0,1,5.081,1.963,10.267,10.267,0,0,1-.057,16.516,9.545,9.545,0,0,1-2.74,1.42.518.518,0,0,1-.759-.538c0-.887,0-1.775,0-2.662a2.978,2.978,0,0,0-.219-1.291,7.837,7.837,0,0,0-.407-.681c.374-.07.78-.122,1.174-.223a4.3,4.3,0,0,0,2.613-1.649,4.824,4.824,0,0,0,.768-2.227,5.881,5.881,0,0,0-.024-1.813,3.718,3.718,0,0,0-.867-1.775.249.249,0,0,1-.055-.283,3.494,3.494,0,0,0-.131-2.479.233.233,0,0,0-.163-.105,1.77,1.77,0,0,0-1.006.2c-.517.244-1.017.524-1.529.778a.5.5,0,0,1-.313.05,9.7,9.7,0,0,0-4.791,0,.444.444,0,0,1-.311-.056,7.382,7.382,0,0,0-2.086-.942c-.013,0-.025-.008-.038-.011-.478-.1-.563-.047-.7.423a3.481,3.481,0,0,0,0,2.182.248.248,0,0,1-.039.207,4.242,4.242,0,0,0-.937,3.384,5.852,5.852,0,0,0,.569,2.089,3.65,3.65,0,0,0,2.188,1.821,16.278,16.278,0,0,0,1.746.408c.031.007.062.01.067.011-.149.271-.3.539-.444.814a.762.762,0,0,0-.088.305.363.363,0,0,1-.318.367,2.3,2.3,0,0,1-1.914-.092,2.256,2.256,0,0,1-.761-.807,2.17,2.17,0,0,0-1.27-1.037,1.986,1.986,0,0,0-.665-.032c-.135.008-.179.118-.088.232a1.233,1.233,0,0,0,.3.313,2.781,2.781,0,0,1,1.106,1.38,2.411,2.411,0,0,0,.542.875,2.319,2.319,0,0,0,1.507.558c.483.022.967,0,1.482,0,0,.29,0,.629,0,.968,0,.26.01.52.009.781a.533.533,0,0,1-.771.557,9.907,9.907,0,0,1-3.966-2.477,10.365,10.365,0,0,1-2.423-3.866,10.2,10.2,0,0,1-.525-2.578c-.006-.078-.021-.156-.031-.234Z" transform="translate(-627.359 -89.203)" fill="#fff" />
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="https://x.com/wasabiwallet" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="19.571" height="20" viewBox="0 0 19.571 20">
-                        <path id="Path_8" data-name="Path 8" d="M0,76.033l.916-1.067,5.313-6.175q.686-.8,1.373-1.594a.063.063,0,0,0,.007-.094Q6.7,65.789,5.8,64.472l-1.853-2.7L2.007,58.954.027,56.073,0,56.038a.38.38,0,0,1,.04,0q2.872,0,5.744,0a.085.085,0,0,1,.06.032Q7.065,57.833,8.28,59.6l2.488,3.62.113.164.212-.246,4.924-5.723q.58-.674,1.161-1.347a.1.1,0,0,1,.066-.034q.826,0,1.651,0l.034,0-.037.046L15.13,60.453l-3.45,4.008a.055.055,0,0,0-.006.081q1.091,1.584,2.18,3.17l2.941,4.279,2.349,3.418.407.592a.188.188,0,0,0,.02.021s0,.01-.005.01H13.74c-.012-.02-.024-.041-.037-.06l-.387-.562-2.351-3.422-2.5-3.644-.053-.076-.036.04L5.78,71.32,1.873,75.861c-.048.056-.094.115-.14.172Zm2.352-18.7c.014.021.022.036.032.049L6.493,63.26,10.9,69.57q1.81,2.589,3.62,5.179a.088.088,0,0,0,.083.043h2.6c-.013-.022-.021-.036-.031-.05l-3.556-5.086L9.858,64.28q-2.415-3.454-4.829-6.908a.085.085,0,0,0-.079-.041H2.407l-.055,0" transform="translate(0 -56.033)" fill="#fff" />
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.reddit.com/r/WasabiWallet/" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="19.967" height="17.765" viewBox="0 0 19.967 17.765">
-                        <g id="Group_33" data-name="Group 33" transform="translate(-2083.593 -529.577)">
-                            <path id="Path_14" data-name="Path 14" d="M2025.036,116c1.014.218,1.978.417,2.936.641.1.024.209.176.252.291a1.57,1.57,0,0,0,1.456,1.073,1.522,1.522,0,0,0,.78-2.834,1.486,1.486,0,0,0-1.878.285.5.5,0,0,1-.548.169c-1.007-.214-2.018-.41-3.028-.61-.618-.123-.791-.007-.924.617q-.485,2.292-.966,4.584c-.036.171-.067.3-.3.31a10.471,10.471,0,0,0-5.293,1.654.4.4,0,0,1-.527-.03,2.206,2.206,0,0,0-2.484,3.645c.167.114.308.207.3.46a5.354,5.354,0,0,0,2.7,4.767,10.1,10.1,0,0,0,4.761,1.628,11,11,0,0,0,7.285-1.6,5.32,5.32,0,0,0,2.752-4.805.447.447,0,0,1,.251-.421,2.177,2.177,0,0,0,.829-2.494,2.2,2.2,0,0,0-3.377-1.064c-.133.1-.233.172-.408.057a10.411,10.411,0,0,0-5.212-1.7c-.257-.015-.321-.113-.264-.357.127-.55.234-1.1.351-1.656.18-.854.361-1.709.552-2.61" transform="translate(70.047 414.618)" fill="#fff" />
-                            <path id="Path_15" data-name="Path 15" d="M2296.53,364.064a1.429,1.429,0,0,1-1.321,1.444,1.487,1.487,0,0,1-1.583-1.519,1.442,1.442,0,0,1,1.469-1.438,1.468,1.468,0,0,1,1.435,1.513" transform="translate(-198.074 176.131)" fill="#3b3b3b" />
-                            <path id="Path_16" data-name="Path 16" d="M2178.977,364.755a1.447,1.447,0,1,1,.021-2.894,1.447,1.447,0,1,1-.021,2.894" transform="translate(-88.909 176.779)" fill="#3b3b3b" />
-                            <path id="Path_17" data-name="Path 17" d="M2202.2,446.523a5.674,5.674,0,0,1-3.41-.964c-.091-.06-.22-.128-.24-.214-.031-.134-.034-.343.046-.416a.494.494,0,0,1,.435-.071c.263.108.485.312.745.427a5.572,5.572,0,0,0,5.479-.319,2.015,2.015,0,0,1,.2-.119.355.355,0,0,1,.5.171c.1.188.016.324-.154.444a5.751,5.751,0,0,1-3.605,1.062" transform="translate(-108.653 98.79)" fill="#3b3b3b" />
-                        </g>
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="https://youtube.com/c/WasabiWallet" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16.389" viewBox="0 0 20 16.389">
-                        <path id="Path_11" data-name="Path 11" d="M3357.333,181.248h-10.818a4.591,4.591,0,0,0-4.591,4.591v7.208a4.591,4.591,0,0,0,4.591,4.591h10.818a4.591,4.591,0,0,0,4.591-4.591v-7.208a4.591,4.591,0,0,0-4.591-4.591m-7.938,11.91c.02-2.347.039-4.672.059-7.026l6.15,3.565-6.208,3.461" transform="translate(-3341.924 -181.248)" fill="#fff" />
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/wasabiwallet.io/" target="_blank">
-                    <svg id="Group_34" data-name="Group 34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19.991" height="20" viewBox="0 0 19.991 20">
-                        <defs>
-                            <clipPath id="clip-path">
-                                <rect id="Rectangle_12" data-name="Rectangle 12" width="19.991" height="20" fill="none" />
-                            </clipPath>
-                        </defs>
-                        <g id="Group_34-2" data-name="Group 34" clip-path="url(#clip-path)">
-                            <path id="Path_18" data-name="Path 18" d="M5.117,0h9.76c.2.033.411.054.612.1a5.447,5.447,0,0,1,4.338,4.118c.081.292.11.6.164.9v9.76c-.012.07-.02.141-.038.209a9.2,9.2,0,0,1-.421,1.554,5.345,5.345,0,0,1-5.084,3.342c-2.966.042-5.934.012-8.9.009A5.321,5.321,0,0,1,2.4,19.008,5.434,5.434,0,0,1,0,14.365q-.011-4.372,0-8.745A5.325,5.325,0,0,1,.108,4.5,5.425,5.425,0,0,1,4.218.164c.292-.081.6-.111.9-.164m13.1,10q0-2.166,0-4.332a3.98,3.98,0,0,0-.2-1.343,3.741,3.741,0,0,0-3.662-2.549c-2.908,0-5.816-.009-8.723.008a4.227,4.227,0,0,0-1.3.2A3.7,3.7,0,0,0,1.776,5.629q-.006,4.362,0,8.723a3.888,3.888,0,0,0,.2,1.323,3.729,3.729,0,0,0,3.629,2.538q4.391.012,8.782,0a3.7,3.7,0,0,0,3.141-1.592,3.748,3.748,0,0,0,.689-2.274q0-2.176,0-4.352" transform="translate(0)" fill="#fff" />
-                            <path id="Path_19" data-name="Path 19" d="M131.5,126.278a5.151,5.151,0,1,1-5.158-5.149,5.173,5.173,0,0,1,5.158,5.149m-1.777,0a3.374,3.374,0,1,0-3.372,3.376,3.378,3.378,0,0,0,3.372-3.376" transform="translate(-116.353 -116.286)" fill="#fff" />
-                            <path id="Path_20" data-name="Path 20" d="M353.053,83.706a1.295,1.295,0,1,1-1.329,1.274,1.3,1.3,0,0,1,1.329-1.274" transform="translate(-337.66 -80.359)" fill="#fff" />
-                        </g>
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="https://t.me/WasabiWallet" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16.659" viewBox="0 0 20 16.659">
-                        <path id="Path_14" data-name="Path 14" d="M5399.488,169.965l.365-4.741,8.545-7.659s.156-.209,0-.261-.243-.121-.721.174-10.43,6.548-10.43,6.548l-4.641-1.407s-.726-.277-.621-.731c.078-.338.521-.572.833-.676s17.871-6.825,17.871-6.825.781-.313,1.146.313c.313.469,0,1.56,0,1.56l-2.97,13.862s-.179.818-.864.846a.868.868,0,0,1-.486-.133c-1.044-.638-4.876-3.5-4.876-3.5l-2.292,2.188a1.605,1.605,0,0,1-.86.443" transform="translate(-5391.976 -154.308)" fill="#fff" />
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="https://discord.gg/nm7YHEZnJs" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15.6" viewBox="0 0 20 15.6">
-                        <path id="Path_10" data-name="Path 10" d="M2713.71,192.459a17.682,17.682,0,0,0-4.139-1.349l-.511,1.209a14.721,14.721,0,0,0-2-.177v-.009s-.088,0-.235,0-.235,0-.235,0v.009a14.72,14.72,0,0,0-2,.177l-.511-1.209a17.682,17.682,0,0,0-4.138,1.349,17.043,17.043,0,0,0-3.022,11.625,21.405,21.405,0,0,0,5.02,2.626,14.985,14.985,0,0,0,1.095-1.812,6.016,6.016,0,0,1-1.674-.791l.419-.372a11.416,11.416,0,0,0,5.045,1.139,14.419,14.419,0,0,0,5.041-1.139h0l.419.372a6.02,6.02,0,0,1-1.674.791,14.985,14.985,0,0,0,1.095,1.812,21.4,21.4,0,0,0,5.02-2.626,17.044,17.044,0,0,0-3.022-11.625m-10.2,9.37a2.114,2.114,0,1,1,1.813-2.093,1.968,1.968,0,0,1-1.813,2.093m6.65,0a2.114,2.114,0,1,1,1.814-2.093,1.968,1.968,0,0,1-1.814,2.093" transform="translate(-2696.83 -191.11)" fill="#fff" />
-                    </svg>
-                </a>
-            </li>
-        </ul>
-        <section class="video-section">
-            <div class="video-homepage">
-                <img class="mobile_video_bg d-block" src="img/video_bg.png" alt="Wasabi Wallet - video">
-            </div>
-            <div class="container">
-                <div class="row vh-100">
-                    <div class="col-lg-11 offset-lg-1 position-relative">
-                        <div class="floating-home">
-                            <div class="row">
-                                <div class="col-lg-5">
-                                    <h1 class="title"><strong>Wasabi Wallet</strong></h1>
-                                    <p class="mb-4">The most popular Bitcoin wallet for desktop with coinjoin. Free & open-source. Non-custodial.
-                                        <br>Reclaim your privacy today.</p><a href="index.html#download" class="btn btn-primary">Download</a> <a href="#bitcoinisnotprivate" class="btn btn-blur affix-arrowright">Read more</a>
-                                </div>
-                                <div class="col-lg-4 offset-lg-3">
-                                    <div class="box-blur d-none d-lg-block">
-                                        <div class="title-small mb-3">No default coordinator</div>
-                                        <p>Starting from June 1, 2024, Wasabi Wallet will no longer have a default coinjoin coordinator.</p><strong><a href="https://github.com/WalletWasabi" target="_blank" class="affix-arrowright">Don't trust, verify</a></strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mt-5">
-                                <div class="col-lg-12 text-end mt-5">
-                                    <div class="title-huge">Privacy</div>
-                                    <div class="title-huge">by default
-                                        <a href="#coinjoin" class="btn btn-giga">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="40.713" height="40.713" viewBox="0 0 40.713 40.713">
-                                                <g id="Group_14" data-name="Group 14" transform="translate(-1608.287 -827.287)">
-                                                    <g id="Group_13" data-name="Group 13" transform="translate(39.908 8.908)">
-                                                        <line id="Line_4" data-name="Line 4" x2="36.417" y2="36.417" transform="translate(1570.5 820.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" />
-                                                        <line id="Line_5" data-name="Line 5" y2="26.301" transform="translate(1607.592 831.29)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" />
-                                                        <line id="Line_6" data-name="Line 6" x2="24.952" transform="translate(1582.639 857.592)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" />
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="bitcoinisnotprivate">
-            <div class="container">
+      <ul class="social-media d-none d-lg-flex">
+        <li>
+          <a href="https://github.com/WalletWasabi" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20.505"
+              height="20"
+              viewBox="0 0 20.505 20"
+            >
+              <path
+                id="Path_9"
+                data-name="Path 9"
+                d="M627.359,98.8c.052-.375.1-.75.156-1.124a9.778,9.778,0,0,1,1.636-4.021,10.2,10.2,0,0,1,9.487-4.4,9.919,9.919,0,0,1,5.081,1.963,10.267,10.267,0,0,1-.057,16.516,9.545,9.545,0,0,1-2.74,1.42.518.518,0,0,1-.759-.538c0-.887,0-1.775,0-2.662a2.978,2.978,0,0,0-.219-1.291,7.837,7.837,0,0,0-.407-.681c.374-.07.78-.122,1.174-.223a4.3,4.3,0,0,0,2.613-1.649,4.824,4.824,0,0,0,.768-2.227,5.881,5.881,0,0,0-.024-1.813,3.718,3.718,0,0,0-.867-1.775.249.249,0,0,1-.055-.283,3.494,3.494,0,0,0-.131-2.479.233.233,0,0,0-.163-.105,1.77,1.77,0,0,0-1.006.2c-.517.244-1.017.524-1.529.778a.5.5,0,0,1-.313.05,9.7,9.7,0,0,0-4.791,0,.444.444,0,0,1-.311-.056,7.382,7.382,0,0,0-2.086-.942c-.013,0-.025-.008-.038-.011-.478-.1-.563-.047-.7.423a3.481,3.481,0,0,0,0,2.182.248.248,0,0,1-.039.207,4.242,4.242,0,0,0-.937,3.384,5.852,5.852,0,0,0,.569,2.089,3.65,3.65,0,0,0,2.188,1.821,16.278,16.278,0,0,0,1.746.408c.031.007.062.01.067.011-.149.271-.3.539-.444.814a.762.762,0,0,0-.088.305.363.363,0,0,1-.318.367,2.3,2.3,0,0,1-1.914-.092,2.256,2.256,0,0,1-.761-.807,2.17,2.17,0,0,0-1.27-1.037,1.986,1.986,0,0,0-.665-.032c-.135.008-.179.118-.088.232a1.233,1.233,0,0,0,.3.313,2.781,2.781,0,0,1,1.106,1.38,2.411,2.411,0,0,0,.542.875,2.319,2.319,0,0,0,1.507.558c.483.022.967,0,1.482,0,0,.29,0,.629,0,.968,0,.26.01.52.009.781a.533.533,0,0,1-.771.557,9.907,9.907,0,0,1-3.966-2.477,10.365,10.365,0,0,1-2.423-3.866,10.2,10.2,0,0,1-.525-2.578c-.006-.078-.021-.156-.031-.234Z"
+                transform="translate(-627.359 -89.203)"
+                fill="#fff"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/wasabiwallet" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19.571"
+              height="20"
+              viewBox="0 0 19.571 20"
+            >
+              <path
+                id="Path_8"
+                data-name="Path 8"
+                d="M0,76.033l.916-1.067,5.313-6.175q.686-.8,1.373-1.594a.063.063,0,0,0,.007-.094Q6.7,65.789,5.8,64.472l-1.853-2.7L2.007,58.954.027,56.073,0,56.038a.38.38,0,0,1,.04,0q2.872,0,5.744,0a.085.085,0,0,1,.06.032Q7.065,57.833,8.28,59.6l2.488,3.62.113.164.212-.246,4.924-5.723q.58-.674,1.161-1.347a.1.1,0,0,1,.066-.034q.826,0,1.651,0l.034,0-.037.046L15.13,60.453l-3.45,4.008a.055.055,0,0,0-.006.081q1.091,1.584,2.18,3.17l2.941,4.279,2.349,3.418.407.592a.188.188,0,0,0,.02.021s0,.01-.005.01H13.74c-.012-.02-.024-.041-.037-.06l-.387-.562-2.351-3.422-2.5-3.644-.053-.076-.036.04L5.78,71.32,1.873,75.861c-.048.056-.094.115-.14.172Zm2.352-18.7c.014.021.022.036.032.049L6.493,63.26,10.9,69.57q1.81,2.589,3.62,5.179a.088.088,0,0,0,.083.043h2.6c-.013-.022-.021-.036-.031-.05l-3.556-5.086L9.858,64.28q-2.415-3.454-4.829-6.908a.085.085,0,0,0-.079-.041H2.407l-.055,0"
+                transform="translate(0 -56.033)"
+                fill="#fff"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.reddit.com/r/WasabiWallet/" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19.967"
+              height="17.765"
+              viewBox="0 0 19.967 17.765"
+            >
+              <g
+                id="Group_33"
+                data-name="Group 33"
+                transform="translate(-2083.593 -529.577)"
+              >
+                <path
+                  id="Path_14"
+                  data-name="Path 14"
+                  d="M2025.036,116c1.014.218,1.978.417,2.936.641.1.024.209.176.252.291a1.57,1.57,0,0,0,1.456,1.073,1.522,1.522,0,0,0,.78-2.834,1.486,1.486,0,0,0-1.878.285.5.5,0,0,1-.548.169c-1.007-.214-2.018-.41-3.028-.61-.618-.123-.791-.007-.924.617q-.485,2.292-.966,4.584c-.036.171-.067.3-.3.31a10.471,10.471,0,0,0-5.293,1.654.4.4,0,0,1-.527-.03,2.206,2.206,0,0,0-2.484,3.645c.167.114.308.207.3.46a5.354,5.354,0,0,0,2.7,4.767,10.1,10.1,0,0,0,4.761,1.628,11,11,0,0,0,7.285-1.6,5.32,5.32,0,0,0,2.752-4.805.447.447,0,0,1,.251-.421,2.177,2.177,0,0,0,.829-2.494,2.2,2.2,0,0,0-3.377-1.064c-.133.1-.233.172-.408.057a10.411,10.411,0,0,0-5.212-1.7c-.257-.015-.321-.113-.264-.357.127-.55.234-1.1.351-1.656.18-.854.361-1.709.552-2.61"
+                  transform="translate(70.047 414.618)"
+                  fill="#fff"
+                />
+                <path
+                  id="Path_15"
+                  data-name="Path 15"
+                  d="M2296.53,364.064a1.429,1.429,0,0,1-1.321,1.444,1.487,1.487,0,0,1-1.583-1.519,1.442,1.442,0,0,1,1.469-1.438,1.468,1.468,0,0,1,1.435,1.513"
+                  transform="translate(-198.074 176.131)"
+                  fill="#3b3b3b"
+                />
+                <path
+                  id="Path_16"
+                  data-name="Path 16"
+                  d="M2178.977,364.755a1.447,1.447,0,1,1,.021-2.894,1.447,1.447,0,1,1-.021,2.894"
+                  transform="translate(-88.909 176.779)"
+                  fill="#3b3b3b"
+                />
+                <path
+                  id="Path_17"
+                  data-name="Path 17"
+                  d="M2202.2,446.523a5.674,5.674,0,0,1-3.41-.964c-.091-.06-.22-.128-.24-.214-.031-.134-.034-.343.046-.416a.494.494,0,0,1,.435-.071c.263.108.485.312.745.427a5.572,5.572,0,0,0,5.479-.319,2.015,2.015,0,0,1,.2-.119.355.355,0,0,1,.5.171c.1.188.016.324-.154.444a5.751,5.751,0,0,1-3.605,1.062"
+                  transform="translate(-108.653 98.79)"
+                  fill="#3b3b3b"
+                />
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://youtube.com/c/WasabiWallet" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="16.389"
+              viewBox="0 0 20 16.389"
+            >
+              <path
+                id="Path_11"
+                data-name="Path 11"
+                d="M3357.333,181.248h-10.818a4.591,4.591,0,0,0-4.591,4.591v7.208a4.591,4.591,0,0,0,4.591,4.591h10.818a4.591,4.591,0,0,0,4.591-4.591v-7.208a4.591,4.591,0,0,0-4.591-4.591m-7.938,11.91c.02-2.347.039-4.672.059-7.026l6.15,3.565-6.208,3.461"
+                transform="translate(-3341.924 -181.248)"
+                fill="#fff"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/wasabiwallet.io/" target="_blank">
+            <svg
+              id="Group_34"
+              data-name="Group 34"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="19.991"
+              height="20"
+              viewBox="0 0 19.991 20"
+            >
+              <defs>
+                <clipPath id="clip-path">
+                  <rect
+                    id="Rectangle_12"
+                    data-name="Rectangle 12"
+                    width="19.991"
+                    height="20"
+                    fill="none"
+                  />
+                </clipPath>
+              </defs>
+              <g
+                id="Group_34-2"
+                data-name="Group 34"
+                clip-path="url(#clip-path)"
+              >
+                <path
+                  id="Path_18"
+                  data-name="Path 18"
+                  d="M5.117,0h9.76c.2.033.411.054.612.1a5.447,5.447,0,0,1,4.338,4.118c.081.292.11.6.164.9v9.76c-.012.07-.02.141-.038.209a9.2,9.2,0,0,1-.421,1.554,5.345,5.345,0,0,1-5.084,3.342c-2.966.042-5.934.012-8.9.009A5.321,5.321,0,0,1,2.4,19.008,5.434,5.434,0,0,1,0,14.365q-.011-4.372,0-8.745A5.325,5.325,0,0,1,.108,4.5,5.425,5.425,0,0,1,4.218.164c.292-.081.6-.111.9-.164m13.1,10q0-2.166,0-4.332a3.98,3.98,0,0,0-.2-1.343,3.741,3.741,0,0,0-3.662-2.549c-2.908,0-5.816-.009-8.723.008a4.227,4.227,0,0,0-1.3.2A3.7,3.7,0,0,0,1.776,5.629q-.006,4.362,0,8.723a3.888,3.888,0,0,0,.2,1.323,3.729,3.729,0,0,0,3.629,2.538q4.391.012,8.782,0a3.7,3.7,0,0,0,3.141-1.592,3.748,3.748,0,0,0,.689-2.274q0-2.176,0-4.352"
+                  transform="translate(0)"
+                  fill="#fff"
+                />
+                <path
+                  id="Path_19"
+                  data-name="Path 19"
+                  d="M131.5,126.278a5.151,5.151,0,1,1-5.158-5.149,5.173,5.173,0,0,1,5.158,5.149m-1.777,0a3.374,3.374,0,1,0-3.372,3.376,3.378,3.378,0,0,0,3.372-3.376"
+                  transform="translate(-116.353 -116.286)"
+                  fill="#fff"
+                />
+                <path
+                  id="Path_20"
+                  data-name="Path 20"
+                  d="M353.053,83.706a1.295,1.295,0,1,1-1.329,1.274,1.3,1.3,0,0,1,1.329-1.274"
+                  transform="translate(-337.66 -80.359)"
+                  fill="#fff"
+                />
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://t.me/WasabiWallet" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="16.659"
+              viewBox="0 0 20 16.659"
+            >
+              <path
+                id="Path_14"
+                data-name="Path 14"
+                d="M5399.488,169.965l.365-4.741,8.545-7.659s.156-.209,0-.261-.243-.121-.721.174-10.43,6.548-10.43,6.548l-4.641-1.407s-.726-.277-.621-.731c.078-.338.521-.572.833-.676s17.871-6.825,17.871-6.825.781-.313,1.146.313c.313.469,0,1.56,0,1.56l-2.97,13.862s-.179.818-.864.846a.868.868,0,0,1-.486-.133c-1.044-.638-4.876-3.5-4.876-3.5l-2.292,2.188a1.605,1.605,0,0,1-.86.443"
+                transform="translate(-5391.976 -154.308)"
+                fill="#fff"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://discord.gg/nm7YHEZnJs" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="15.6"
+              viewBox="0 0 20 15.6"
+            >
+              <path
+                id="Path_10"
+                data-name="Path 10"
+                d="M2713.71,192.459a17.682,17.682,0,0,0-4.139-1.349l-.511,1.209a14.721,14.721,0,0,0-2-.177v-.009s-.088,0-.235,0-.235,0-.235,0v.009a14.72,14.72,0,0,0-2,.177l-.511-1.209a17.682,17.682,0,0,0-4.138,1.349,17.043,17.043,0,0,0-3.022,11.625,21.405,21.405,0,0,0,5.02,2.626,14.985,14.985,0,0,0,1.095-1.812,6.016,6.016,0,0,1-1.674-.791l.419-.372a11.416,11.416,0,0,0,5.045,1.139,14.419,14.419,0,0,0,5.041-1.139h0l.419.372a6.02,6.02,0,0,1-1.674.791,14.985,14.985,0,0,0,1.095,1.812,21.4,21.4,0,0,0,5.02-2.626,17.044,17.044,0,0,0-3.022-11.625m-10.2,9.37a2.114,2.114,0,1,1,1.813-2.093,1.968,1.968,0,0,1-1.813,2.093m6.65,0a2.114,2.114,0,1,1,1.814-2.093,1.968,1.968,0,0,1-1.814,2.093"
+                transform="translate(-2696.83 -191.11)"
+                fill="#fff"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <section class="video-section">
+        <div class="video-homepage">
+          <img
+            class="mobile_video_bg d-block"
+            src="img/video_bg.png"
+            alt="Wasabi Wallet - video"
+          />
+        </div>
+        <div class="container">
+          <div class="row vh-100">
+            <div class="col-lg-11 offset-lg-1 position-relative">
+              <div class="floating-home">
                 <div class="row">
-                    <div class="col-lg-3 offset-lg-1">
-                        <h2 class="title">Bitcoin is not private</h2>
+                  <div class="col-lg-5">
+                    <h1 class="title"><strong>Wasabi Wallet</strong></h1>
+                    <p class="mb-4">
+                      The most popular Bitcoin wallet for desktop with coinjoin.
+                      Free & open-source. Non-custodial. <br />Reclaim your
+                      privacy today.
+                    </p>
+                    <a href="index.html#download" class="btn btn-primary"
+                      >Download</a
+                    >
+                    <a
+                      href="#bitcoinisnotprivate"
+                      class="btn btn-blur affix-arrowright"
+                      >Read more</a
+                    >
+                  </div>
+                  <div class="col-lg-4 offset-lg-3">
+                    <div class="box-blur d-none d-lg-block">
+                      <div class="title-small mb-3">No default coordinator</div>
+                      <p>
+                        Starting from June 1, 2024, Wasabi Wallet will no longer
+                        have a default coinjoin coordinator.
+                      </p>
+                      <strong
+                        ><a
+                          href="https://github.com/WalletWasabi"
+                          target="_blank"
+                          class="affix-arrowright"
+                          >Don't trust, verify</a
+                        ></strong
+                      >
                     </div>
-                    <div class="col-lg-4">
-                        <p>Bitcoin transactions are publicly visible to anyone. That’s great to prevent inflation and fraud without relying on third parties. But it has some privacy drawbacks.</p>
-                        <p>Coins in the Bitcoin network are called UTXOs (Unspent Transaction Outputs). Each coin has a unique transaction history and is accounted for by every full nodes. So all Bitcoin transactions are easily trackable at all times.</p>
-                    </div>
+                  </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-11 offset-lg-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1504" height="158" viewBox="0 0 1504 158" class="w-100">
-                            <g id="Group_25" data-name="Group 25" transform="translate(-42 -1874)">
-                                <g id="Rectangle_10" data-name="Rectangle 10" transform="translate(416 1920)" fill="none" stroke="#77C600" stroke-width="2">
-                                    <rect width="260" height="66" rx="33" stroke="none" />
-                                    <rect x="0.5" y="0.5" width="259" height="65" rx="32.5" fill="none" />
-                                </g>
-                                <g id="Rectangle_10-2" data-name="Rectangle 10" transform="translate(696 1920)" fill="none" stroke="#77C600" stroke-width="2">
-                                    <rect width="260" height="66" rx="33" stroke="none" />
-                                    <rect x="0.5" y="0.5" width="259" height="65" rx="32.5" fill="none" />
-                                </g>
-                                <g id="Rectangle_10-3" data-name="Rectangle 10" transform="translate(976 1920)" fill="none" stroke="#77C600" stroke-width="2">
-                                    <rect width="260" height="66" rx="33" stroke="none" />
-                                    <rect x="0.5" y="0.5" width="259" height="65" rx="32.5" fill="none" />
-                                </g>
-                                <g id="Rectangle_10-4" data-name="Rectangle 10" transform="translate(1286 1874)" fill="none" stroke="#77C600" stroke-width="2">
-                                    <rect width="260" height="66" rx="33" stroke="none" />
-                                    <rect x="0.5" y="0.5" width="259" height="65" rx="32.5" fill="none" />
-                                </g>
-                                <g id="Rectangle_11" data-name="Rectangle 11" transform="translate(1286 1966)" fill="none" stroke="#77C600" stroke-width="2">
-                                    <rect width="260" height="66" rx="33" stroke="none" />
-                                    <rect x="0.5" y="0.5" width="259" height="65" rx="32.5" fill="none" />
-                                </g>
-                                <path id="Path_7" data-name="Path 7" d="M-279.661,0h1214" transform="translate(321.661 1953)" fill="none" stroke="#77C600" stroke-width="2" />
-                                <path id="Path_6" data-name="Path 6" d="M3502,1902.8h-30v91.527h30" transform="translate(-2216 4.204)" fill="none" stroke="#77C600" stroke-width="2" />
+                <div class="row mt-5">
+                  <div class="col-lg-12 text-end mt-5">
+                    <div class="title-huge">Privacy</div>
+                    <div class="title-huge">
+                      by default
+                      <a href="#coinjoin" class="btn btn-giga">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40.713"
+                          height="40.713"
+                          viewBox="0 0 40.713 40.713"
+                        >
+                          <g
+                            id="Group_14"
+                            data-name="Group 14"
+                            transform="translate(-1608.287 -827.287)"
+                          >
+                            <g
+                              id="Group_13"
+                              data-name="Group 13"
+                              transform="translate(39.908 8.908)"
+                            >
+                              <line
+                                id="Line_4"
+                                data-name="Line 4"
+                                x2="36.417"
+                                y2="36.417"
+                                transform="translate(1570.5 820.5)"
+                                fill="none"
+                                stroke="#fff"
+                                stroke-linecap="round"
+                                stroke-width="3"
+                              />
+                              <line
+                                id="Line_5"
+                                data-name="Line 5"
+                                y2="26.301"
+                                transform="translate(1607.592 831.29)"
+                                fill="none"
+                                stroke="#fff"
+                                stroke-linecap="round"
+                                stroke-width="3"
+                              />
+                              <line
+                                id="Line_6"
+                                data-name="Line 6"
+                                x2="24.952"
+                                transform="translate(1582.639 857.592)"
+                                fill="none"
+                                stroke="#fff"
+                                stroke-linecap="round"
+                                stroke-width="3"
+                              />
                             </g>
+                          </g>
                         </svg>
+                      </a>
                     </div>
+                  </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-3 offset-lg-4">Blog post: <strong class="d-block mt-2">BITCOIN PRIVACY PRIMER</strong> <a href="https://blog.wasabiwallet.io/bitcoin-privacy-primer/" target="_blank" class="btn btn-secondary affix-arrowright mt-4">Read it here</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 offset-lg-6 text-end">
-                        <h3 class="title-big mt-5 mt-lg-0">reclaim your privacy</h3>
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 offset-lg-1">
-                        <h2 class="title">Privacy by default</h2>
-                    </div>
-                    <div class="col-lg-4">
-                        <p>Get started with good privacy by default. All traffic is routed via Tor. Coinjoins happen automatically. Your wallet transactions are downloaded with block filters. Easily reclaim your privacy with collaborative bitcoin transactions.</p>
-                        <p>Enjoy optional insights and control with hardware wallets, custom privacy profiles, coin control, privacy warnings, change avoidance, personal full node, developer tools and more.</p>
-                    </div>
-                    <div class="col-lg-2 offset-lg-1 position-relative"><img src="img/screen_shot1.png" class="pull-img pull-img-to-right">
-                    </div>
-                </div>
+          </div>
+        </div>
+      </section>
+      <section id="bitcoinisnotprivate">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 offset-lg-1">
+              <h2 class="title">Bitcoin is not private</h2>
             </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 offset-lg-1">
-                        <h2 class="title">Why Wasabi Wallet</h2><a href="index.html#download" class="btn btn-primary">Download</a>
-                    </div>
-                    <div class="col-lg-4 mt-5 mt-lg-0">
-                        <div class="box">
-                            <h3 class="title-small position-relative ms-5 mt-4"><img src="img/icon1.svg" class="icon-pull-left"> OPEN SOURCE</h3>
-                            <p class="ms-5">Wasabi Wallet is a free and open-source software. Anyone can see, verify and even contribute to the code.</p>
-                            <h3 class="title-small position-relative ms-5 mt-5"><img src="img/icon2.svg" class="icon-pull-left"> STRONG PRIVACY</h3>
-                            <p class="ms-5">Neither the public nor developers can breach your privacy. Use of coinjoins, block filters and the Tor anonymity network guarantee that.</p>
-                            <h3 class="title-small position-relative ms-5 mt-5"><img src="img/icon3.svg" class="icon-pull-left"> SELF-CUSTODIAL</h3>
-                            <p class="ms-5">Not your keys, not your bitcoin. You're in full control of your private keys.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mt-5 mt-lg-0">
-                        <div class="box">
-                            <h3 class="title-small position-relative ms-5 mt-4"><img src="img/icon4.svg" class="icon-pull-left"> SIMPLE</h3>
-                            <p class="ms-5">Good privacy on bitcoin now just works. Use a simple yet functional wallet with all the features you'd expect.</p>
-                            <h3 class="title-small position-relative ms-5 mt-5"><img src="img/icon5.svg" class="icon-pull-left"> ACCESSIBLE</h3>
-                            <p class="ms-5">Coinjoin with any amount, from 5,000 sats to 40,000 BTC and anything in between. WabiSabi is the coinjoin protocol under the hood that makes it work.</p>
-                            <h3 class="title-small position-relative ms-5 mt-5"><img src="img/icon6.svg" class="icon-pull-left"> AFFORDABLE</h3>
-                            <p class="ms-5">Pay as much as 0.3% of coordinator fees, plus applicable mining fees. For amounts under 0.01 BTC or coming from previous coinjoins, coordinator fees are 0%.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-4">
+              <p>
+                Bitcoin transactions are publicly visible to anyone. That’s
+                great to prevent inflation and fraud without relying on third
+                parties. But it has some privacy drawbacks.
+              </p>
+              <p>
+                Coins in the Bitcoin network are called UTXOs (Unspent
+                Transaction Outputs). Each coin has a unique transaction history
+                and is accounted for by every full nodes. So all Bitcoin
+                transactions are easily trackable at all times.
+              </p>
             </div>
-        </section>
-        <section id="coinjoin" class="coinjoin-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 offset-lg-1">
-                        <h2 class="title">A coinjoin is...</h2><a href="coinjoin.html" class="btn btn-secondary affix-arrowright mt-4">Read more</a>
-                    </div>
-                    <div class="col-lg-4 mt-5 mt-lg-0">
-                        <p>A collaborative bitcoin transaction. In a coinjoin, many different users participate together in one single collaborative transaction sending bitcoin to themselves.</p>
-                        <p>A coinjoin transaction has many standard outputs of the same amounts, which makes it very hard to track them back to their initial inputs.</p>
-                        <p>Coinjoins allow users to conceal the history of their coins from the public to make their UTXOs fungible on the public Bitcoin network.</p>
-                    </div>
-                    <div class="col-lg-2 offset-lg-1 position-relative"><img src="img/screen_shot2.png" class="pull-img pull-img-to-right">
-                    </div>
-                </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-11 offset-lg-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1504"
+                height="158"
+                viewBox="0 0 1504 158"
+                class="w-100"
+              >
+                <g
+                  id="Group_25"
+                  data-name="Group 25"
+                  transform="translate(-42 -1874)"
+                >
+                  <g
+                    id="Rectangle_10"
+                    data-name="Rectangle 10"
+                    transform="translate(416 1920)"
+                    fill="none"
+                    stroke="#77C600"
+                    stroke-width="2"
+                  >
+                    <rect width="260" height="66" rx="33" stroke="none" />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="259"
+                      height="65"
+                      rx="32.5"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Rectangle_10-2"
+                    data-name="Rectangle 10"
+                    transform="translate(696 1920)"
+                    fill="none"
+                    stroke="#77C600"
+                    stroke-width="2"
+                  >
+                    <rect width="260" height="66" rx="33" stroke="none" />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="259"
+                      height="65"
+                      rx="32.5"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Rectangle_10-3"
+                    data-name="Rectangle 10"
+                    transform="translate(976 1920)"
+                    fill="none"
+                    stroke="#77C600"
+                    stroke-width="2"
+                  >
+                    <rect width="260" height="66" rx="33" stroke="none" />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="259"
+                      height="65"
+                      rx="32.5"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Rectangle_10-4"
+                    data-name="Rectangle 10"
+                    transform="translate(1286 1874)"
+                    fill="none"
+                    stroke="#77C600"
+                    stroke-width="2"
+                  >
+                    <rect width="260" height="66" rx="33" stroke="none" />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="259"
+                      height="65"
+                      rx="32.5"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Rectangle_11"
+                    data-name="Rectangle 11"
+                    transform="translate(1286 1966)"
+                    fill="none"
+                    stroke="#77C600"
+                    stroke-width="2"
+                  >
+                    <rect width="260" height="66" rx="33" stroke="none" />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="259"
+                      height="65"
+                      rx="32.5"
+                      fill="none"
+                    />
+                  </g>
+                  <path
+                    id="Path_7"
+                    data-name="Path 7"
+                    d="M-279.661,0h1214"
+                    transform="translate(321.661 1953)"
+                    fill="none"
+                    stroke="#77C600"
+                    stroke-width="2"
+                  />
+                  <path
+                    id="Path_6"
+                    data-name="Path 6"
+                    d="M3502,1902.8h-30v91.527h30"
+                    transform="translate(-2216 4.204)"
+                    fill="none"
+                    stroke="#77C600"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
             </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 offset-lg-1">
-                        <h2 class="title">THE API FOR COINJOINS</h2>
-                        <p>With a simple, yet powerful Coinjoin API, enterprises can protect their users' privacy with collaborative Bitcoin transactions.</p><a href="integrations.html" class="btn btn-secondary affix-arrowright mt-4">Read more</a>
-                    </div>
-                    <div class="col-lg-8 mt-5 mt-lg-0 no-break-holder">
-                        <div class="row no-break equal">
-                            <div class="col-10 col-lg-5">
-                                <div class="box">
-                                    <h3 class="title-small mt-4 green-text">New Revenue Stream</h3>
-                                    <p>Bitcoin companies and wallet developers enjoy several benefits by integrating the coinjoin API into their operations.</p><img src="img/graph.png" class="d-block w-50 mx-auto">
-                                </div>
-                            </div>
-                            <div class="col-10 col-lg-5">
-                                <div class="box">
-                                    <h3 class="title-small mt-4 green-text">Fast Time to Market</h3>
-                                    <p>Get up and running in a few weeks on a highly liquid coinjoin coordinator. Deliver high-value and scalable features at a fraction of the cost of building from scratch.</p><img src="img/clock.png" class="d-block w-50 mx-auto">
-                                </div>
-                            </div>
-                            <div class="col-10 col-lg-5">
-                                <div class="box">
-                                    <h3 class="title-small mt-4 green-text">Adhere to Privacy Laws</h3>
-                                    <p>Respect local and regional consumer privacy laws by protecting personal user transaction information.</p><img src="img/shield.png" class="d-block w-50 mx-auto">
-                                </div>
-                            </div>
-                            <div class="col-10 col-lg-5">
-                                <div class="box">
-                                    <h3 class="title-small mt-4 green-text">Low Maintenance</h3>
-                                    <p>Deploy-and-forget maintenance with a backend infrastructure overhead fully managed by Wasabi Wallet offering a high uptime.</p><img src="img/feather.png" class="d-block w-50 mx-auto">
-                                </div>
-                            </div>
-                            <div class="col-10 col-lg-5">
-                                <div class="box">
-                                    <h3 class="title-small mt-4 green-text">Reduce Data Breach Risk</h3>
-                                    <p>Mitigate the impact to your customers in case of data breaches from exchange and brokerage platforms.</p><img src="img/people.png" class="d-block w-50 mx-auto">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-5 mt-lg-0">
-                    <div class="col-lg-4 offset-lg-8 text-start text-lg-end">
-                        <div class="title-small mb-4">Get in Touch</div>
-                        <p>If you are interested in learning more about the coinjoin API, please contact us at:</p><a href="https://x.com/wasabiwallet" target="_blank" class="btn btn-primary mt-4">Twitter</a>
-                    </div>
-                </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 offset-lg-4">
+              Blog post:
+              <strong class="d-block mt-2">BITCOIN PRIVACY PRIMER</strong>
+              <a
+                href="https://blog.wasabiwallet.io/bitcoin-privacy-primer/"
+                target="_blank"
+                class="btn btn-secondary affix-arrowright mt-4"
+                >Read it here</a
+              >
             </div>
-        </section>
-        <section>
-            <div class="container">
+          </div>
+          <div class="row">
+            <div class="col-lg-6 offset-lg-6 text-end">
+              <h3 class="title-big mt-5 mt-lg-0">reclaim your privacy</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 offset-lg-1">
+              <h2 class="title">Privacy by default</h2>
+            </div>
+            <div class="col-lg-4">
+              <p>
+                Get started with good privacy by default. All traffic is routed
+                via Tor. Coinjoins happen automatically. Your wallet
+                transactions are downloaded with block filters. Easily reclaim
+                your privacy with collaborative bitcoin transactions.
+              </p>
+              <p>
+                Enjoy optional insights and control with hardware wallets,
+                custom privacy profiles, coin control, privacy warnings, change
+                avoidance, personal full node, developer tools and more.
+              </p>
+            </div>
+            <div class="col-lg-2 offset-lg-1 position-relative">
+              <img
+                src="img/screen_shot1.png"
+                class="pull-img pull-img-to-right"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 offset-lg-1">
+              <h2 class="title">Why Wasabi Wallet</h2>
+              <a href="index.html#download" class="btn btn-primary">Download</a>
+            </div>
+            <div class="col-lg-4 mt-5 mt-lg-0">
+              <div class="box">
+                <h3 class="title-small position-relative ms-5 mt-4">
+                  <img src="img/icon1.svg" class="icon-pull-left" /> OPEN SOURCE
+                </h3>
+                <p class="ms-5">
+                  Wasabi Wallet is a free and open-source software. Anyone can
+                  see, verify and even contribute to the code.
+                </p>
+                <h3 class="title-small position-relative ms-5 mt-5">
+                  <img src="img/icon2.svg" class="icon-pull-left" /> STRONG
+                  PRIVACY
+                </h3>
+                <p class="ms-5">
+                  Neither the public nor developers can breach your privacy. Use
+                  of coinjoins, block filters and the Tor anonymity network
+                  guarantee that.
+                </p>
+                <h3 class="title-small position-relative ms-5 mt-5">
+                  <img src="img/icon3.svg" class="icon-pull-left" />
+                  SELF-CUSTODIAL
+                </h3>
+                <p class="ms-5">
+                  Not your keys, not your bitcoin. You're in full control of
+                  your private keys.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 mt-5 mt-lg-0">
+              <div class="box">
+                <h3 class="title-small position-relative ms-5 mt-4">
+                  <img src="img/icon4.svg" class="icon-pull-left" /> SIMPLE
+                </h3>
+                <p class="ms-5">
+                  Good privacy on bitcoin now just works. Use a simple yet
+                  functional wallet with all the features you'd expect.
+                </p>
+                <h3 class="title-small position-relative ms-5 mt-5">
+                  <img src="img/icon5.svg" class="icon-pull-left" /> ACCESSIBLE
+                </h3>
+                <p class="ms-5">
+                  Coinjoin with any amount, from 5,000 sats to 40,000 BTC and
+                  anything in between. WabiSabi is the coinjoin protocol under
+                  the hood that makes it work.
+                </p>
+                <h3 class="title-small position-relative ms-5 mt-5">
+                  <img src="img/icon6.svg" class="icon-pull-left" /> AFFORDABLE
+                </h3>
+                <p class="ms-5">
+                  Pay as much as 0.3% of coordinator fees, plus applicable
+                  mining fees. For amounts under 0.01 BTC or coming from
+                  previous coinjoins, coordinator fees are 0%.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="coinjoin" class="coinjoin-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 offset-lg-1">
+              <h2 class="title">A coinjoin is...</h2>
+              <a
+                href="coinjoin.html"
+                class="btn btn-secondary affix-arrowright mt-4"
+                >Read more</a
+              >
+            </div>
+            <div class="col-lg-4 mt-5 mt-lg-0">
+              <p>
+                A collaborative bitcoin transaction. In a coinjoin, many
+                different users participate together in one single collaborative
+                transaction sending bitcoin to themselves.
+              </p>
+              <p>
+                A coinjoin transaction has many standard outputs of the same
+                amounts, which makes it very hard to track them back to their
+                initial inputs.
+              </p>
+              <p>
+                Coinjoins allow users to conceal the history of their coins from
+                the public to make their UTXOs fungible on the public Bitcoin
+                network.
+              </p>
+            </div>
+            <div class="col-lg-2 offset-lg-1 position-relative">
+              <img
+                src="img/screen_shot2.png"
+                class="pull-img pull-img-to-right"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 offset-lg-1">
+              <h2 class="title">THE API FOR COINJOINS</h2>
+              <p>
+                With a simple, yet powerful Coinjoin API, enterprises can
+                protect their users' privacy with collaborative Bitcoin
+                transactions.
+              </p>
+              <a
+                href="integrations.html"
+                class="btn btn-secondary affix-arrowright mt-4"
+                >Read more</a
+              >
+            </div>
+            <div class="col-lg-8 mt-5 mt-lg-0 no-break-holder">
+              <div class="row no-break equal">
+                <div class="col-10 col-lg-5">
+                  <div class="box">
+                    <h3 class="title-small mt-4 green-text">
+                      New Revenue Stream
+                    </h3>
+                    <p>
+                      Bitcoin companies and wallet developers enjoy several
+                      benefits by integrating the coinjoin API into their
+                      operations.
+                    </p>
+                    <img src="img/graph.png" class="d-block w-50 mx-auto" />
+                  </div>
+                </div>
+                <div class="col-10 col-lg-5">
+                  <div class="box">
+                    <h3 class="title-small mt-4 green-text">
+                      Fast Time to Market
+                    </h3>
+                    <p>
+                      Get up and running in a few weeks on a highly liquid
+                      coinjoin coordinator. Deliver high-value and scalable
+                      features at a fraction of the cost of building from
+                      scratch.
+                    </p>
+                    <img src="img/clock.png" class="d-block w-50 mx-auto" />
+                  </div>
+                </div>
+                <div class="col-10 col-lg-5">
+                  <div class="box">
+                    <h3 class="title-small mt-4 green-text">
+                      Adhere to Privacy Laws
+                    </h3>
+                    <p>
+                      Respect local and regional consumer privacy laws by
+                      protecting personal user transaction information.
+                    </p>
+                    <img src="img/shield.png" class="d-block w-50 mx-auto" />
+                  </div>
+                </div>
+                <div class="col-10 col-lg-5">
+                  <div class="box">
+                    <h3 class="title-small mt-4 green-text">Low Maintenance</h3>
+                    <p>
+                      Deploy-and-forget maintenance with a backend
+                      infrastructure overhead fully managed by Wasabi Wallet
+                      offering a high uptime.
+                    </p>
+                    <img src="img/feather.png" class="d-block w-50 mx-auto" />
+                  </div>
+                </div>
+                <div class="col-10 col-lg-5">
+                  <div class="box">
+                    <h3 class="title-small mt-4 green-text">
+                      Reduce Data Breach Risk
+                    </h3>
+                    <p>
+                      Mitigate the impact to your customers in case of data
+                      breaches from exchange and brokerage platforms.
+                    </p>
+                    <img src="img/people.png" class="d-block w-50 mx-auto" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5 mt-lg-0">
+            <div class="col-lg-4 offset-lg-8 text-start text-lg-end">
+              <div class="title-small mb-4">Get in Touch</div>
+              <p>
+                If you are interested in learning more about the coinjoin API,
+                please contact us at:
+              </p>
+              <a
+                href="https://x.com/wasabiwallet"
+                target="_blank"
+                class="btn btn-primary mt-4"
+                >Twitter</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row align-items-end">
+            <div class="col-lg-6 offset-lg-1">
+              <div class="row">
+                <div class="col-lg-6">
+                  <h2 class="title">Pay 0.3% or less</h2>
+                </div>
+                <div class="col-lg-6">
+                  <p>
+                    Pay as much as 0.3% of coordinator fees, plus applicable
+                    mining fees. For amounts under 0.01 BTC or coming from
+                    previous coinjoins, coordinator fees are 0%.
+                  </p>
+                </div>
+              </div>
+              <div class="row mt-5 equal">
+                <div class="col-lg-4 text-center mb-2 mb-lg-0">
+                  <div class="box small-text">
+                    <img
+                      src="img/icon_white1.svg"
+                      class="icon-size d-block mx-auto mb-4"
+                    />
+                    <p>
+                      For savers. Only participates in coinjoins during the
+                      cheapest parts of the week.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4 text-center mb-2 mb-lg-0">
+                  <div class="box small-text">
+                    <img
+                      src="img/icon_white2.svg"
+                      class="icon-size d-block mx-auto mb-4"
+                    />
+                    <p>
+                      Getting things done. Geared towards speed and convenience.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4 text-center mb-2 mb-lg-0">
+                  <div class="box small-text">
+                    <img
+                      src="img/icon_white3.svg"
+                      class="icon-size d-block mx-auto mb-4"
+                    />
+                    <p>
+                      Choice of the paranoid. Optimizes for privacy at all
+                      costs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 text-end mt-5 mt-lg-0">
+              <a
+                href="https://docs.wasabiwallet.io/using-wasabi/CoinJoin.html#music-box"
+                target="_blank"
+                class="btn btn-secondary affix-arrowright mb-4"
+                >Read more</a
+              >
+              <h3 class="title-big">Friends Don’t Pay</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 offset-lg-1">
+              <h2 class="title">FAQ</h2>
+            </div>
+            <div class="col-lg-8">
+              <div class="card">
+                <input type="checkbox" id="faq1" />
+                <label for="faq1">WHAT IS A “COINJOIN”?</label>
+                <div class="card-content">
+                  <p>
+                    A coinjoin is a collaborative transaction between multiple
+                    peers.
+                  </p>
+                  <p>
+                    Usually, but not necessarily, it consists of some standard
+                    output denominations that participants should break their
+                    coins in to. This makes it difficult for outside parties to
+                    trace where a particular coin was sent to (as opposed to
+                    regular bitcoin transactions, where there is usually one
+                    sender and one receiver).
+                  </p>
+                  <p>
+                    Coinjoins can be done with non-custodial software like
+                    Wasabi Wallet, that eliminates the risk of funds
+                    disappearing or being stolen. The funds will always be in a
+                    bitcoin address that the user controls and not even
+                    developers can alter the transaction or redirect the funds.
+                  </p>
+                  <p>
+                    Coinjoin basically means: “when you want to make a
+                    transaction, find someone else who also wants to make a
+                    transaction and make a joint transaction together”.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <input type="checkbox" id="faq2" />
+                <label for="faq2">WHAT ARE THE FEES FOR COINJOINS?</label>
+                <div class="card-content">
+                  <p>
+                    Coinjoining coins with a value above 0.01 BTC costs 0.3% as
+                    a coordinator fee + mining fees. Inputs of 0.01 BTC or below
+                    don't pay coordinator fees, nor do remixes, even after one
+                    transaction. Thus, a payment made with coinjoined funds
+                    allows the sender and the recipient to remix their coins
+                    without paying any coordinator fees.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <input type="checkbox" id="faq3" />
+                <label for="faq3"
+                  >DO I NEED TO TRUST WASABI WITH MY COINS?</label
+                >
+                <div class="card-content">
+                  <p>
+                    No, Wasabi’s coinjoin implementation is trustless by design.
+                    The participants do not need to trust each other or the
+                    coordinator. Since only the user knows the private keys,
+                    only he can sign the transaction, which will only be done
+                    after verifying that everything is alright. Nobody can
+                    neither steal your coins, nor figure out which outputs
+                    belong to which inputs.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <input type="checkbox" id="faq4" />
+                <label for="faq4">DOES WASABI SUPPORT HARDWARE WALLETS?</label>
+                <div class="card-content">
+                  <p>
+                    Wasabi does support hardware wallet usage through the
+                    standard Bitcoin-core HWI, although coinjoining straight
+                    from a hardware wallet is not yet possible.
+                  </p>
+                  <p>
+                    Since
+                    <a
+                      href="https://github.com/WalletWasabi/WalletWasabi/releases/tag/v2.0.7.2"
+                      target="_blank"
+                      >2.0.7.2</a
+                    >, you can coinjoin directly to an external wallet.
+                  </p>
+                  <p>
+                    Here's a
+                    <a
+                      href="https://github.com/WalletWasabi/blob/master/WalletWasabi.Documentation/WasabiCompatibility.md#officially-supported-hardware-wallets"
+                      target="_blank"
+                      >list</a
+                    >
+                    of the officially supported hardware wallets.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <input type="checkbox" id="faq5" />
+                <label for="faq5">IS THERE AN ANDROID/IOS VERSION?</label>
+                <div class="card-content">
+                  <p>
+                    No. Wasabi’s features, like coinjoin, require considerable
+                    computational power, which are currently not replicable on a
+                    smartphone.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <input type="checkbox" id="faq6" />
+                <label for="faq6">DOES WASABI SUPPORT ALTCOINS?</label>
+                <div class="card-content">
+                  <p>
+                    No. There are countless reasons why it is the only logical
+                    choice to be bitcoin-only. With Bitcoin we have a once in a
+                    lifetime opportunity to manifest libre sound money. If we
+                    succeed, then an utmost beautiful agora of sovereign
+                    individuals may emerge. If we fail, then this will conjure
+                    up the most horrific Orwellian nightmare. There is no room
+                    for wasted time and energy, this great work requires our
+                    full attention. Any line of code written to support a random
+                    shitcoin takes away scarce developer time to work on real
+                    problems.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <input type="checkbox" id="faq7" />
+                <label for="faq7"
+                  >WHAT ARE THE MINIMAL REQUIREMENTS TO RUN WASABI?</label
+                >
+                <div class="card-content">
+                  <p>
+                    Wasabi runs in most operating systems with 64-bit
+                    architecture.
+                  </p>
+                  <p>
+                    For the complete list of all the officially supported
+                    operating systems, click
+                    <a
+                      href="https://github.com/WalletWasabi/blob/master/WalletWasabi.Documentation/WasabiCompatibility.md#officially-supported-operating-systems"
+                      target="_blank"
+                      >here</a
+                    >.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <input type="checkbox" id="faq8" />
+                <label for="faq8">DO I NEED TO RUN TOR?</label>
+                <div class="card-content">
+                  <p>
+                    All Wasabi network traffic goes via Tor by default -there's
+                    no need to set up Tor by yourself. If you do already have
+                    Tor, and it is running, then Wasabi will try to use that
+                    first.
+                  </p>
+                  <p>
+                    You can turn off Tor in the Settings. Note that in this case
+                    you are still private, except when you coinjoin and when you
+                    broadcast a transaction. In the first case, the coordinator
+                    would know the links between your inputs and outputs based
+                    on your IP address. In the second case, if you happen to
+                    broadcast a transaction of yours to a full node that is
+                    spying on you, it will know the link between your
+                    transaction and your IP address.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <input type="checkbox" id="faq9" />
+                <label for="faq9"
+                  >WHY IS IT IMPORTANT TO USE A NEW ADDRESS FOR EVERY
+                  PAYMENT?</label
+                >
+                <div class="card-content">
+                  <p>
+                    Addresses being used more than once is very damaging to
+                    privacy because that links together more blockchain
+                    transactions with proof that they were created by the same
+                    entity. The most private and secure way to use bitcoin is to
+                    send a brand new address to each person who pays you. After
+                    an address has received a coin, it should never be used
+                    again. Also, a brand new bitcoin address should be demanded
+                    from the recipient when sending bitcoin. Wasabi has a user
+                    interface which discourages address reuse by removing from
+                    the GUI addresses which have received a coin.
+                  </p>
+                  <p>
+                    It has been argued that the phrase "bitcoin address" was a
+                    bad name for this object because it implies it can be reused
+                    like an email address. A better name would be something like
+                    "bitcoin invoice".
+                  </p>
+                  <p>
+                    Bitcoin isn't anonymous but pseudonymous, and the pseudonyms
+                    are bitcoin addresses. Avoiding address reuse is like
+                    throwing away a pseudonym after it has been used.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <input type="checkbox" id="faq10" />
+                <label for="faq10">WHAT IS THE PASSPHRASE USED FOR?</label>
+                <div class="card-content">
+                  <p>
+                    The passphrase you set is used as a 13th seed word (as
+                    described in
+                    <a
+                      href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"
+                      target="_blank"
+                      >BIP 39</a
+                    >) and to encrypt the private key of the extended private
+                    key (as described in
+                    <a
+                      href="https://github.com/bitcoin/bips/blob/master/bip-0038.mediawiki"
+                      target="_blank"
+                      >BIP 38</a
+                    >) to get an encrypted secret which is stored on the
+                    computer.
+                  </p>
+                  <p>
+                    Wasabi Wallet stores only the BIP38 encrypted blob, so
+                    you'll need to type in the passphrase to spend or coinjoin
+                    from the wallet.
+                  </p>
+                  <p>
+                    The passphrase will unlock your bitcoin to anyone who has
+                    access to the recovery words backup or the computer! If your
+                    backup gets compromised, this passphrase is the only thing
+                    protecting your precious sats.
+                  </p>
+                  <p>It is important to use a random and long passphrase.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-transparent" id="download">
+        <div class="container">
+          <div class="row align-items-center mt-5 mt-lg-0">
+            <div class="col-lg-11 offset-lg-1">
+              <div class="row align-items-top mb-5">
+                <div class="col-lg-6 order-1">
+                  <h3 class="title-huge">DOWNLOAD</h3>
+                </div>
+                <div class="col-6 order-3 order-lg-2">
+                  <div class="ps-0 ps-lg-5">
+                    <p class="small-text">
+                      <a
+                        href="https://github.com/WalletWasabi#build-from-source-code"
+                        target="_blank"
+                        ><i class="muted-text">or build it from source</i></a
+                      >
+                      <br /><a
+                        href="https://raw.githubusercontent.com/zkSNACKs/WalletWasabi/master/PGP.txt"
+                        target="_blank"
+                        >PGP: 6FB3 872B 5D42 292F 5992 0797 8563 4832 8949
+                        861E</a
+                      >
+                    </p>
+                    <a
+                      href="https://github.com/WalletWasabi/releases"
+                      target="_blank"
+                      class="affix-arrowright"
+                      >RELEASE NOTES</a
+                    >
+                  </div>
+                </div>
+                <div class="col-lg-12 order-2 order-lg-3">
+                  <h3 class="title-huge">WASABI WALLET</h3>
+                </div>
+              </div>
+              <div class="version-content d-none d-lg-block">
                 <div class="row align-items-end">
-                    <div class="col-lg-6 offset-lg-1">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <h2 class="title">Pay 0.3% or less</h2>
-                            </div>
-                            <div class="col-lg-6">
-                                <p>Pay as much as 0.3% of coordinator fees, plus applicable mining fees. For amounts under 0.01 BTC or coming from previous coinjoins, coordinator fees are 0%.</p>
-                            </div>
-                        </div>
-                        <div class="row mt-5 equal">
-                            <div class="col-lg-4 text-center mb-2 mb-lg-0">
-                                <div class="box small-text"><img src="img/icon_white1.svg" class="icon-size d-block mx-auto mb-4">
-                                    <p>For savers. Only participates in coinjoins during the cheapest parts of the week.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 text-center mb-2 mb-lg-0">
-                                <div class="box small-text"><img src="img/icon_white2.svg" class="icon-size d-block mx-auto mb-4">
-                                    <p>Getting things done. Geared towards speed and convenience.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 text-center mb-2 mb-lg-0">
-                                <div class="box small-text"><img src="img/icon_white3.svg" class="icon-size d-block mx-auto mb-4">
-                                    <p>Choice of the paranoid. Optimizes for privacy at all costs.</p>
-                                </div>
-                            </div>
-                        </div>
+                  <div class="col-sm-6 col-md-4 col-xl">
+                    <div class="download-box">
+                      <img
+                        src="img/icon_windows.svg"
+                        class="download-icon"
+                        alt="Wasabi Wallet on Windows"
+                      />
+                      <div class="my-4">
+                        <div class="system-text">WINDOWS 10+</div>
+                      </div>
+                      <a
+                        href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.msi"
+                        target="_blank"
+                        class="btn btn-primary w-100"
+                        >Download</a
+                      >
+                      <div class="small-text mt-4">
+                        .msi
+                        <span class="float-end"
+                          ><a
+                            href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.msi.asc"
+                            target="_blank"
+                            >signature</a
+                          >
+                          /
+                          <a
+                            href="https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html#windows"
+                            target="_blank"
+                            >guide</a
+                          ></span
+                        >
+                      </div>
                     </div>
-                    <div class="col-lg-5 text-end mt-5 mt-lg-0"><a href="https://docs.wasabiwallet.io/using-wasabi/CoinJoin.html#music-box" target="_blank" class="btn btn-secondary affix-arrowright mb-4">Read more</a>
-                        <h3 class="title-big">Friends Don’t Pay</h3>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-xl">
+                    <div class="download-box">
+                      <img src="img/icon_mac.svg" class="download-icon" /><img
+                        src="img/icon_intel.svg"
+                        class="download-icon small"
+                        alt="Wasabi Wallet Mac Intel"
+                      />
+                      <div class="my-4">
+                        <div class="system-text">MACOS 12.0+ INTEL</div>
+                      </div>
+                      <a
+                        href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.dmg"
+                        target="_blank"
+                        class="btn btn-primary w-100"
+                        >Download</a
+                      >
+                      <div class="small-text mt-4">
+                        .dmg
+                        <span class="float-end"
+                          ><a
+                            href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.dmg.asc"
+                            target="_blank"
+                            >signature</a
+                          >
+                          /
+                          <a
+                            href="https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html#macos"
+                            target="_blank"
+                            >guide</a
+                          ></span
+                        >
+                      </div>
                     </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-xl">
+                    <div class="download-box">
+                      <img src="img/icon_mac.svg" class="download-icon" /><img
+                        src="img/icon_apple_silicon.svg"
+                        class="download-icon small"
+                        alt="Wasabi Wallet M1 M2"
+                      />
+                      <div class="my-4">
+                        <div class="system-text">MACOS 12.0+ M1, M2</div>
+                      </div>
+                      <a
+                        href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8-arm64.dmg"
+                        target="_blank"
+                        class="btn btn-primary w-100"
+                        >Download</a
+                      >
+                      <div class="small-text mt-4">
+                        .dmg
+                        <span class="float-end"
+                          ><a
+                            href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8-arm64.dmg.asc"
+                            target="_blank"
+                            >signature</a
+                          >
+                          /
+                          <a
+                            href="https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html#macos"
+                            target="_blank"
+                            >guide</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-xl">
+                    <div class="download-box">
+                      <img
+                        src="img/icon_ubuntu.svg"
+                        class="download-icon"
+                        alt="Wasabi Wallet Ubuntu"
+                      />
+                      <div class="my-4">
+                        <div class="system-text">UBUNTU / DEBIAN</div>
+                      </div>
+                      <a
+                        href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.deb"
+                        target="_blank"
+                        class="btn btn-primary w-100"
+                        >Download</a
+                      >
+                      <div class="small-text mt-4">
+                        .deb
+                        <span class="float-end"
+                          ><a
+                            href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.deb.asc"
+                            target="_blank"
+                            >signature</a
+                          >
+                          /
+                          <a
+                            href="https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html#debian-and-ubuntu"
+                            target="_blank"
+                            >guide</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-xl">
+                    <div class="download-box">
+                      <img
+                        src="img/icon_linux.svg"
+                        class="download-icon"
+                        alt="Wasabi Wallet Linux"
+                      />
+                      <div class="my-4">
+                        <div class="system-text">OTHER LINUX</div>
+                      </div>
+                      <a
+                        href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.tar.gz"
+                        target="_blank"
+                        class="btn btn-primary w-100"
+                        >Download</a
+                      >
+                      <div class="small-text mt-4">
+                        .tar.gz
+                        <span class="float-end"
+                          ><a
+                            href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.tar.gz.asc"
+                            target="_blank"
+                            >signature</a
+                          >
+                          /
+                          <a
+                            href="https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html#other-linux"
+                            target="_blank"
+                            >guide</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="d-block d-lg-none">
+                <p class="green-text">
+                  Our software is exclusively available for desktop use. To
+                  download, please access this website from a desktop computer.
+                </p>
+              </div>
             </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 offset-lg-1">
-                        <h2 class="title">FAQ</h2>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="card">
-                            <input type="checkbox" id="faq1">
-                            <label for="faq1">WHAT IS A “COINJOIN”?</label>
-                            <div class="card-content">
-                                <p>A coinjoin is a collaborative transaction between multiple peers.</p>
-                                <p>Usually, but not necessarily, it consists of some standard output denominations that participants should break their coins in to. This makes it difficult for outside parties to trace where a particular coin was sent to (as opposed to regular bitcoin transactions, where there is usually one sender and one receiver).</p>
-                                <p>Coinjoins can be done with non-custodial software like Wasabi Wallet, that eliminates the risk of funds disappearing or being stolen. The funds will always be in a bitcoin address that the user controls and not even developers can alter the transaction or redirect the funds.</p>
-                                <p>Coinjoin basically means: “when you want to make a transaction, find someone else who also wants to make a transaction and make a joint transaction together”.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <input type="checkbox" id="faq2">
-                            <label for="faq2">WHAT ARE THE FEES FOR COINJOINS?</label>
-                            <div class="card-content">
-                                <p>Coinjoining coins with a value above 0.01 BTC costs 0.3% as a coordinator fee + mining fees. Inputs of 0.01 BTC or below don't pay coordinator fees, nor do remixes, even after one transaction. Thus, a payment made with coinjoined funds allows the sender and the recipient to remix their coins without paying any coordinator fees.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <input type="checkbox" id="faq3">
-                            <label for="faq3">DO I NEED TO TRUST WASABI WITH MY COINS?</label>
-                            <div class="card-content">
-                                <p>No, Wasabi’s coinjoin implementation is trustless by design. The participants do not need to trust each other or the coordinator. Since only the user knows the private keys, only he can sign the transaction, which will only be done after verifying that everything is alright. Nobody can neither steal your coins, nor figure out which outputs belong to which inputs.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <input type="checkbox" id="faq4">
-                            <label for="faq4">DOES WASABI SUPPORT HARDWARE WALLETS?</label>
-                            <div class="card-content">
-                                <p>Wasabi does support hardware wallet usage through the standard Bitcoin-core HWI, although coinjoining straight from or to a hardware wallet is not yet possible.</p>
-                                <p>Here's a <a href="https://github.com/WalletWasabi/blob/master/WalletWasabi.Documentation/WasabiCompatibility.md#officially-supported-hardware-wallets" target="_blank">list</a> of the officially supported hardware wallets.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <input type="checkbox" id="faq5">
-                            <label for="faq5">IS THERE AN ANDROID/IOS VERSION?</label>
-                            <div class="card-content">
-                                <p>No. Wasabi’s features, like coinjoin, require considerable computational power, which are currently not replicable on a smartphone.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <input type="checkbox" id="faq6">
-                            <label for="faq6">DOES WASABI SUPPORT ALTCOINS?</label>
-                            <div class="card-content">
-                                <p>There are countless reasons why it is the only logical choice to be bitcoin-only. With Bitcoin we have a once in a lifetime opportunity to manifest libre sound money. If we succeed, then an utmost beautiful agora of sovereign individuals may emerge. If we fail, then this will conjure up the most horrific Orwellian nightmare. There is no room for wasted time and energy, this great work requires our full attention. Any line of code written to support a random shitcoin takes away scarce developer time to work on real problems.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <input type="checkbox" id="faq7">
-                            <label for="faq7">WHAT ARE THE MINIMAL REQUIREMENTS TO RUN WASABI?</label>
-                            <div class="card-content">
-                                <p>Wasabi runs in most operating systems with 64-bit architecture.</p>
-                                <p>For the complete list of all the officially supported operating systems, click <a href="https://github.com/WalletWasabi/blob/master/WalletWasabi.Documentation/WasabiCompatibility.md#officially-supported-operating-systems" target="_blank">here</a>.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <input type="checkbox" id="faq8">
-                            <label for="faq8">DO I NEED TO RUN TOR?</label>
-                            <div class="card-content">
-                                <p>All Wasabi network traffic goes via Tor by default -there's no need to set up Tor by yourself. If you do already have Tor, and it is running, then Wasabi will try to use that first.</p>
-                                <p>You can turn off Tor in the Settings. Note that in this case you are still private, except when you coinjoin and when you broadcast a transaction. In the first case, the coordinator would know the links between your inputs and outputs based on your IP address. In the second case, if you happen to broadcast a transaction of yours to a full node that is spying on you, it will know the link between your transaction and your IP address.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <input type="checkbox" id="faq9">
-                            <label for="faq9">WHY IS IT IMPORTANT TO USE A NEW ADDRESS FOR EVERY PAYMENT?</label>
-                            <div class="card-content">
-                                <p>Addresses being used more than once is very damaging to privacy because that links together more blockchain transactions with proof that they were created by the same entity. The most private and secure way to use bitcoin is to send a brand new address to each person who pays you. After an address has received a coin, it should never be used again. Also, a brand new bitcoin address should be demanded from the recipient when sending bitcoin. Wasabi has a user interface which discourages address reuse by removing from the GUI addresses which have received a coin.</p>
-                                <p>It has been argued that the phrase "bitcoin address" was a bad name for this object because it implies it can be reused like an email address. A better name would be something like "bitcoin invoice".</p>
-                                <p>Bitcoin isn't anonymous but pseudonymous, and the pseudonyms are bitcoin addresses. Avoiding address reuse is like throwing away a pseudonym after it has been used.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <input type="checkbox" id="faq10">
-                            <label for="faq10">WHAT IS THE PASSWORD USED FOR?</label>
-                            <div class="card-content">
-                                <p>The password you set is used as a 13th seed word (as described in <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki" target="_blank">BIP 39</a>) and to encrypt the private key of the extended private key (as described in <a href="https://github.com/bitcoin/bips/blob/master/bip-0038.mediawiki" target="_blank">BIP 38</a>) to get an encrypted secret which is stored on the computer.</p>
-                                <p>Wasabi Wallet stores only the BIP38 encrypted blob, so you'll need to type in the password to spend or coinjoin from the wallet.</p>
-                                <p>The password will unlock your bitcoin to anyone who has access to the recovery words backup or the computer! If your backup gets compromised, this password is the only thing protecting your precious sats.</p>
-                                <p>It is important to use a random and long password.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section-transparent" id="download">
-            <div class="container">
-                <div class="row align-items-center mt-5 mt-lg-0">
-                    <div class="col-lg-11 offset-lg-1">
-                        <div class="row align-items-top mb-5">
-                            <div class="col-lg-6 order-1">
-                                <h3 class="title-huge">DOWNLOAD</h3>
-                            </div>
-                            <div class="col-6 order-3 order-lg-2">
-                                <div class="ps-0 ps-lg-5">
-                                    <p class="small-text"><a href="https://github.com/WalletWasabi#build-from-source-code" target="_blank"><i class="muted-text">or build it from source</i></a>
-                                        <br><a href="https://raw.githubusercontent.com/zkSNACKs/WalletWasabi/master/PGP.txt" target="_blank">PGP: 6FB3 872B 5D42 292F 5992 0797 8563 4832 8949 861E</a>
-                                    </p><a href="https://github.com/WalletWasabi/releases" target="_blank" class="affix-arrowright">RELEASE NOTES</a>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 order-2 order-lg-3">
-                                <h3 class="title-huge">WASABI WALLET</h3>
-                            </div>
-                        </div>
-                        <div class="version-content d-none d-lg-block">
-                            <div class="row align-items-end">
-                                <div class="col-sm-6 col-md-4 col-xl">
-                                    <div class="download-box"><img src="img/icon_windows.svg" class="download-icon" alt="Wasabi Wallet on Windows">
-                                        <div class="my-4">
-                                            <div class="system-text">WINDOWS 10+</div>
-                                        </div><a href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.msi" target="_blank" class="btn btn-primary w-100">Download</a>
-                                        <div class="small-text mt-4">.msi <span class="float-end"><a href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.msi.asc" target="_blank">signature</a> / <a href="https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html#windows" target="_blank">guide</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-xl">
-                                    <div class="download-box"><img src="img/icon_mac.svg" class="download-icon"><img src="img/icon_intel.svg" class="download-icon small" alt="Wasabi Wallet Mac Intel">
-                                        <div class="my-4">
-                                            <div class="system-text">MACOS 12.0+ INTEL</div>
-                                        </div><a href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.dmg" target="_blank" class="btn btn-primary w-100">Download</a>
-                                        <div class="small-text mt-4">.dmg <span class="float-end"><a href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.dmg.asc" target="_blank">signature</a> / <a href="https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html#macos" target="_blank">guide</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-xl">
-                                    <div class="download-box"><img src="img/icon_mac.svg" class="download-icon"><img src="img/icon_apple_silicon.svg" class="download-icon small" alt="Wasabi Wallet M1 M2">
-                                        <div class="my-4">
-                                            <div class="system-text">MACOS 12.0+ M1, M2</div>
-                                        </div><a href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8-arm64.dmg" target="_blank" class="btn btn-primary w-100">Download</a>
-                                        <div class="small-text mt-4">.dmg <span class="float-end"><a href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8-arm64.dmg.asc" target="_blank">signature</a> / <a href="https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html#macos" target="_blank">guide</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-xl">
-                                    <div class="download-box"><img src="img/icon_ubuntu.svg" class="download-icon" alt="Wasabi Wallet Ubuntu">
-                                        <div class="my-4">
-                                            <div class="system-text">UBUNTU / DEBIAN</div>
-                                        </div><a href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.deb" target="_blank" class="btn btn-primary w-100">Download</a>
-                                        <div class="small-text mt-4">.deb <span class="float-end"><a href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.deb.asc" target="_blank">signature</a> / <a href="https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html#debian-and-ubuntu" target="_blank">guide</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-xl">
-                                    <div class="download-box"><img src="img/icon_linux.svg" class="download-icon" alt="Wasabi Wallet Linux">
-                                        <div class="my-4">
-                                            <div class="system-text">OTHER LINUX</div>
-                                        </div><a href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.tar.gz" target="_blank" class="btn btn-primary w-100">Download</a>
-                                        <div class="small-text mt-4">.tar.gz <span class="float-end"><a href="https://github.com/WalletWasabi/releases/download/v2.0.8/Wasabi-2.0.8.tar.gz.asc" target="_blank">signature</a> / <a href="https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html#other-linux" target="_blank">guide</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-block d-lg-none">
-                            <p class="green-text">Our software is exclusively available for desktop use. To download, please access this website from a desktop computer.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </div>
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-auto py-2"><a href="#" target="_blank" class="white-text">Wasabi Wallet</a>
-                </div>
-                <div class="col-lg py-2 text-lg-end">
-                    <a href="contribution.html" class="d-inline-block me-3">Contribution</a>
-                    <a href="/swagger" class="d-inline-block me-3">API</a>
-                    <a href="https://github.com/WalletWasabi/WalletWasabi/blob/master/WalletWasabi/Legal/Assets/LegalDocumentsWw2.txt" target="_blank" class="d-inline-block">Privacy policy</a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-auto py-2">
+            <a href="#" target="_blank" class="white-text">Wasabi Wallet</a>
+          </div>
+          <div class="col-lg py-2 text-lg-end">
+            <a href="contribution.html" class="d-inline-block me-3"
+              >Contribution</a
+            >
+            <a href="/swagger" class="d-inline-block me-3">API</a>
+            <a
+              href="https://github.com/WalletWasabi/WalletWasabi/blob/master/WalletWasabi/Legal/Assets/LegalDocumentsWw2.txt"
+              target="_blank"
+              class="d-inline-block"
+              >Privacy policy</a
+            >
+          </div>
         </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
