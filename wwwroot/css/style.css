@@ -473,6 +473,9 @@ footer .white-text {
 .card-content {
     padding: 18px;
 }
+.card-content a {
+    color: var(--green);
+}
 .card table {
     color: var(--green);
     margin: 40px;

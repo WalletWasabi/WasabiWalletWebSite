@@ -51,10 +51,10 @@
           },
           {
             "@type": "Question",
-            "name": "Do I need to trust Wasabi with my coins?",
+            "name": "Do I need to trust the coordinator with my coins?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "<p>No, Wasabi’s coinjoin implementation is trustless by design. The participants do not need to trust each other or the coordinator. Since only the user knows the private keys, only he can sign the transaction, which will only be done after verifying that everything is alright. Nobody can neither steal your coins, nor figure out which outputs belong to which inputs.</p>"
+              "text": "<pNo, Wasabi’s coinjoin implementation is trustless by design. The participants do not need to trust each other or the coordinator. Since only the user knows the private keys, only he can sign the transaction, which will only be done after verifying that everything is alright. Nobody can neither steal your coins, nor figure out which outputs belong to which inputs.</p>"
             }
           },
           {
@@ -62,7 +62,7 @@
             "name": "Does Wasabi support Hardware wallets?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "<p>Wasabi does support hardware wallet usage through the standard Bitcoin-core HWI, although coinjoining straight from a hardware wallet is not yet possible. Since <a href='https://github.com/WalletWasabi/WalletWasabi/releases/tag/v2.0.7.2' target='_blank'>2.0.7.2</a>, you can coinjoin directly to an external wallet.</p><p>Here's a <a href='https://github.com/WalletWasabi/blob/master/WalletWasabi.Documentation/WasabiCompatibility.md#officially-supported-hardware-wallets' target='_blank'>list</a> of the officially supported hardware wallets.</p>"
+              "text": "<p>Wasabi does support hardware wallet usage through the standard Bitcoin-core HWI, and coinjoining straight to a hardware wallet is possible, but signing a coinjoin trasaction with a hardwarewallet is not implemented.</p><p>Here's a <a href='https://github.com/WalletWasabi/WalletWasabi/blob/master/WalletWasabi.Documentation/WasabiCompatibility.md#officially-supported-hardware-wallets'>list</a> of the officially supported hardware wallets.</p>"
             }
           },
           {
@@ -86,7 +86,7 @@
             "name": "What are the minimal requirements to run Wasabi?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "<p>Wasabi runs in most operating systems with 64-bit architecture.</p><p>For the complete list of all the officially supported operating systems, click <a href='https://github.com/WalletWasabi/blob/master/WalletWasabi.Documentation/WasabiCompatibility.md#officially-supported-operating-systems' target='_blank'>here</a>.</p>"
+              "text": "<p>Wasabi Wallet runs in most operating systems with 64-bit and arm64 architecture, like Linux, MacOs and Windows. Wasabi Wallet does not required a lot of storage, CPU and Memory, it should run on basically any hardware. For the complete list of all the officially supported operating systems, click <a href='https://github.com/WalletWasabi/WalletWasabi/blob/master/WalletWasabi.Documentation/WasabiCompatibility.md#officially-supported-operating-systems'>here</a>.</p>"
             }
           },
           {
@@ -233,309 +233,176 @@
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
                         <h1 class="text-center title mb-5">FAQ</h1>
-
                         <div class="card">
-                            <input type="checkbox" id="faq1" />
-                            <label for="faq1"> WHAT IS A “COINJOIN”? </label>
+                            <input type="checkbox" id="faq1">
+                            <label for="faq1">WHAT IS A “COINJOIN”?</label>
                             <div class="card-content">
-                                <p>
-                                    A coinjoin is a collaborative transaction between multiple peers.
-                                </p>
-
-                                <p>
-                                    Usually, but not necessarily, it consists of some standard output denominations that participants should break their coins in to. This makes it difficult for outside parties to trace where a particular coin was sent to (as opposed to regular bitcoin transactions, where there is usually one sender and one receiver).
-                                </p>
-
-                                <p>
-                                    Coinjoins can be done with non-custodial software like Wasabi Wallet, that eliminates the risk of funds disappearing or being stolen. The funds will always be in a bitcoin address that the user controls and not even developers can alter the transaction or redirect the funds.
-                                </p>
-
-                                <p>
-                                    Coinjoin basically means: “when you want to make a transaction, find someone else who also wants to make a transaction and make a joint transaction together”.
-                                </p>
+                                <p>A coinjoin is a collaborative transaction between multiple peers.</p>
+                                <p>Usually, but not necessarily, it consists of some standard output denominations that participants should break their coins in to. This makes it difficult for outside parties to trace where a particular coin was sent to (as opposed to regular bitcoin transactions, where there is usually one sender and one receiver).</p>
+                                <p>Coinjoins can be done with non-custodial software like Wasabi Wallet, that eliminates the risk of funds disappearing or being stolen. The funds will always be in a bitcoin address that the user controls and not even the coordinator can alter the transaction or redirect the funds.</p>
+                                <p>Coinjoin basically means: “when you want to make a transaction, find someone else who also wants to make a transaction and make a joint transaction together”.</p>
                             </div>
                         </div>
                         <div class="card">
-                            <input type="checkbox" id="faq2" />
-                            <label for="faq2"> WHAT ARE THE FEES FOR COINJOINS? </label>
+                            <input type="checkbox" id="faq3">
+                            <label for="faq3">DO I NEED TO TRUST THE COORDINATOR WITH MY COINS?</label>
                             <div class="card-content">
-                                <p>
-                                    Coinjoining coins with a value above 0.01 BTC costs 0.3% as a coordinator fee + mining fees. Inputs of 0.01 BTC or below don't pay coordinator fees, nor do remixes, even after one transaction. Thus, a payment made with coinjoined funds allows the sender and the recipient to remix their coins without paying any coordinator fees.
-                                </p>
+                                <p>No, Wasabi’s coinjoin implementation is trustless by design. The participants do not need to trust each other or the coordinator. Since only the user knows the private keys, only he can sign the transaction, which will only be done after verifying that everything is alright. Nobody can neither steal your coins, nor figure out which outputs belong to which inputs.</p>
                             </div>
                         </div>
                         <div class="card">
-                            <input type="checkbox" id="faq3" />
-                            <label for="faq3">
-                                DO I NEED TO TRUST WASABI WITH MY COINS?
-                            </label>
+                            <input type="checkbox" id="faq4">
+                            <label for="faq4">DOES WASABI SUPPORT HARDWARE WALLETS?</label>
                             <div class="card-content">
-                                <p>
-                                    No, Wasabi’s coinjoin implementation is trustless by design. The participants do not need to trust each other or the coordinator. Since only the user knows the private keys, only he can sign the transaction, which will only be done after verifying that everything is alright. Nobody can neither steal your coins, nor figure out which outputs belong to which inputs.
-                                </p>
+                                <p>Wasabi does support hardware wallet usage through the standard Bitcoin-core HWI, and coinjoining straight to a hardware wallet is possible, but signing a coinjoin trasaction with a hardwarewallet is not implemented.</p>
+                                <p>Here's a <a href="https://github.com/WalletWasabi/WalletWasabi/blob/master/WalletWasabi.Documentation/WasabiCompatibility.md#officially-supported-hardware-wallets" target="_blank">list</a> of the officially supported hardware wallets.</p>
                             </div>
                         </div>
                         <div class="card">
-                            <input type="checkbox" id="faq4" />
-                            <label for="faq4">
-                                DOES WASABI SUPPORT HARDWARE WALLETS?
-                            </label>
+                            <input type="checkbox" id="faq5">
+                            <label for="faq5">IS THERE AN ANDROID/IOS VERSION?</label>
                             <div class="card-content">
-                                <p>
-                                    Wasabi does support hardware wallet usage through the standard Bitcoin-core HWI, although coinjoining straight from a hardware wallet is not yet possible.
-                                </p>
-                                <p>
-                                    Since
-                                    <a href="https://github.com/WalletWasabi/WalletWasabi/releases/tag/v2.0.7.2" target="_blank">2.0.7.2</a>, you can coinjoin directly to an external wallet.
-                                </p>
-
-                                <p>
-                                    Here's a
-                                    <a href="https://github.com/WalletWasabi/blob/master/WalletWasabi.Documentation/WasabiCompatibility.md#officially-supported-hardware-wallets" target="_blank">list</a> of the officially supported hardware wallets.
-                                </p>
+                                <p>No. Wasabi’s features, like Tor and coinjoin, require considerable computational power, which are currently not replicable on a smartphone.</p>
                             </div>
                         </div>
                         <div class="card">
-                            <input type="checkbox" id="faq5" />
-                            <label for="faq5"> IS THERE AN ANDROID/IOS VERSION? </label>
+                            <input type="checkbox" id="faq6">
+                            <label for="faq6">DOES WASABI SUPPORT ALTCOINS?</label>
                             <div class="card-content">
-                                <p>
-                                    No. Wasabi’s features, like coinjoin, require considerable computational power, which are currently not replicable on a smartphone.
-                                </p>
+                                <p>There are countless reasons why it is the only logical choice to be bitcoin-only. With Bitcoin we have a once in a lifetime opportunity to manifest libre sound money. If we succeed, then an utmost beautiful agora of sovereign individuals may emerge. If we fail, then this will conjure up the most horrific Orwellian nightmare. There is no room for wasted time and energy, this great work requires our full attention. Any line of code written to support a random shitcoin takes away scarce developer time to work on real problems.</p>
                             </div>
                         </div>
                         <div class="card">
-                            <input type="checkbox" id="faq6" />
-                            <label for="faq6"> DOES WASABI SUPPORT ALTCOINS? </label>
+                            <input type="checkbox" id="faq7">
+                            <label for="faq7">WHAT ARE THE MINIMAL REQUIREMENTS TO RUN WASABI WALLET?</label>
                             <div class="card-content">
-                                <p>
-                                    No. There are countless reasons why it is the only logical choice to be bitcoin-only. With Bitcoin we have a once in a lifetime opportunity to manifest libre sound money. If we succeed, then an utmost beautiful agora of sovereign individuals may emerge. If we fail, then this will conjure up the most horrific Orwellian nightmare. There is no room for wasted time and energy, this great work requires our full attention. Any line of code written to support a random shitcoin takes away scarce developer time to work on real problems.
-                                </p>
+                                <p>Wasabi Wallet runs in most operating systems with 64-bit and arm64 architecture, like Linux, MacOs and Windows. Wasabi Wallet does not required a lot of storage, CPU and Memory, it should run on basically any hardware. For the complete list of all the officially supported operating systems, click <a href="https://github.com/WalletWasabi/WalletWasabi/blob/master/WalletWasabi.Documentation/WasabiCompatibility.md#officially-supported-operating-systems" target="_blank">here</a>.</p>
                             </div>
                         </div>
                         <div class="card">
-                            <input type="checkbox" id="faq7" />
-                            <label for="faq7">
-                                WHAT ARE THE MINIMAL REQUIREMENTS TO RUN WASABI?
-                            </label>
+                            <input type="checkbox" id="faq8">
+                            <label for="faq8">DO I NEED TO RUN TOR?</label>
                             <div class="card-content">
-                                <p>
-                                    Wasabi runs in most operating systems with 64-bit architecture.
-                                </p>
-
-                                <p>
-                                    For the complete list of all the officially supported operating systems, click
-                                    <a href="https://github.com/WalletWasabi/blob/master/WalletWasabi.Documentation/WasabiCompatibility.md#officially-supported-operating-systems" target="_blank">here</a
-                    >.
-                  </p>
-                </div>
-              </div>
-              <div class="card">
-                <input type="checkbox" id="faq8" />
-                <label for="faq8"> DO I NEED TO RUN TOR? </label>
-                <div class="card-content">
-                  <p>
-                    All Wasabi network traffic goes via Tor by default -there's
-                    no need to set up Tor by yourself. If you do already have
-                    Tor, and it is running, then Wasabi will try to use that
-                    first.
-                  </p>
-                  <p>
-                    You can turn off Tor in the Settings. Note that in this case
-                    you are still private, except when you coinjoin and when you
-                    broadcast a transaction. In the first case, the coordinator
-                    would know the links between your inputs and outputs based
-                    on your IP address. In the second case, if you happen to
-                    broadcast a transaction of yours to a full node that is
-                    spying on you, it will know the link between your
-                    transaction and your IP address.
-                  </p>
-                </div>
-              </div>
-              <div class="card">
-                <input type="checkbox" id="faq9" />
-                <label for="faq9">
-                  WHY IS IT IMPORTANT TO USE A NEW ADDRESS FOR EVERY PAYMENT?
-                </label>
-                <div class="card-content">
-                  <p>
-                    Addresses being used more than once is very damaging to
-                    privacy because that links together more blockchain
-                    transactions with proof that they were created by the same
-                    entity. The most private and secure way to use bitcoin is to
-                    send a brand new address to each person who pays you. After
-                    an address has received a coin, it should never be used
-                    again. Also, a brand new bitcoin address should be demanded
-                    from the recipient when sending bitcoin. Wasabi has a user
-                    interface which discourages address reuse by removing from
-                    the GUI addresses which have received a coin.
-                  </p>
-
-                  <p>
-                    It has been argued that the phrase "bitcoin address" was a
-                    bad name for this object because it implies it can be reused
-                    like an email address. A better name would be something like
-                    "bitcoin invoice".
-                  </p>
-
-                  <p>
-                    Bitcoin isn't anonymous but pseudonymous, and the pseudonyms
-                    are bitcoin addresses. Avoiding address reuse is like
-                    throwing away a pseudonym after it has been used.
-                  </p>
-                </div>
-              </div>
-              <div class="card">
-                <input type="checkbox" id="faq10" />
-                <label for="faq10"> WHAT IS THE PASSPHRASE USED FOR? </label>
-                <div class="card-content">
-                  <p>
-                    The passphrase you set is used as a 13th seed word (as
-                    described in
-                    <a
-                      href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"
-                      target="_blank"
-                      >BIP 39</a
-                    >) and to encrypt the private key of the extended private
-                    key (as described in
-                    <a
-                      href="https://github.com/bitcoin/bips/blob/master/bip-0038.mediawiki"
-                      target="_blank"
-                      >BIP 38</a
-                    >) to get an encrypted secret which is stored on the
-                    computer.
-                  </p>
-
-                  <p>
-                    Wasabi Wallet stores only the BIP38 encrypted blob, so
-                    you'll need to type in the passphrase to spend or coinjoin
-                    from the wallet.
-                  </p>
-
-                  <p>
-                    The passphrase will unlock your bitcoin to anyone who has
-                    access to the recovery words backup or the computer! If your
-                    backup gets compromised, this passphrase is the only thing
-                    protecting your precious sats.
-                  </p>
-
-                  <p>It is important to use a random and long passphrase.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-11 offset-lg-1">
-              <h1 class="text-center title">Help</h1>
-              <div class="row mt-5 equal">
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="box">
-                    <h2 class="title-small mt-5 text-center">GitHub</h2>
-                    <br />
-                    <div class="text-center my-5">
-                      <img
-                        src="img/github.svg"
-                        class="icon-size"
-                        alt="Wasabi Wallet"
-                      />
-                    </div>
-                    <a
-                      href="https://github.com/WalletWasabi"
-                      target="_blank"
-                      class="stretched-link"
-                    ></a>
+                                <p>All Wasabi network traffic goes via Tor by default -there's no need to set up Tor by yourself. If you do already have Tor, and it is running, then Wasabi will try to use that first.</p>
+                                <p>You can turn off Tor in the Settings. Note that in this case you are still private, except when you coinjoin and when you broadcast a transaction. In the first case, the coordinator would know the links between your inputs and outputs based on your IP address. In the second case, if you happen to broadcast a transaction of yours to a full node that is spying on you, it will know the link between your transaction and your IP address.</p>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xl-3 mb-4">
-                            <div class="box">
-                                <h2 class="title-small mt-5 text-center">
-                      GitHub discussions
-                    </h2>
-                                <br />
-                                <div class="text-center my-5">
-                                    <img src="img/github.svg" class="icon-size" alt="Wasabi Wallet" />
-                                </div>
-                                <a href="https://github.com/WalletWasabi/discussions" target="_blank" class="stretched-link"></a>
+                        <div class="card">
+                            <input type="checkbox" id="faq9">
+                            <label for="faq9">WHY IS IT IMPORTANT TO USE A NEW ADDRESS FOR EVERY PAYMENT?</label>
+                            <div class="card-content">
+                                <p>Addresses being used more than once is very damaging to privacy because that links together more blockchain transactions with proof that they were created by the same entity. The most private and secure way to use bitcoin is to give a brand new address to each person who pays you. After an address has received a coin, it should never be used again. Also, a brand new bitcoin address should be demanded from the recipient when sending bitcoin. Wasabi has a user interface which discourages address reuse by removing from the GUI addresses which have received a coin.</p>
+                                <p>It has been argued that the phrase "bitcoin address" was a bad name for this object because it implies it can be reused like an email address. A better name would be something like "bitcoin invoice".</p>
+                                <p>Bitcoin isn't anonymous but pseudonymous, and the pseudonyms are bitcoin addresses. Avoiding address reuse is like throwing away a pseudonym after it has been used.</p>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xl-3 mb-4">
-                            <div class="box">
-                                <h2 class="title-small mt-5 text-center">
-                      Documentation 1.0
-                    </h2>
-                                <br />
-                                <div class="text-center my-5">
-                                    <img src="img/wasabi-wallet-logo.svg" class="icon-size" alt="Wasabi Wallet" />
-                                </div>
-                                <a href="http://web.archive.org/web/20220923123458/https://docs.wasabiwallet.io/" target="_blank" class="stretched-link"></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-xl-3 mb-4">
-                            <div class="box">
-                                <h2 class="title-small mt-5 text-center">
-                      Documentation 2.0
-                    </h2>
-                                <div class="text-center my-5">
-                                    <img src="img/logo_small.svg" class="icon-size" alt="Wasabi Wallet" />
-                                </div>
-                                <a href="https://docs.wasabiwallet.io" target="_blank" class="stretched-link"></a>
+                        <div class="card">
+                            <input type="checkbox" id="faq10">
+                            <label for="faq10">WHAT IS THE PASSPHRASE USED FOR?</label>
+                            <div class="card-content">
+                                <p>The passphrase you set is used as a 13th seed word (as described in <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki" target="_blank">BIP 39</a>) and to encrypt the private key of the extended private key (as described in <a href="https://github.com/bitcoin/bips/blob/master/bip-0038.mediawiki" target="_blank">BIP 38</a>) to get an encrypted secret which is stored on the computer.</p>
+                                <p>Wasabi Wallet stores only the BIP38 encrypted blob, so you'll need to type in the passphrase to spend or coinjoin from the wallet.</p>
+                                <p>The passphrase will unlock your bitcoin to anyone who has access to the recovery words backup or the computer! If your backup gets compromised, this password is the only thing protecting your precious sats.</p>
+                                <p>It is important to use a random and long passphrase.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    </div>
-    </section>
-    <section>
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-xl-10 offset-xl-1">
-                    <div class="text-center">
-                        <h2 class="title mt-5">
-                  Reclaim your
-                  <span class="green-text d-block">privacy now</span>
-                </h2>
-                        <h3>Get started in 3 simple steps</h3>
-                    </div>
-                    <div class="row text-center p-100">
-                        <div class="col-md-4 my-4">
-                            <div class="icon-big mx-auto">
-                                <img src="img/downloadww.svg" alt="Wasabi Wallet Download" />
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-11 offset-lg-1">
+                        <h1 class="text-center title">Help</h1>
+                        <div class="row mt-5 equal">
+                            <div class="col-lg-6 col-xl-3 mb-4">
+                                <div class="box">
+                                    <h2 class="title-small mt-5 text-center">GitHub</h2>
+                                    <br />
+                                    <div class="text-center my-5">
+                                        <img src="img/github.svg" class="icon-size" alt="Wasabi Wallet" />
+                                    </div>
+                                    <a href="https://github.com/WalletWasabi" target="_blank" class="stretched-link"></a>
+                                </div>
                             </div>
-                            <p class="mt-4 mb-0 text-center text-md-left">
-                                <strong>1. Download Wasabi Wallet</strong>
-                            </p>
-                        </div>
-                        <div class="col-md-4 my-4">
-                            <div class="icon-big mx-auto">
-                                <img src="img/createnewwallet.svg" alt="Wasabi Wallet Create Wallet" />
+                            <div class="col-lg-6 col-xl-3 mb-4">
+                                <div class="box">
+                                    <h2 class="title-small mt-5 text-center">GitHub discussions</h2>
+                                    <br />
+                                    <div class="text-center my-5">
+                                        <img src="img/github.svg" class="icon-size" alt="Wasabi Wallet" />
+                                    </div>
+                                    <a href="https://github.com/WalletWasabi/discussions" target="_blank" class="stretched-link"></a>
+                                </div>
                             </div>
-                            <p class="mt-4 mb-0 text-center text-md-left">
-                                <strong>2. Create a new wallet</strong>
-                            </p>
-                        </div>
-                        <div class="col-md-4 my-4">
-                            <div class="icon-big mx-auto">
-                                <img src="img/coinjoin.svg" alt="Wasabi Wallet Coinjoin" />
+                            <div class="col-lg-6 col-xl-3 mb-4">
+                                <div class="box">
+                                    <h2 class="title-small mt-5 text-center">Documentation 1.0</h2>
+                                    <br />
+                                    <div class="text-center my-5">
+                                        <img src="img/wasabi-wallet-logo.svg" class="icon-size" alt="Wasabi Wallet" />
+                                    </div>
+                                    <a href="http://web.archive.org/web/20220923123458/https://docs.wasabiwallet.io/" target="_blank" class="stretched-link"></a>
+                                </div>
                             </div>
-                            <p class="mt-4 mb-0 text-center text-md-left">
-                                <strong>3. Let auto-coinjoin do its magic</strong>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col text-center">
-                            <a href="index.html#download" class="btn btn-primary btn-download">Download NOW</a>
+                            <div class="col-lg-6 col-xl-3 mb-4">
+                                <div class="box">
+                                    <h2 class="title-small mt-5 text-center">Documentation 2.0</h2>
+                                    <div class="text-center my-5">
+                                        <img src="img/logo_small.svg" class="icon-size" alt="Wasabi Wallet" />
+                                    </div>
+                                    <a href="https://docs.wasabiwallet.io" target="_blank" class="stretched-link"></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-xl-10 offset-xl-1">
+                        <div class="text-center">
+                            <h2 class="title mt-5">Reclaim your<span class="green-text d-block">privacy now</span></h2>
+                            <h3>Get started in 3 simple steps</h3>
+                        </div>
+                        <div class="row text-center p-100">
+                            <div class="col-md-4 my-4">
+                                <div class="icon-big mx-auto">
+                                    <img src="img/downloadww.svg" alt="Wasabi Wallet Download" />
+                                </div>
+                                <p class="mt-4 mb-0 text-center text-md-left">
+                                    <strong>1. Download Wasabi Wallet</strong>
+                                </p>
+                            </div>
+                            <div class="col-md-4 my-4">
+                                <div class="icon-big mx-auto">
+                                    <img src="img/createnewwallet.svg" alt="Wasabi Wallet Create Wallet" />
+                                </div>
+                                <p class="mt-4 mb-0 text-center text-md-left">
+                                    <strong>2. Create a new wallet</strong>
+                                </p>
+                            </div>
+                            <div class="col-md-4 my-4">
+                                <div class="icon-big mx-auto">
+                                    <img src="img/coinjoin.svg" alt="Wasabi Wallet Coinjoin" />
+                                </div>
+                                <p class="mt-4 mb-0 text-center text-md-left">
+                                    <strong>3. Let auto-coinjoin do its magic</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center">
+                                <a href="index.html#download" class="btn btn-primary btn-download">Download NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <footer>
         <div class="container">
