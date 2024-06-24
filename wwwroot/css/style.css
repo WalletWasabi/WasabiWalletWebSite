@@ -82,8 +82,10 @@ header {
 }
 .menu li {
     display: block;
-    font-size: 20px;
+}
+.menu li a {
     line-height: 2em;
+    font-size: 20px;
 }
 header a[target="_blank"] {
     position: relative;
@@ -94,9 +96,8 @@ header a[target="_blank"]:after {
     background-image: url('../img/icon_arrow_right.svg');
     background-repeat: no-repeat;
     background-position: center right;
-    background-size: 30%;
     width: 40px;
-    height: 40px;
+    height: 18px;
     border-radius: 50%;
     color: var(--green);
     position: absolute;
@@ -194,12 +195,12 @@ header a[target="_blank"]:after {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 30%;
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     color: var(--green);
     position: absolute;
-    left: 0;
+    left: 3px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -303,7 +304,7 @@ video::-webkit-media-controls {
 }
 section {
     background-color: var(--black);
-    padding: clamp(40px, 15vh, 200px) 0;
+    padding: clamp(40px, 15vh, 120px) 0;
     width: 100%;
 }
 .video-section {
@@ -634,6 +635,9 @@ ol li::marker {
     color: var(--green);
 }
 .green-text {
+    color: var(--green);
+}
+ol a {
     color: var(--green);
 }
 @media (min-width: 576px) {
