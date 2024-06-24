@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22">
+  <g id="shield" transform="translate(1 1)">
+    <path id="shield-2" data-name="shield" d="M12,22s8-4,8-10V5L12,2,4,5v7C4,18,12,22,12,22Z" transform="translate(-4 -2)" fill="none" stroke="#77c300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

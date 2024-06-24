@@ -9,22 +9,37 @@
 
 <url>
   <loc>https://wasabiwallet.io/index.html</loc>
-  <lastmod>2022-11-19T19:54:24+00:00</lastmod>
+  <lastmod>2024-04-03T19:54:24+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://wasabiwallet.io/about.html</loc>
-  <lastmod>2022-11-19T19:54:24+00:00</lastmod>
+  <lastmod>2024-04-03T19:54:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://wasabiwallet.io/buy-anything.html</loc>
+  <lastmod>2024-04-03T19:54:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://wasabiwallet.io/contribution.html</loc>
-  <lastmod>2022-11-19T19:54:24+00:00</lastmod>
+  <lastmod>2024-04-03T19:54:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://wasabiwallet.io/faq.html</loc>
-  <lastmod>2022-11-19T19:54:24+00:00</lastmod>
+  <lastmod>2024-04-03T19:54:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://wasabiwallet.io/integrations.html</loc>
+  <lastmod>2024-04-03T19:54:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://wasabiwallet.io/coinjoin.html</loc>
+  <lastmod>2024-04-03T19:54:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 </urlset>
