@@ -1,0 +1,39 @@
+name: Update Wasabi Version
+on:
+  repository_dispatch:
+    types: [update-version]
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Update wwwroot/index.html
+        run: |
+          NEW_VERSION="${{ github.event.client_payload.new_version }}"
+          echo "Updating index.html to version: $NEW_VERSION"
+          sed -i -E "s/Wasabi-[0-9]+(\.[0-9]+){1,3}/Wasabi-$NEW_VERSION/g" wwwroot/index.html
+          sed -i -E "s|(/download/v)[0-9]+(\.[0-9]+){1,3}|\1$NEW_VERSION|g" wwwroot/index.html
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git checkout -b update-index-version-branch
+          git add wwwroot/index.html
+          git commit -m "Update index.html version to ${{ github.event.client_payload.new_version }}"
+          git push -f --set-upstream origin update-index-version-branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install GitHub CLI
+        run: sudo apt-get install gh
+      - name: Create Pull Request
+        run: |
+          gh pr create --base master --head update-index-version-branch --title "Update index.html version to ${{ github.event.client_payload.new_version }}" --body "Auto-update index.html version to ${{ github.event.client_payload.new_version }}."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Merge Pull Request with Admin Privileges
+        run: |
+          gh pr merge update-index-version-branch --admin --squash --delete-branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
