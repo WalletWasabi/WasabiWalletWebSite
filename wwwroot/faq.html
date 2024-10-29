@@ -46,7 +46,7 @@
             "name": "What are the fees for coinjoins?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The coinjoin coordinator sets its own fee policy for the coinjoin service provided. This includes things like the mining fee, the coordination fee, no coordination fee for remixes and/or no coordination fee for UTXO amounts below a threshold etc."
+              "text": "Wasabi version 2.2.0.0 and higher only pay mining fees for the coinjoin. Read more <a href='https://docs.wasabiwallet.io/using-wasabi/CoinJoin.html#fees'>here</a>"
             }
           },
           {
@@ -229,7 +229,9 @@
                             <input type="checkbox" id="faq2">
                             <label for="faq2">WHAT ARE THE FEES FOR COINJOINS?</label>
                             <div class="card-content">
-                                <p>The coinjoin coordinator sets its own fee policy for the coinjoin service provided. This includes things like the mining fee, the coordination fee, no coordination fee for remixes and/or no coordination fee for UTXO amounts below a threshold etc.</p>
+                                <p>Wasabi version 2.2.0.0 and higher only pay mining fees for the coinjoin.</p>
+                                <p>Occasionally, the client can also forfeit a small amount (max 10.000 sats) to leftovers in order to save money, read more <a href="https://docs.wasabiwallet.io/using-wasabi/CoinJoin.html#fees" target="_blank">here</a>.</p>
+
                             </div>
                         </div>
                         <div class="card">
