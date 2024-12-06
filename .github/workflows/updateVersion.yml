@@ -19,7 +19,7 @@ jobs:
           sed -i -E "s|(/download/v)[0-9]+(\.[0-9]+){1,3}|\1$NEW_VERSION|g" wwwroot/index.html
       - name: Commit changes
         run: |
-          git config --local user.email "turbolay@github.com"
+          git config --local user.email "turbolay@proton.me"
           git config --local user.name "turbolay"
           git checkout -b update-index-version-branch
           git add wwwroot/index.html
