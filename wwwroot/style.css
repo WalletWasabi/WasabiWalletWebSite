@@ -146,32 +146,164 @@ body {
 
   .stripe {
     position: absolute;
-    top: -150px;
+    top: -80px;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: -1;
     width: 100%;
-    height: 600px;
+    height: 650px;
+    transform-origin: center;
+    transform: scale(2) rotate(0.5deg);
+    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
 
+    @media screen and (min-width: 280px) {
+      top: -79px;
+      height: 652px;
+      transform: scale(1.97) rotate(0.48deg);
+    }
+    @media screen and (min-width: 300px) {
+      top: -78px;
+      height: 654px;
+      transform: scale(1.94) rotate(0.46deg);
+    }
+    @media screen and (min-width: 320px) {
+      top: -77px;
+      height: 656px;
+      transform: scale(1.91) rotate(0.44deg);
+    }
+    @media screen and (min-width: 340px) {
+      top: -76px;
+      height: 658px;
+      transform: scale(1.88) rotate(0.42deg);
+    }
+    @media screen and (min-width: 360px) {
+      top: -75px;
+      height: 660px;
+      transform: scale(1.85) rotate(0.4deg);
+    }
+    @media screen and (min-width: 375px) {
+      top: -74px;
+      height: 662px;
+      transform: scale(1.82) rotate(0.38deg);
+    }
+    @media screen and (min-width: 390px) {
+      top: -73px;
+      height: 664px;
+      transform: scale(1.79) rotate(0.36deg);
+    }
+    @media screen and (min-width: 410px) {
+      top: -72px;
+      height: 666px;
+      transform: scale(1.76) rotate(0.34deg);
+    }
+    @media screen and (min-width: 425px) {
+      top: -71px;
+      height: 668px;
+      transform: scale(1.73) rotate(0.32deg);
+    }
     @media screen and (min-width: 450px) {
-      top: -130px;
+      top: -70px;
+      height: 670px;
+      transform: scale(1.7) rotate(0.3deg);
+    }
+    @media screen and (min-width: 480px) {
+      top: -68px;
+      height: 672px;
+      transform: scale(1.67) rotate(0.28deg);
+    }
+    @media screen and (min-width: 500px) {
+      top: -66px;
+      height: 675px;
+      transform: scale(1.64) rotate(0.26deg);
+    }
+    @media screen and (min-width: 520px) {
+      top: -64px;
+      height: 678px;
+      transform: scale(1.61) rotate(0.24deg);
     }
     @media screen and (min-width: 550px) {
-      top: -100px;
+      top: -62px;
+      height: 680px;
+      transform: scale(1.58) rotate(0.22deg);
+    }
+    @media screen and (min-width: 580px) {
+      top: -60px;
+      height: 682px;
+      transform: scale(1.55) rotate(0.2deg);
+    }
+    @media screen and (min-width: 600px) {
+      top: -58px;
+      height: 685px;
+      transform: scale(1.52) rotate(0.18deg);
+    }
+    @media screen and (min-width: 620px) {
+      top: -56px;
+      height: 688px;
+      transform: scale(1.49) rotate(0.16deg);
     }
     @media screen and (min-width: 650px) {
-      top: -70px;
+      top: -54px;
+      height: 690px;
+      transform: scale(1.46) rotate(0.14deg);
+    }
+    @media screen and (min-width: 680px) {
+      top: -52px;
+      height: 692px;
+      transform: scale(1.43) rotate(0.12deg);
+    }
+    @media screen and (min-width: 700px) {
+      top: -50px;
+      height: 695px;
+      transform: scale(1.4) rotate(0.1deg);
+    }
+    @media screen and (min-width: 730px) {
+      height: 698px;
+      transform: scale(1.3) rotate(0.09deg);
     }
     @media screen and (min-width: 768px) {
       height: 700px;
-      top: -50px;
+      transform: scale(1.25) rotate(0.08deg);
+    }
+    @media screen and (min-width: 800px) {
+      height: 710px;
+      transform: scale(1.2) rotate(0.07deg);
+    }
+    @media screen and (min-width: 850px) {
+      height: 725px;
+      transform: scale(1.15) rotate(0.06deg);
+    }
+    @media screen and (min-width: 900px) {
+      height: 750px;
+      transform: scale(1.12) rotate(0.05deg);
+    }
+    @media screen and (min-width: 950px) {
+      height: 775px;
+      transform: scale(1.09) rotate(0.04deg);
+    }
+    @media screen and (min-width: 1000px) {
+      height: 790px;
+      transform: scale(1.06) rotate(0.03deg);
     }
     @media screen and (min-width: 1024px) {
       height: 800px;
+      transform: scale(1.04) rotate(0.02deg);
+    }
+    @media screen and (min-width: 1100px) {
+      height: 820px;
+      transform: scale(1.03) rotate(0.01deg);
+    }
+    @media screen and (min-width: 1200px) {
+      height: 850px;
+      transform: scale(1.02) rotate(0.005deg);
+    }
+    @media screen and (min-width: 1300px) {
+      height: 860px;
+      transform: scale(1.01) rotate(0.002deg);
     }
     @media screen and (min-width: 1500px) {
       height: 870px;
+      transform: scale(1) rotate(0deg);
     }
   }
 
