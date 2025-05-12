@@ -18,15 +18,14 @@ body {
 }
 
 .container {
-  overflow: hidden;
-
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  height: 100vh;
+  
   @media screen and (min-width: 1224px) {
     scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
   }
-
-  scroll-behavior: smooth;
 }
 
 .container::-webkit-scrollbar {
@@ -38,7 +37,7 @@ body {
 .section-3 {
   scroll-snap-align: start;
   min-height: 100vh;
-  overflow: hidden;
+  overflow: visible;
 }
 
 @keyframes blob-1 {
@@ -92,9 +91,8 @@ body {
     z-index: -1;
     animation: blob-1 9s ease-in-out infinite;
     @media screen and (max-width: 1224px) {
-      height: 325px;
-      width: 350px;
-      left: -50px;
+      height: 385px;
+      width: 500px;
     }
   }
   .blob-2-wrapper {
@@ -107,6 +105,12 @@ body {
     transform: translateX(-50%);
     z-index: -1;
     animation: blob-2 15s ease-in-out infinite;
+    display: none;
+    
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+    
     @media screen and (min-width: 1224px) {
       height: 650px;
       width: 550px;
@@ -126,7 +130,12 @@ body {
     animation: blob-3 12s ease-in-out infinite;
     width: 350px;
     height: 450px;
-
+    display: none;
+    
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+    
     @media screen and (min-width: 1024px) {
       right: 50px;
     }
@@ -190,10 +199,10 @@ body {
 
       .logo {
         align-self: flex-end;
-        padding-left: 10px;
+        padding-left: 20px;
         
         @media screen and (max-width: 480px) {
-          padding-left: 5px;
+          padding-left: 15px;
         }
         
         @media screen and (min-width: 640px) {
@@ -343,7 +352,7 @@ body {
         border: none;
       }
 
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 768px) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -721,7 +730,7 @@ body {
 .section-3 {
   display: none;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 768px) {
     display: block;
   }
   .download {
