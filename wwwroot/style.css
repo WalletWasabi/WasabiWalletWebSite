@@ -556,8 +556,12 @@ body {
     padding: 0 20px;
     margin-top: 13vh;
 
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      max-width: 750px;
+    }
     @media screen and (min-width: 768px) {
-      max-width: 500px;
+      max-width: 750px;
     }
     @media screen and (min-width: 1024px) {
       display: flex;
@@ -630,11 +634,18 @@ body {
     }
     .feature-toggle:checked + .feature {
       background: linear-gradient(180deg, #c4c4c40d, #5e5e5e0f);
-      transform: translateX(-10px);
       align-items: center;
       max-width: 300px;
+      
+      @media screen and (min-width: 1024px) {
+        transform: translateX(-10px);
+      }
 
-      @media screen and (min-width: 380px) {
+      @media screen and (min-width: 380px) and (max-width: 1023px) {
+        align-items: center;
+      }
+      
+      @media screen and (min-width: 1024px) {
         align-items: flex-start;
       }
       svg {
@@ -654,11 +665,14 @@ body {
 
       h6 {
         flex-direction: column;
-
         gap: 4px;
         transition: all 0.4s ease;
 
-        @media screen and (min-width: 380px) {
+        @media screen and (min-width: 380px) and (max-width: 1023px) {
+          flex-direction: column;
+        }
+        
+        @media screen and (min-width: 1024px) {
           flex-direction: row;
         }
         span {
