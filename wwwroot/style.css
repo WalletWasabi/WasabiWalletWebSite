@@ -20,9 +20,12 @@ body {
 .container {
   overflow: hidden;
 
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
+  @media screen and (min-width: 1224px) {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+
   scroll-behavior: smooth;
 }
 
@@ -51,35 +54,31 @@ body {
 }
 @keyframes blob-3 {
   0% {
-    transform: translateX(200px);
+    transform: translateX(250px);
   }
   50% {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(200px);
+    transform: translateX(250px);
   }
 }
+
 @keyframes blob-2 {
   0% {
     transform: translateX(-50%) translateY(-270px);
-    opacity: 1;
   }
   25% {
-    transform: translateX(-70%) translateY(-100px);
-    opacity: 1;
+    transform: translateX(-60%) translateY(-200px);
   }
   50% {
-    transform: translateX(-95%) translateY(70px);
-    opacity: 1;
+    transform: translateX(-70%) translateY(-100px);
   }
   75% {
-    opacity: 1;
-    transform: translateX(-120%) translateY(110px);
+    transform: translateX(-60%) translateY(-200px);
   }
   100% {
-    opacity: 0;
-    transform: translateX(-120%) translateY(110px);
+    transform: translateX(-50%) translateY(-270px);
   }
 }
 
@@ -91,42 +90,54 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    animation: blob-1 12s ease-in-out infinite;
+    animation: blob-1 9s ease-in-out infinite;
 
     @media screen and (max-width: 1024px) {
       height: 300px;
       width: 250px;
     }
   }
-  .blob-2 {
+  .blob-2-wrapper {
+    overflow: hidden;
     position: absolute;
     top: 20%;
     left: 50%;
-    height: 300px;
-    width: 250px;
+    height: 400px;
+    width: 350px;
     transform: translateX(-50%);
     z-index: -1;
-
-    animation: blob-2 12s ease-in-out infinite;
-
+    animation: blob-2 15s ease-in-out infinite;
     @media screen and (min-width: 1024px) {
-      height: 600px;
+      height: 650px;
       width: 550px;
     }
+    .blob-2 {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+    }
   }
+
   .blob-3 {
     position: absolute;
     top: 0;
-    right: 0;
-
+    right: 0px;
     z-index: -1;
-
     animation: blob-3 12s ease-in-out infinite;
+    width: 350px;
+    height: 450px;
+
+    @media screen and (min-width: 1024px) {
+      right: 50px;
+    }
+    @media screen and (min-width: 1224px) {
+      right: 200px;
+    }
   }
 
   .stripe {
     position: absolute;
-    top: 0;
+    top: -150px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -134,14 +145,24 @@ body {
     width: 100%;
     height: 600px;
 
+    @media screen and (min-width: 450px) {
+      top: -130px;
+    }
+    @media screen and (min-width: 550px) {
+      top: -100px;
+    }
+    @media screen and (min-width: 650px) {
+      top: -70px;
+    }
     @media screen and (min-width: 768px) {
       height: 700px;
+      top: -50px;
     }
     @media screen and (min-width: 1024px) {
       height: 800px;
     }
     @media screen and (min-width: 1500px) {
-      height: 850px;
+      height: 870px;
     }
   }
 
@@ -152,7 +173,8 @@ body {
       align-items: center;
       max-width: 1440px;
       margin: 0 auto;
-      padding: 40px 20px 10px 20px;
+      padding: 0 20px;
+      padding-top: 40px;
       @media screen and (min-width: 640px) {
         padding: 0 40px;
         padding-top: 40px;
@@ -168,8 +190,18 @@ body {
 
       .logo {
         align-self: flex-end;
+        padding-left: 10px;
+        
+        @media screen and (max-width: 480px) {
+          padding-left: 5px;
+        }
+        
+        @media screen and (min-width: 640px) {
+          padding-left: 0;
+        }
+        
         img {
-          width: 50px;
+          width: 70px;
 
           @media screen and (min-width: 768px) {
             width: 70px;
@@ -177,37 +209,57 @@ body {
         }
       }
 
-.btn-secondary {
-    width: 160px;
-    height: 46px;
+      .btn-secondary {
+        width: 160px;
+        height: 46px;
+        border-radius: 100px;
+        padding: 10px 30px;
+        gap: 12px;
+        background: linear-gradient(180deg, #2a2a2a, #050404);
+        border: 1px solid #a2ff00;
+        font-family: "Inter", sans-serif;
+        position: relative;
+        box-shadow: 2px 4px 4px 0px #212121;
+        color: #c9c9c9;
 
-    @media screen and (max-width: 450px) {
-        width: 110px;
-        height: 30px;
-    }
-
-    border-radius: 100px;
-    padding: 10px 30px;
-    gap: 12px;
-    background: linear-gradient(180deg, #2a2a2a, #050404);
-    border: 1px solid #a2ff00;
-    font-family: "Inter", sans-serif;
-    position: relative;
-    box-shadow: 2px 4px 4px 0px #212121;
-    color: #c9c9c9;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 600ms ease;
-    &:hover {
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 600ms ease;
+        
+        @media screen and (max-width: 640px) {
+          width: 130px;
+          height: 40px;
+          padding: 8px 16px;
+          gap: 8px;
+          font-size: 14px;
+        }
+        
+        @media screen and (max-width: 480px) {
+          width: 100px;
+          height: 36px;
+          padding: 5px 10px;
+          gap: 6px;
+          font-size: 12px;
+        }
+        
+        &:hover {
           border: 1px solid #5a5959;
           box-shadow: 1px 3px 3px 0px #5a5959;
         }
 
         img {
           width: 18px;
+          
+          @media screen and (max-width: 640px) {
+            width: 16px;
+          }
+          
+          @media screen and (max-width: 480px) {
+            width: 14px;
+          }
         }
       }
     }
@@ -264,30 +316,39 @@ body {
       }
     }
 
-.btn-primary {
-    position: relative;
-    width: 160px;
-    height: 46px;
-    font-size: 16px;
-    font-weight: 500;
+    .btn-primary {
+      position: relative;
+      width: 160px;
+      height: 46px;
+      border-radius: 30px;
+      padding: 10px 30px;
+      border-radius: 30px;
+      background: linear-gradient(180deg, #a2ff00 5.68%, #639b01 71.59%);
+      background-color: #a2ff00;
+      border: none;
 
-    @media screen and (max-width: 450px) {
-        width: 110px;
-        height: 30px;
-        font-size: 14px;
-    }
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 600ms;
 
-    border-radius: 30px;
-    padding: 0px 0px;
-    border-radius: 30px;
-    background: linear-gradient(180deg, #a2ff00 5.68%, #639b01 71.59%);
-    background-color: #a2ff00;
-    border: none;
-    color: #000000;
-    cursor: pointer;
-    transition: background-color 600ms;
-    font-family: "Inter", sans-serif;
-    &:after {
+      text-decoration: none;
+
+      display: none;
+
+      button {
+        color: #000000;
+        font-size: 16px;
+        font-family: "Inter", sans-serif;
+        background: none;
+        border: none;
+      }
+
+      @media screen and (min-width: 1024px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &:after {
         content: "";
         position: absolute;
         top: 0;
@@ -841,6 +902,11 @@ body {
   .logo {
     display: flex;
     align-items: center;
+
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
 
     img {
       width: 100px;
