@@ -414,10 +414,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 26px;
-    margin-top: 100px; /* Moved up from 120px */
+    gap: 20px;
+    margin-top: 80px;
 
     @media screen and (min-width: 640px) {
+      gap: 26px;
       margin-top: 150px;
     }
 
@@ -432,12 +433,7 @@ body {
       flex-direction: column;
       align-items: center;
       padding: 5px 0;
-      
-      @media screen and (min-width: 640px) {
-        flex-direction: row;
-        justify-content: center;
-        gap: 15px;
-      }
+      gap: 10px;
     }
     
     h1 .wasabi, h1 .wallet {
@@ -453,12 +449,7 @@ body {
       background: linear-gradient(180deg, #ffffff, #a0a0a0, rgb(150, 146, 122));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 5px;
       font-weight: 700;
-      
-      @media screen and (min-width: 640px) {
-        margin-bottom: 0;
-      }
     }
     
     h1 .wallet {
@@ -547,21 +538,19 @@ body {
 
   .generic-features {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     transition: all 300ms ease;
-    gap: 10px;
-    max-width: 500px;
+    gap: 8px;
+    max-width: 750px;
     margin: 0 auto;
     padding: 0 20px;
-    margin-top: 13vh;
+    margin-top: 8vh;
+    position: relative;
 
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      grid-template-columns: 1fr 1fr 1fr;
-      max-width: 750px;
-    }
-    @media screen and (min-width: 768px) {
-      max-width: 750px;
+    @media screen and (max-width: 640px) {
+      grid-template-columns: 1fr 1fr;
+      max-width: 640px;
     }
     @media screen and (min-width: 1024px) {
       display: flex;
@@ -581,22 +570,34 @@ body {
 
     .feature {
       display: flex;
-
       flex-direction: column;
       align-items: center;
-      gap: 16px;
-      padding: 20px 5px;
+      gap: 12px;
+      padding: 15px 5px;
       border-radius: 20px;
-      max-width: 140px;
+      max-width: 120px;
       transition: all 0.4s ease;
       height: auto;
       width: 100%;
       cursor: pointer;
-      transition: all 0.4s ease;
+      
+      @media screen and (max-width: 480px) {
+        gap: 8px;
+        padding: 10px 5px;
+      }
+      
       @media screen and (min-width: 1024px) {
         height: 260px;
         padding: 20px 10px;
+        max-width: 140px;
+        gap: 16px;
       }
+      
+      svg {
+        width: auto;
+        height: auto;
+      }
+      
       h6 {
         display: flex;
         flex-direction: column;
@@ -604,15 +605,23 @@ body {
 
         span {
           color: #fff;
-          font-size: 15.14px;
+          font-size: 13px;
           font-weight: 300;
           line-height: 1.2;
           text-align: center;
+          
+          @media screen and (max-width: 480px) {
+            font-size: 12px;
+          }
+          
+          @media screen and (min-width: 1024px) {
+            font-size: 15.14px;
+          }
         }
       }
       .hiddenText {
         font-weight: 300;
-        font-size: 14px;
+        font-size: 13px;
         color: #ffffff;
         max-width: 280px;
         max-height: 0;
@@ -620,9 +629,15 @@ body {
         opacity: 0;
         display: block;
         transition: all 0.3s ease;
-        line-height: 18px;
+        line-height: 17px;
         margin: 0;
         transition: all 0.4s ease 0.1s;
+        
+        @media screen and (max-width: 480px) {
+          font-size: 12px;
+          line-height: 16px;
+        }
+        
         a {
           text-decoration: underline;
           color: #77c400;
@@ -632,6 +647,7 @@ body {
     .svg-3-greeen {
       display: none;
     }
+    
     .feature-toggle:checked + .feature {
       background: linear-gradient(180deg, #c4c4c40d, #5e5e5e0f);
       align-items: center;
@@ -639,19 +655,22 @@ body {
       
       @media screen and (min-width: 1024px) {
         transform: translateX(-10px);
+        align-items: flex-start;
       }
 
       @media screen and (min-width: 380px) and (max-width: 1023px) {
         align-items: center;
       }
       
+
       @media screen and (min-width: 1024px) {
         align-items: flex-start;
       }
-      svg {
+            svg {
         transition: all 0.4s ease;
         flex-shrink: 0;
       }
+      
       .svg-checked path {
         fill: url(#paint0_linear_checked);
       }
@@ -659,6 +678,7 @@ body {
       .svg-3 {
         display: none;
       }
+      
       .svg-3-greeen {
         display: block;
       }
@@ -675,16 +695,31 @@ body {
         @media screen and (min-width: 1024px) {
           flex-direction: row;
         }
+        
         span {
           color: #77c400;
           font-weight: 700;
         }
       }
-
-      .hiddenText {
+    }
+    
+    .feature-toggle:checked ~ .feature .hiddenText {
+      max-height: fit-content;
+      opacity: 1;
+    }
+    
+    .feature-toggle:checked ~ .hiddenText-fullwidth {
+      @media screen and (max-width: 640px) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
         max-height: fit-content;
-
         opacity: 1;
+        z-index: 20;
+        margin-top: 10px;
       }
     }
   }
