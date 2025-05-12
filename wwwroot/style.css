@@ -43,42 +43,42 @@ body {
 
 @keyframes blob-1 {
   0% {
-    transform: translateX(-200px);
+    transform: translateX(-350px);
   }
   50% {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(-200px);
+    transform: translateX(-350px);
   }
 }
 @keyframes blob-3 {
   0% {
-    transform: translateX(250px);
+    transform: translateX(350px);
   }
   50% {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(250px);
+    transform: translateX(350px);
   }
 }
 
 @keyframes blob-2 {
   0% {
-    transform: translateX(-50%) translateY(-270px);
+    transform: translateX(-30%) translateY(-300px);
   }
   25% {
-    transform: translateX(-60%) translateY(-200px);
+    transform: translateX(-45%) translateY(-200px);
   }
   50% {
-    transform: translateX(-70%) translateY(-100px);
+    transform: translateX(-60%) translateY(-100px);
   }
   75% {
-    transform: translateX(-60%) translateY(-200px);
+    transform: translateX(-45%) translateY(-200px);
   }
   100% {
-    transform: translateX(-50%) translateY(-270px);
+    transform: translateX(-30%) translateY(-300px);
   }
 }
 
@@ -91,10 +91,10 @@ body {
     left: 0;
     z-index: -1;
     animation: blob-1 9s ease-in-out infinite;
-
-    @media screen and (max-width: 1024px) {
-      height: 300px;
-      width: 250px;
+    @media screen and (max-width: 1224px) {
+      height: 325px;
+      width: 350px;
+      left: -50px;
     }
   }
   .blob-2-wrapper {
@@ -102,12 +102,12 @@ body {
     position: absolute;
     top: 20%;
     left: 50%;
-    height: 400px;
-    width: 350px;
+    height: 500px;
+    width: 425px;
     transform: translateX(-50%);
     z-index: -1;
     animation: blob-2 15s ease-in-out infinite;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1224px) {
       height: 650px;
       width: 550px;
     }
