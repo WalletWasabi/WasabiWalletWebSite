@@ -415,7 +415,7 @@ body {
     align-items: center;
     flex-direction: column;
     gap: 26px;
-    margin-top: 120px;
+    margin-top: 100px; /* Moved up from 120px */
 
     @media screen and (min-width: 640px) {
       margin-top: 150px;
@@ -426,34 +426,69 @@ body {
     }
 
     h1 {
-      font-size: 34px;
       font-weight: 600;
       line-height: 1;
-      background: linear-gradient(180deg, #fefefe, #5e5e5e);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5px 0;
+      
+      @media screen and (min-width: 640px) {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+      }
+    }
+    
+    h1 .wasabi, h1 .wallet {
+      font-size: 60px; /* Increased from 54px */
+      text-align: center;
+      
+      @media screen and (min-width: 640px) {
+        font-size: 64px; /* Increased from 58px */
+      }
+    }
+    
+    h1 .wasabi {
+      background: linear-gradient(180deg, #ffffff, #a0a0a0, rgb(150, 146, 122));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-
+      margin-bottom: 5px;
+      font-weight: 700;
+      
       @media screen and (min-width: 640px) {
-        font-size: 44px;
+        margin-bottom: 0;
       }
-
-      @media screen and (min-width: 1024px) {
-        font-size: 54px;
-      }
+    }
+    
+    h1 .wallet {
+      background: linear-gradient(180deg, #d0d0d0, #686868, rgb(83, 92, 83));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+      padding-left: 0.1em; /* Slight padding to offset the 'T' for better alignment */
     }
 
     p {
       font-size: 18px;
-      color: #ffffff;
-      line-height: 1;
-      font-weight: 300;
-
+      color: #c0c0c0;
+      line-height: 1.3; /* Increased from 1 for better readability */
+      font-weight: 400; /* Increased from 300 for better visibility on small screens */
+      text-align: center; /* Center the text */
+      max-width: 90%; /* Prevent text from stretching too wide */
+      margin: 0 auto; /* Center the text block */
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle shadow for better contrast */
+      
       @media screen and (min-width: 640px) {
         font-size: 22px;
+        line-height: 1.2;
+        max-width: 80%;
       }
 
       @media screen and (min-width: 1024px) {
         font-size: 28px;
+        line-height: 1;
+        max-width: none;
       }
     }
 
