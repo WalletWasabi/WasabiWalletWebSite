@@ -847,16 +847,15 @@ body {
       min-height: 250px;
     }
 
-    .option-text {
-      display: none;
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 1.2;
-      background: linear-gradient(180deg, #ffffff, #949494);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-
-      a {
+.option-text {
+    display: none;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.2;
+    background: linear-gradient(180deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    a {
         background: linear-gradient(180deg, #ffffff, #fff);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -977,15 +976,14 @@ body {
     -webkit-text-fill-color: transparent !important;
   }
 
-  .option-description {
+.option-description {
     font-weight: 300;
     font-size: 16px;
     line-height: 1.2;
     margin-top: 4px;
-    background: linear-gradient(180deg, #ffffff, #949494);
+    background: linear-gradient(180deg, #ffffff, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
     span {
       display: flex;
       flex-direction: column;
