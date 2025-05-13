@@ -753,7 +753,12 @@ body {
       height: 972px;
     }
   }
-  .specific-features {
+  
+  /* Make all icons have the same brightness */
+  .radio-column svg g[opacity="0.7"] {
+    opacity: 1;
+  }
+    .specific-features {
     max-width: 1440px;
     margin: 0 auto;
     padding: 260px 240px;
@@ -768,26 +773,69 @@ body {
       padding: 120px 20px;
     }
     @media screen and (min-width: 768px) {
-      padding: 160px 120px;
+      padding: 160px 20px; /* Reduced side padding to make container wider */
     }
     @media screen and (min-width: 1024px) {
-      padding: 260px 120px;
+      padding: 260px 80px; /* Reduced side padding to make container wider */
       gap: 127px;
       flex-direction: row;
       justify-content: space-between;
     }
     @media screen and (min-width: 1224px) {
-      padding: 260px 220px;
+      padding: 260px 120px; /* Reduced side padding to make container wider */
     }
 
     .radio-column {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      display: flex;
+      overflow-x: auto;
+      gap: 10px; /* Further reduced gap */
+      padding: 15px 15px 15px 0px; /* Further reduced padding on right side */
+      width: 100%;
+      position: relative;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+      
+      /* No gradient fade - clean look */
+      
+      /* Hide scrollbar */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      
+      .radio-option {
+        flex: 0 0 auto;
+        width: calc(100% / 3.5); /* Further reduced to show more of the 4th icon */
+      }
+      
+      /* Make the first option have negative margin to shift everything left */
+      .radio-option:first-child {
+        margin-left: -10px;
+      }
+      
+      @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        width: 100%;
+        max-width: 900px; /* Increased from 700px to make container wider */
+        margin: 0 auto;
+        overflow-x: visible;
+        padding: 0;
+        
+        &::after {
+          display: none;
+        }
+        
+        .radio-option {
+          width: auto;
+        }
+      }
 
       @media screen and (min-width: 1024px) {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
+        max-width: none;
+        margin: 0;
       }
     }
 
@@ -867,16 +915,36 @@ body {
     }
   }
 
-  .radio-label {
+    .radio-label {
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    max-width: 110px;
-    gap: 13px;
+    max-width: 90px; /* Reduced from 110px */
+    gap: 10px; /* Reduced from 13px */
     transition: transform 0.4s ease;
     /* Prevent scrolling on click */
     -webkit-tap-highlight-color: transparent;
+    margin: 0 auto;
+    
+    /* Scale icons on small screens */
+    svg {
+      transform: scale(0.85); /* Increased from 0.7 */
+      max-width: 38px; /* Increased from 32px */
+      max-height: 38px; /* Increased from 32px */
+    }
+    
+    @media screen and (min-width: 768px) {
+      max-width: 110px;
+      gap: 13px;
+      
+      svg {
+        transform: scale(0.95); /* Very slightly reduced size */
+        max-width: none;
+        max-height: none;
+      }
+    }
+    
     h6 {
       display: flex;
       flex-direction: column;
@@ -886,10 +954,14 @@ body {
         background: linear-gradient(180deg, #a2ff00, #639b01);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 14px;
+        font-size: 12px; /* Reduced from 14px */
         font-weight: 300;
         line-height: 1.2;
         text-align: center;
+        
+        @media screen and (min-width: 768px) {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -989,7 +1061,7 @@ body {
       padding: 120px 20px;
     }
     @media screen and (min-width: 768px) {
-      padding: 160px 120px;
+      padding: 160px 40px; /* Further reduced padding to make container even wider */
     }
     @media screen and (min-width: 1024px) {
       padding: 220px 120px;
