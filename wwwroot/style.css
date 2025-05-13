@@ -833,10 +833,22 @@ body {
       }
 
       @media screen and (min-width: 1024px) {
+        display: grid; /* Explicitly declare grid again for Safari */
         grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-        max-width: none;
+        column-gap: 20px; /* Specify column-gap for Safari */
+        row-gap: 20px; /* Specify row-gap for Safari */
+        max-width: 380px; /* Constrain width for more consistent spacing */
         margin: 0;
+      }
+
+      /* Specific fix for Safari */
+      @media not all and (min-resolution:.001dpcm) {
+        @supports (-webkit-appearance:none) {
+          @media screen and (min-width: 1024px) {
+            column-gap: 20px;
+            row-gap: 20px;
+          }
+        }
       }
     }
 
@@ -905,6 +917,7 @@ body {
     }
     .bitcoin-green {
       display: none;
+      filter: brightness(0.2);
     }
     h6 {
       span {
@@ -929,17 +942,26 @@ body {
     
     /* Scale icons on small screens */
     svg {
-      transform: scale(0.85); /* Increased from 0.7 */
-      max-width: 38px; /* Increased from 32px */
-      max-height: 38px; /* Increased from 32px */
+      transform: scale(0.8); /* Increased from 0.7 */
     }
     
-    @media screen and (min-width: 768px) {
-      max-width: 110px;
+    /* Medium screens - 20% smaller */
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      max-width: 120px; /* 20% smaller than 110px */
+      gap: 10px;
+      
+      svg {
+        transform: scale(0.9); /* 20% smaller than 0.95 */
+      }
+    }
+    
+    /* Large screens - original size */
+    @media screen and (min-width: 1024px) {
+      max-width: 120px;
       gap: 13px;
       
       svg {
-        transform: scale(0.95); /* Very slightly reduced size */
+        transform: scale(0.95);
         max-width: none;
         max-height: none;
       }
@@ -959,7 +981,13 @@ body {
         line-height: 1.2;
         text-align: center;
         
-        @media screen and (min-width: 768px) {
+        /* Medium screens - 20% smaller text */
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+          font-size: 11px; /* Smaller text for medium screens */
+        }
+        
+        /* Large screens - original size */
+        @media screen and (min-width: 1024px) {
           font-size: 14px;
         }
       }
@@ -1040,7 +1068,6 @@ body {
     outline: none;
   }
 }
-
 .section-3 {
   display: none;
 
@@ -1060,7 +1087,7 @@ body {
       padding: 180px 20px;
     }
     @media screen and (min-width: 1024px) {
-      padding: 220px 120px;
+      padding: 20px 120px;
     }
 
     @media screen and (min-width: 1024px) {
