@@ -841,7 +841,14 @@ body {
     display: none;
   }
 
-  .radio-label.active {
+  #option1:checked ~ .radio-column .radio-label1,
+  #option2:checked ~ .radio-column label[for="option2"],
+  #option3:checked ~ .radio-column label[for="option3"],
+  #option4:checked ~ .radio-column label[for="option4"],
+  #option5:checked ~ .radio-column label[for="option5"],
+  #option6:checked ~ .radio-column label[for="option6"],
+  #option7:checked ~ .radio-column label[for="option7"],
+  #option8:checked ~ .radio-column label[for="option8"] {
     svg path {
       fill: rgba(255, 255, 255, 0.774);
     }
@@ -868,6 +875,8 @@ body {
     max-width: 110px;
     gap: 13px;
     transition: transform 0.4s ease;
+    /* Prevent scrolling on click */
+    -webkit-tap-highlight-color: transparent;
     h6 {
       display: flex;
       flex-direction: column;
@@ -953,6 +962,11 @@ body {
   }
   #option8:checked ~ .text-column .text-option8 {
     display: block;
+  }
+  
+  /* Prevent default scrolling behavior when clicking radio inputs */
+  .radio-input:focus {
+    outline: none;
   }
 }
 
