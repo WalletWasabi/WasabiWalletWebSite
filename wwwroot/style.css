@@ -53,13 +53,13 @@ body {
 }
 @keyframes blob-3 {
   0% {
-    transform: translateX(350px);
+    transform: translateX(350px) translateY(-60px);
   }
   50% {
-    transform: translateX(0px);
+    transform: translateX(100px) translateY(-20px);
   }
   100% {
-    transform: translateX(350px);
+    transform: translateX(350px) translateY(-60px);
   }
 }
 
