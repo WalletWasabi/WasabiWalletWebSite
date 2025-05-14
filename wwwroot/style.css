@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
 *,
 *::before,
 *::after {
@@ -443,11 +441,11 @@ body {
     }
     
     h1 .wasabi, h1 .wallet {
-      font-size: 60px; /* Increased from 54px */
+      font-size: 50px;
       text-align: center;
       
       @media screen and (min-width: 640px) {
-        font-size: 64px; /* Increased from 58px */
+        font-size: 64px;
       }
     }
     
@@ -561,7 +559,7 @@ body {
     @media screen and (min-width: 1024px) {
       margin-top: 15vh;
     }
-
+    
     @media screen and (max-width: 640px) {
       grid-template-columns: 1fr 1fr;
       max-width: 640px;
@@ -575,13 +573,13 @@ body {
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       max-width: 1200px;
     }
-
+  
     .feature-toggle {
       position: absolute;
       opacity: 0;
       cursor: pointer;
     }
-
+  
     .feature {
       display: flex;
       flex-direction: column;
@@ -616,7 +614,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-
+  
         span {
           color: #fff;
           font-size: 13px;
@@ -671,16 +669,16 @@ body {
         transform: translateX(-10px);
         align-items: flex-start;
       }
-
+      
       @media screen and (min-width: 380px) and (max-width: 1023px) {
         align-items: center;
       }
       
-
+      
       @media screen and (min-width: 1024px) {
         align-items: flex-start;
       }
-            svg {
+      svg {
         transition: all 0.4s ease;
         flex-shrink: 0;
       }
@@ -688,7 +686,7 @@ body {
       .svg-checked path {
         fill: url(#paint0_linear_checked);
       }
-
+      
       .svg-3 {
         display: none;
       }
@@ -696,12 +694,12 @@ body {
       .svg-3-greeen {
         display: block;
       }
-
+      
       h6 {
         flex-direction: column;
         gap: 4px;
         transition: all 0.4s ease;
-
+        
         @media screen and (min-width: 380px) and (max-width: 1023px) {
           flex-direction: column;
         }
@@ -714,16 +712,16 @@ body {
           color: #77c400;
           font-weight: 700;
         }
+        }
       }
-    }
-    
+      
     .feature-toggle:checked ~ .feature .hiddenText {
       max-height: fit-content;
-      opacity: 1;
+        opacity: 1;
     }
     
     .feature-toggle:checked ~ .hiddenText-fullwidth {
-      @media screen and (max-width: 640px) {
+    @media screen and (max-width: 640px) {
         position: absolute;
         top: 100%;
         left: 0;
