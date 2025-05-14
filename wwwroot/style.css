@@ -816,7 +816,8 @@ body {
       @media screen and (min-width: 768px) {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+        column-gap: 10px;
+        row-gap: 40px;
         width: 100%;
         max-width: 900px; /* Increased from 700px to make container wider */
         margin: 0 auto;
@@ -835,8 +836,8 @@ body {
       @media screen and (min-width: 1024px) {
         display: grid; /* Explicitly declare grid again for Safari */
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 20px; /* Specify column-gap for Safari */
-        row-gap: 20px; /* Specify row-gap for Safari */
+        column-gap: 10px; /* Specify column-gap for Safari */
+        row-gap: 40px; /* Specify row-gap for Safari */
         max-width: 380px; /* Constrain width for more consistent spacing */
         margin: 0;
       }
@@ -845,8 +846,8 @@ body {
       @media not all and (min-resolution:.001dpcm) {
         @supports (-webkit-appearance:none) {
           @media screen and (min-width: 1024px) {
-            column-gap: 20px;
-            row-gap: 20px;
+            column-gap: 10px;
+            row-gap: 40px;
           }
         }
       }
@@ -945,7 +946,7 @@ body {
     
     /* Scale icons on small screens */
     svg {
-      transform: scale(0.8); /* Increased from 0.7 */
+      transform: scale(0.85); /* Increased from 0.7 */
     }
     
     /* Medium screens - 20% smaller */
@@ -954,7 +955,7 @@ body {
       gap: 10px;
       
       svg {
-        transform: scale(0.9); /* 20% smaller than 0.95 */
+        transform: scale(0.92); /* 20% smaller than 0.95 */
       }
     }
     
