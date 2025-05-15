@@ -17,6 +17,11 @@ body {
   background: #050404;
 }
 
+a {
+  text-decoration: underline;
+  color: #77c400;
+}
+
 .container {
   overflow-y: auto;
   overflow-x: hidden;
@@ -646,15 +651,19 @@ body {
         line-height: 23px;
         margin: 0;
         transition: all 0.4s ease 0.1s;
+        a {
+          -webkit-text-fill-color: #77c400;
+          color: #77c400;
+          transition: all 0.3s ease;
+        }
         
+        a:hover {
+          -webkit-text-fill-color: #a2ff00;
+          color: #a2ff00;
+        }
         @media screen and (max-width: 480px) {
           font-size: 12px;
           line-height: 16px;
-        }
-        
-        a {
-          text-decoration: underline;
-          color: #77c400;
         }
       }
     }
@@ -854,7 +863,7 @@ body {
     }
 
     .text-column {
-      max-width: 573px;
+      max-width: 650px;
       position: relative;
 
       min-height: 250px;
@@ -868,21 +877,6 @@ body {
     background: linear-gradient(180deg, #ffffff, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    a {
-        background: linear-gradient(180deg, #ffffff, #fff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        position: relative;
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 95%;
-          height: 1px;
-          background-color: white;
-        }
-      }
       ul {
         list-style: disc;
         padding-left: 25px;
@@ -1008,7 +1002,7 @@ body {
     -webkit-text-fill-color: transparent !important;
   }
 
-.option-description {
+  .option-description {
     font-weight: 250;
     font-size: 17px;
     line-height: 1.5;
@@ -1016,28 +1010,26 @@ body {
     background: linear-gradient(180deg, #ffffff, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
+    display: block;
+    
+    a {
+      -webkit-text-fill-color: #77c400;
+      color: #77c400;
+      transition: all 0.3s ease;
+    }
+    
+    a:hover {
+      -webkit-text-fill-color: #a2ff00;
+      color: #a2ff00;
+    }
+    
     span {
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
-
-    a {
-      background: linear-gradient(180deg, #ffffff, #fff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      position: relative;
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 95%;
-        height: 1px;
-        background-color: white;
-      }
-    }
-  }
+}
 
   #option1:checked ~ .text-column .text-option1 {
     display: block;
