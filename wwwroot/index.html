@@ -331,7 +331,7 @@
               <span>Integration</span>
             </h6>
             <p class="hiddenText hiddenText-fullwidth">Wasabi supports <a href="https://github.com/bitcoin-core/HWI">HWI</a> , enabling seamless integration with popular hardware wallets like Trezor,
-              ColdCard, Ledger, Blockstream Jade, and BitBox02. Check the full list of supported devices <a href="https://github.com/WalletWasabi/WalletWasabi/blob/master/WalletWasabi.Documentation/WasabiCompatibility.md#officially-supported-operating-systems">here</a>
+              ColdCard, Ledger, Blockstream Jade, and BitBox02. Check the full list of supported devices <a href="https://github.com/WalletWasabi/WalletWasabi/blob/master/WalletWasabi.Documentation/WasabiCompatibility.md#officially-supported-hardware-wallets">here</a>
             </p>
           </div>
         </label>
@@ -353,37 +353,42 @@
         <div class="text-column">
           <div class="option-text  text-option1">
             <h6 class="option-label">Tor Everywhere</h6>
-            <p class="option-description">All your traffic is routed through the <a href="https://www.torproject.org/">Tor Network,</a> ensuring complete privacy and
+            <p class="option-description">All your traffic is routed through the <a href="https://www.torproject.org/">Tor Network</a>, ensuring privacy and
+
               anonymity.
-              <hr style="margin-top: 20px; border: none;">Wasabi's custom Tor integration ensures that no two important requests appear to originate from the same source, making it virtually impossible for
+              <br/><br/>Wasabi's custom Tor integration ensures that no two important requests appear to originate from the same source, making it virtually impossible for
               anyone to trace your activity. 
-              <hr style="margin-top: 20px; border: none;">Whether you're sending transactions or synchronizing with the blockchain, your privacy is always
+              <br/><br/>Whether you're sending transactions or synchronizing with the blockchain, your privacy is always
               protected.</p>
           </div>
           <div class="option-text  text-option2">
             <h6 class="option-label">Private Blockchain Synchronization</h6>
             <p class="option-description">Wasabi uses Compact Filters to synchronize with the blockchain privately. 
-              <hr style="margin-top: 20px; border: none;">Instead of relying on a central
+              <br/><br/>Instead of relying on a central
               server or having to download the entire blockchain, Wasabi requests only the relevant blocks for your transactions. 
-              <hr style="margin-top: 20px; border: none;">This ensures that noone can determine how much Bitcoin you own or which transactions belong to you.</p>
+              <br/><br/>This ensures that no one can determine how much Bitcoin you own or which transactions belong to you.</p>
+
           </div>
           <div class="option-text  text-option3">
-            <h6 class="option-label">Multi-Party Trasactions</h6>
-            <p class="option-description" style="display: flex; flex-direction: column; gap: 20px;">
-              Wasabi integrates the WabiSabi Trustless Multi-Party Transaction Engine, a cutting-edge protocol for collaborative
-                transactions.
-                
-                <hr style="margin-top: 20px; border: none;">This innovative feature offers several advantages:
+            <h6 class="option-label">Multi-Party Transactions</h6>
 
-            <ul>
-              <li><b>Hide Payment Origins:</b> Conceal the inputs used for payments from recipients and observers.</li>
-              <li><b>Batch Payments:</b> Combine multiple payments into a single transaction to save on mining fees and reduce change outputs.</li>
-              <li><b>Self-Spend Consolidation:</b> Make it difficult for senders or observers to track how your funds are used or consolidated.</li>
+            <p class="option-description">
+              Wasabi integrates the WabiSabi Trustless Multi-Party Transaction Protocol, a cutting-edge mechanism for collaborative transactions.
+              <br/><br/>This innovative feature offers several advantages:
+            </p>
 
-            </ul>Wasabi ensures trustless privacy: your security is guaranteed by cryptography, not third-party
+            <div class="option-description">
+              <ul>
+                <li><b>Hide Payment Origins:</b> conceal the inputs used for payments from recipients and observers.</li>
+                <li><b>Batch Payments:</b> Combine multiple payments into a single transaction to save on mining fees and reduce change outputs.</li>
+                <li><b>Self-Spend Consolidation:</b> Make it difficult for senders or observers to track how your funds are used or consolidated.</li>
+              </ul>
+            </div>
+            
+            <p class="option-description">Wasabi ensures trustless privacy: your security is guaranteed by cryptography, not third-party
               promises.
               
-              <hr style="margin-top: 20px; border: none;"><a href="https://docs.wasabiwallet.io/FAQ/FAQ-UseWasabi.html#how-do-i-find-a-coordinator">Find</a> a third-party Wasabi
+              <br/><br/><a href="https://docs.wasabiwallet.io/FAQ/FAQ-UseWasabi.html#how-do-i-find-a-coordinator">Find</a> a third-party Wasabi
               Coordination Service Provider and start performing multi-party transactions with Wasabi today!
             </p>
           </div>
@@ -392,39 +397,43 @@
             <p class="option-description">Silent Payments allow you to create a single, static address for sharing with friends, accepting
               donations, or posting publicly without compromising privacy. 
               
-              <hr style="margin-top: 20px; border: none;"> Unlike traditional Bitcoin addresses, Silent Payments can be reused while ensuring
+              <br/><br/> Unlike traditional Bitcoin addresses, Silent Payments can be reused while ensuring
               that any transaction received on it remains unlinkable to other ones.
 
-              <hr style="margin-top: 20px; border: none;">Note: Wasabi currently supports sending to Silent Payment addresses. Support for generating and receiving to Silent Payment addresses is coming soon!
+              <br/><br/>Note: Wasabi currently supports sending to Silent Payment addresses. Support for generating and receiving to Silent Payment addresses is coming soon!
             </p>
           </div>
           <div class="option-text  text-option5">
             <h6 class="option-label">Label Management</h6>
             <p class="option-description">Wasabi provides a comprehensive labeling system to help you track transactions and avoid privacy leaks. 
               
-              <hr style="margin-top: 20px; border: none;"> By labeling coins you can ensure that funds sent by a specific entity will be prioritarily reused when sending payments back to them.
-              <hr style="margin-top: 20px; border: none;"> Wasabi also provides a clear list of entities that will know about a given payment, giving you full transparency and control.
+              <br/><br/> By labeling coins you can ensure that funds sent by a specific entity will be prioritarily reused when sending payments back to them.
+              <br/><br/>Wasabi also provides a clear list of entities that will know about a given payment, giving you full transparency and control.
             </p>
           </div>
           <div class="option-text  text-option6">
             <h6 class="option-label">Privacy Suggestions for Payments</h6>
             <p class="option-description">When making a payment, Wasabi provides actionable suggestions to minimize privacy risks.
               
-              <hr style="margin-top: 20px; border: none;">For example:
-            <ul>
-              <li>Adjusting the payment amount slightly to avoid creating a change output.</li>
-              <li>Warning about the entities that will be made aware that this payment is yours.</li>
-            </ul>
-            These suggestions not only protect your privacy but also improve the efficiency of your transactions, saving you money on fees.
+              <br/><br/>For example:
+            </p>
+            <div class="option-description">
+              <ul>
+                <li>Adjusting the payment amount slightly to avoid creating a change output.</li>
+                <li>Warning about the entities that will be made aware that this payment is yours.</li>
+              </ul>
+            </div>
+            <p class="option-description">
+              These suggestions not only protect your privacy but also improve the efficiency of your transactions, saving you money on fees.
             </p>
           </div>
           <div class="option-text  text-option7">
             <h6 class="option-label">Coin Control</h6>
             <p class="option-description">
               For users who want granular control over their transactions, Wasabi offers advanced Coin Control features.
-              <hr style="margin-top: 20px; border: none;"> While Wasabi's engine automatically selects the best coins for your transactions, you can manually choose specific coins to
+              <br/><br/> While Wasabi's engine automatically selects the best coins for your transactions, you can manually choose specific coins to
                 use.
-                <hr style="margin-top: 20px; border: none;">This
+                <br/><br/>This
                 allows for precise management of your UTXOs, ensuring that the selection fits your most specific needs.
 
             </p>
@@ -434,7 +443,8 @@
             <p class="option-description">Wasabi provides an <a href="https://docs.wasabiwallet.io/using-wasabi/RPC.html">RPC
                 Interface</a> to directly interact with core features of the Wallet.
                 
-                <hr style="margin-top: 20px; border: none;">While the graphical interface might not cover very specific use cases, this feature allows the creation of complete scripts and integrations
+                <br/><br/>As the graphical interface might not cover very specific use cases, this feature allows the creation of complete scripts and integrations.
+
 
             </p>
           </div>
