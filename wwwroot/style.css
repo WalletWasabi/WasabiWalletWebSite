@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  hyphens: auto !important;
+  hyphens: none !important;
   overflow-wrap: break-word !important;
 }
 
