@@ -783,7 +783,7 @@ a {
       padding: 120px 20px;
     }
     @media screen and (min-width: 768px) {
-      padding: 160px 20px; /* Reduced side padding to make container wider */
+      padding: 50px 20px; /* Reduced side padding to make container wider */
     }
     @media screen and (min-width: 1024px) {
       padding: 260px 80px; /* Reduced side padding to make container wider */
@@ -866,7 +866,7 @@ a {
       max-width: 650px;
       position: relative;
 
-      min-height: 250px;
+      min-height: 500px;
     }
 
 .option-text {
