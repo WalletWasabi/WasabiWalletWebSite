@@ -161,7 +161,7 @@ a {
     transform-origin: center;
     transform: scale(2) rotate(0.5deg);
     transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
-
+  
     @media screen and (min-width: 280px) {
       top: -79px;
       height: 652px;
