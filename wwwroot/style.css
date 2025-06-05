@@ -2033,6 +2033,23 @@ a {
   display: block;
 }
 
+.section-2 .specific-features .option-text a {
+  color: #77c400 !important;
+  text-decoration: underline !important;
+  -webkit-text-fill-color: #77c400 !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.section-2 .specific-features .option-text a:hover {
+  color: #a2ff00 !important;
+  -webkit-text-fill-color: #a2ff00 !important;
+}
+
+
 /* Only apply clipping if supported */
 @supports (-webkit-background-clip: text) {
   .section-2 .option-description {
