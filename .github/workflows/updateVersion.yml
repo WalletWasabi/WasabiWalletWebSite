@@ -33,9 +33,9 @@ jobs:
         run: |
           gh pr create --base master --head update-index-version-branch --title "Update index.html version to ${{ github.event.client_payload.new_version }}" --body "Auto-update index.html version to ${{ github.event.client_payload.new_version }}."
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.VERSION_UPDATE_TOKEN }}
       - name: Merge Pull Request with Admin Privileges
         run: |
           gh pr merge update-index-version-branch --admin --squash --delete-branch
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.VERSION_UPDATE_TOKEN }}
